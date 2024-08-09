@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-04-30T18:36:41.186Z",
+  "updatedAt": "2026-04-30T18:42:48.739Z",
   "stats": {
     "total": 21,
     "easy": 0,
-    "medium": 1,
+    "medium": 2,
     "hard": 0
   },
   "problems": [
@@ -47,6 +47,53 @@
           "difficulty": "Hard",
           "titleSlug": "partition-array-into-two-arrays-to-minimize-sum-difference",
           "title": "Partition Array Into Two Arrays to Minimize Sum Difference",
+          "isPaidOnly": false
+        }
+      ],
+      "elapsedSeconds": null
+    },
+    {
+      "platform": "leetcode",
+      "id": "870",
+      "title": "Magic Squares In Grid",
+      "titleSlug": "magic-squares-in-grid",
+      "difficulty": "Medium",
+      "topic": "Array",
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Matrix"
+      ],
+      "canonical": null,
+      "code": "class Solution:\n    def numMagicSquaresInside(self, grid: List[List[int]]) -> int:\n        if len(grid) < 3 or len(grid[0]) < 3:\n            print(\"0\")\n        def is_magic(mag):\n            flatmag = [item for row in mag for item in row]\n            flatmag = [item for item in flatmag if 1 <= item <= 9]\n            if len(flatmag) != 9 or set(flatmag) != {1, 2, 3, 4, 5, 6, 7, 8, 9}:\n                return False\n            return (sum(mag[0]) == sum(mag[1]) == sum(mag[2]) == \n                    sum(mag[i][0] for i in range(3)) == \n                    sum(mag[i][1] for i in range(3)) == \n                    sum(mag[i][2] for i in range(3)) == \n                    mag[0][0] + mag[1][1] + mag[2][2] == \n                    mag[0][2] + mag[1][1] + mag[2][0])\n        \n        rowlen = len(grid)\n        collen = len(grid[0])\n        magic_count = 0\n        \n        for row in range(rowlen - 2):\n            for col in range(collen - 2):\n                mag = [grid[row+i][col:col+3] for i in range(3)]\n                if is_magic(mag):\n                    magic_count += 1\n        \n        return magic_count",
+      "files": [
+        {
+          "path": "topics/Array/magic-squares-in-grid/Python3.py",
+          "content": "class Solution:\n    def numMagicSquaresInside(self, grid: List[List[int]]) -> int:\n        if len(grid) < 3 or len(grid[0]) < 3:\n            print(\"0\")\n        def is_magic(mag):\n            flatmag = [item for row in mag for item in row]\n            flatmag = [item for item in flatmag if 1 <= item <= 9]\n            if len(flatmag) != 9 or set(flatmag) != {1, 2, 3, 4, 5, 6, 7, 8, 9}:\n                return False\n            return (sum(mag[0]) == sum(mag[1]) == sum(mag[2]) == \n                    sum(mag[i][0] for i in range(3)) == \n                    sum(mag[i][1] for i in range(3)) == \n                    sum(mag[i][2] for i in range(3)) == \n                    mag[0][0] + mag[1][1] + mag[2][2] == \n                    mag[0][2] + mag[1][1] + mag[2][0])\n        \n        rowlen = len(grid)\n        collen = len(grid[0])\n        magic_count = 0\n        \n        for row in range(rowlen - 2):\n            for col in range(collen - 2):\n                mag = [grid[row+i][col:col+3] for i in range(3)]\n                if is_magic(mag):\n                    magic_count += 1\n        \n        return magic_count"
+        },
+        {
+          "path": "topics/Array/magic-squares-in-grid/README.md",
+          "content": "# [840] Magic Squares In Grid\n**Difficulty:** Medium  |  **Acceptance:** 55.1%  |  **Likes:** 1109 / **Dislikes:** 1904\n**Tags:** `Array`, `Hash Table`, `Math`, `Matrix`\n## Problem\nA 3 x 3 magic square is a 3 x 3 grid filled with distinct numbers from 1 to 9 such that each row, column, and both diagonals all have the same sum.\n\nGiven a row x col grid of integers, how many 3 x 3 magic square subgrids are there?\n\nNote: while a magic square can only contain numbers from 1 to 9, grid may contain numbers up to 15.\n\n&nbsp;\nExample 1:\n\nInput: grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]\nOutput: 1\nExplanation: \nThe following subgrid is a 3 x 3 magic square:\n\nwhile this one is not:\n\nIn total, there is only one magic square inside the given grid.\n\nExample 2:\n\nInput: grid = [[8]]\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\trow == grid.length\n\tcol == grid[i].length\n\t1 <= row, col <= 10\n\t0 <= grid[i][j] <= 15\n## My Submission\n\n- Runtime: 45 ms (beats 7.0%)\n- Memory: 16.5 MB (beats 100.0%)\n\n## Similar Problems\n\n- [Largest Magic Square](https://leetcode.com/problems/largest-magic-square/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py"
+      },
+      "runtime": "45 ms",
+      "memory": "16.5 MB",
+      "runtimePct": 6.9504000000000055,
+      "memoryPct": 100,
+      "timestamp": 1723228427000,
+      "acRate": 55.14572257129048,
+      "likes": 1109,
+      "dislikes": 1904,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "largest-magic-square",
+          "title": "Largest Magic Square",
           "isPaidOnly": false
         }
       ],
@@ -179,22 +226,6 @@
       "timestamp": 1777054886000,
       "code": "",
       "url": "https://leetcode.com/problems/invalid-tweets/"
-    },
-    {
-      "id": "last-stone-weight-ii",
-      "title": "Last Stone Weight II",
-      "titleSlug": "last-stone-weight-ii",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "python3",
-        "ext": "python3",
-        "slug": "python3"
-      },
-      "tags": [],
-      "timestamp": 1777484846000,
-      "code": "",
-      "url": "https://leetcode.com/problems/last-stone-weight-ii/"
     },
     {
       "id": "minimum-cost-tree-from-leaf-values",
