@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-04-30T18:42:48.739Z",
+  "updatedAt": "2026-04-30T19:24:20.866Z",
   "stats": {
-    "total": 21,
-    "easy": 0,
-    "medium": 2,
-    "hard": 0
+    "total": 211,
+    "easy": 126,
+    "medium": 68,
+    "hard": 5
   },
   "problems": [
     {
@@ -54,6 +54,65 @@
     },
     {
       "platform": "leetcode",
+      "id": "3062",
+      "title": "Create a DataFrame from List",
+      "titleSlug": "create-a-dataframe-from-list",
+      "difficulty": "Easy",
+      "topic": "Uncategorized",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef createDataframe(student_data: List[List[int]]) -> pd.DataFrame:\n    return pd.DataFrame(student_data, columns = [\"student_id\", \"age\"])",
+      "files": [
+        {
+          "path": "topics/Uncategorized/create-a-dataframe-from-list/Pandas.txt",
+          "content": "import pandas as pd\n\ndef createDataframe(student_data: List[List[int]]) -> pd.DataFrame:\n    return pd.DataFrame(student_data, columns = [\"student_id\", \"age\"])"
+        },
+        {
+          "path": "topics/Uncategorized/create-a-dataframe-from-list/README.md",
+          "content": "# [2877] Create a DataFrame from List\n**Difficulty:** Easy  |  **Acceptance:** 81.0%  |  **Likes:** 292 / **Dislikes:** 12\n**Tags:** —\n## Problem\nWrite a solution to create a DataFrame from a 2D list called student_data. This 2D list contains the IDs and ages of some students.\n\nThe DataFrame should have two columns, student_id and age, and be in the same order as the original 2D list.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput:\nstudent_data:\n[\n  [1, 15],\n  [2, 11],\n  [3, 11],\n  [4, 20]\n]\nOutput:\n+------------+-----+\n| student_id | age |\n+------------+-----+\n| 1          | 15  |\n| 2          | 11  |\n| 3          | 11  |\n| 4          | 20  |\n+------------+-----+\nExplanation:\nA DataFrame was created on top of student_data, with two columns named student_id and age.\n## My Submission\n\n- Runtime: 390 ms (beats 5.0%)\n- Memory: 68.5 MB (beats 5.9%)\n"
+        }
+      ],
+      "lang": {
+        "name": "Pandas",
+        "ext": "txt"
+      },
+      "runtime": "390 ms",
+      "memory": "68.5 MB",
+      "runtimePct": 5.038700000000027,
+      "memoryPct": 5.932899999999987,
+      "timestamp": 1729715291000,
+      "acRate": 80.98951158722937,
+      "likes": 292,
+      "dislikes": 12,
+      "similar": [],
+      "elapsedSeconds": null
+    },
+    {
+      "id": "3sum::python3",
+      "platform": "leetcode",
+      "title": "3Sum",
+      "titleSlug": "3sum",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1754848047000,
+      "runtime": "539 ms",
+      "memory": "20.7 MB",
+      "skipCommit": true
+    },
+    {
+      "platform": "leetcode",
       "id": "870",
       "title": "Magic Squares In Grid",
       "titleSlug": "magic-squares-in-grid",
@@ -100,6 +159,126 @@
       "elapsedSeconds": null
     },
     {
+      "id": "add-binary::python3",
+      "platform": "leetcode",
+      "title": "Add Binary",
+      "titleSlug": "add-binary",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "String",
+        "Bit Manipulation",
+        "Simulation"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1729279641000,
+      "runtime": "4 ms",
+      "memory": "16.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "add-digits::python3",
+      "platform": "leetcode",
+      "title": "Add Digits",
+      "titleSlug": "add-digits",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Simulation",
+        "Number Theory"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1729416459000,
+      "runtime": "0 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "add-strings::python3",
+      "platform": "leetcode",
+      "title": "Add Strings",
+      "titleSlug": "add-strings",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "String",
+        "Simulation"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1729281468000,
+      "runtime": "0 ms",
+      "memory": "17.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "add-to-array-form-of-integer::python3",
+      "platform": "leetcode",
+      "title": "Add to Array-Form of Integer",
+      "titleSlug": "add-to-array-form-of-integer",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729281259000,
+      "runtime": "5 ms",
+      "memory": "17.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "add-two-numbers::python3",
+      "platform": "leetcode",
+      "title": "Add Two Numbers",
+      "titleSlug": "add-two-numbers",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Linked List",
+        "Math",
+        "Recursion"
+      ],
+      "topic": "Linked List",
+      "code": "",
+      "files": [],
+      "timestamp": 1729531106000,
+      "runtime": "3 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
       "id": "article-views-i",
       "title": "Article Views I",
       "titleSlug": "article-views-i",
@@ -114,6 +293,53 @@
       "timestamp": 1777054016000,
       "code": "",
       "url": "https://leetcode.com/problems/article-views-i/"
+    },
+    {
+      "id": "article-views-i::mysql",
+      "platform": "leetcode",
+      "title": "Article Views I",
+      "titleSlug": "article-views-i",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777054016000,
+      "runtime": "404 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "assign-cookies::python3",
+      "platform": "leetcode",
+      "title": "Assign Cookies",
+      "titleSlug": "assign-cookies",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Greedy",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1775539972000,
+      "runtime": "23 ms",
+      "memory": "22.2 MB",
+      "skipCommit": true
     },
     {
       "id": "average-time-of-process-per-machine",
@@ -132,6 +358,74 @@
       "url": "https://leetcode.com/problems/average-time-of-process-per-machine/"
     },
     {
+      "id": "average-time-of-process-per-machine::mysql",
+      "platform": "leetcode",
+      "title": "Average Time of Process per Machine",
+      "titleSlug": "average-time-of-process-per-machine",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777114835000,
+      "runtime": "243 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "best-time-to-buy-and-sell-stock::java",
+      "platform": "leetcode",
+      "title": "Best Time to Buy and Sell Stock",
+      "titleSlug": "best-time-to-buy-and-sell-stock",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729372227000,
+      "runtime": "1 ms",
+      "memory": "61.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "best-time-to-buy-and-sell-stock::python3",
+      "platform": "leetcode",
+      "title": "Best Time to Buy and Sell Stock",
+      "titleSlug": "best-time-to-buy-and-sell-stock",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729371844000,
+      "runtime": "21 ms",
+      "memory": "26.1 MB",
+      "skipCommit": true
+    },
+    {
       "id": "big-countries",
       "title": "Big Countries",
       "titleSlug": "big-countries",
@@ -146,6 +440,582 @@
       "timestamp": 1777048368000,
       "code": "",
       "url": "https://leetcode.com/problems/big-countries/"
+    },
+    {
+      "id": "big-countries::mysql",
+      "platform": "leetcode",
+      "title": "Big Countries",
+      "titleSlug": "big-countries",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777048368000,
+      "runtime": "275 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "binary-number-with-alternating-bits::python3",
+      "platform": "leetcode",
+      "title": "Binary Number with Alternating Bits",
+      "titleSlug": "binary-number-with-alternating-bits",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Bit Manipulation"
+      ],
+      "topic": "Bit Manipulation",
+      "code": "",
+      "files": [],
+      "timestamp": 1748869843000,
+      "runtime": "0 ms",
+      "memory": "17.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "binary-search::python",
+      "platform": "leetcode",
+      "title": "Binary Search",
+      "titleSlug": "binary-search",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767650811000,
+      "runtime": "0 ms",
+      "memory": "13.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "binary-tree-level-order-traversal::python3",
+      "platform": "leetcode",
+      "title": "Binary Tree Level Order Traversal",
+      "titleSlug": "binary-tree-level-order-traversal",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Tree",
+        "Breadth-First Search",
+        "Binary Tree"
+      ],
+      "topic": "Tree",
+      "code": "",
+      "files": [],
+      "timestamp": 1753211566000,
+      "runtime": "558 ms",
+      "memory": "19.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "can-make-arithmetic-progression-from-sequence::python3",
+      "platform": "leetcode",
+      "title": "Can Make Arithmetic Progression From Sequence",
+      "titleSlug": "can-make-arithmetic-progression-from-sequence",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1746512029000,
+      "runtime": "0 ms",
+      "memory": "17.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "change-data-type::pythondata",
+      "platform": "leetcode",
+      "title": "Change Data Type",
+      "titleSlug": "change-data-type",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729838254000,
+      "runtime": "474 ms",
+      "memory": "68.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "check-if-all-characters-have-equal-number-of-occurrences::python3",
+      "platform": "leetcode",
+      "title": "Check if All Characters Have Equal Number of Occurrences",
+      "titleSlug": "check-if-all-characters-have-equal-number-of-occurrences",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1729430331000,
+      "runtime": "0 ms",
+      "memory": "16.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "climbing-stairs-ii::python3",
+      "platform": "leetcode",
+      "title": "Climbing Stairs II",
+      "titleSlug": "climbing-stairs-ii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767075488000,
+      "runtime": "190 ms",
+      "memory": "31 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "climbing-stairs::python3",
+      "platform": "leetcode",
+      "title": "Climbing Stairs",
+      "titleSlug": "climbing-stairs",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Memoization"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1729173921000,
+      "runtime": "0 ms",
+      "memory": "16.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "coin-change::python3",
+      "platform": "leetcode",
+      "title": "Coin Change",
+      "titleSlug": "coin-change",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Breadth-First Search"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1758441308000,
+      "runtime": "1245 ms",
+      "memory": "18.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "consecutive-characters::python3",
+      "platform": "leetcode",
+      "title": "Consecutive Characters",
+      "titleSlug": "consecutive-characters",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1757180443000,
+      "runtime": "2 ms",
+      "memory": "17.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "construct-smallest-number-from-di-string::python3",
+      "platform": "leetcode",
+      "title": "Construct Smallest Number From DI String",
+      "titleSlug": "construct-smallest-number-from-di-string",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Backtracking",
+        "Stack",
+        "Greedy"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1729795270000,
+      "runtime": "0 ms",
+      "memory": "16.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "container-with-most-water::python3",
+      "platform": "leetcode",
+      "title": "Container With Most Water",
+      "titleSlug": "container-with-most-water",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Greedy"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776517178000,
+      "runtime": "66 ms",
+      "memory": "29.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "contains-duplicate::python3",
+      "platform": "leetcode",
+      "title": "Contains Duplicate",
+      "titleSlug": "contains-duplicate",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1748871383000,
+      "runtime": "9 ms",
+      "memory": "31.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "convert-1d-array-into-2d-array::java",
+      "platform": "leetcode",
+      "title": "Convert 1D Array Into 2D Array",
+      "titleSlug": "convert-1d-array-into-2d-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Matrix",
+        "Simulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1726675330000,
+      "runtime": "5 ms",
+      "memory": "56.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "convert-1d-array-into-2d-array::python3",
+      "platform": "leetcode",
+      "title": "Convert 1D Array Into 2D Array",
+      "titleSlug": "convert-1d-array-into-2d-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Matrix",
+        "Simulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1726674627000,
+      "runtime": "688 ms",
+      "memory": "23.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "count-integers-with-even-digit-sum::python3",
+      "platform": "leetcode",
+      "title": "Count Integers With Even Digit Sum",
+      "titleSlug": "count-integers-with-even-digit-sum",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Simulation"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1729413509000,
+      "runtime": "11 ms",
+      "memory": "16.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "count-number-of-pairs-with-absolute-difference-k::python3",
+      "platform": "leetcode",
+      "title": "Count Number of Pairs With Absolute Difference K",
+      "titleSlug": "count-number-of-pairs-with-absolute-difference-k",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1757449762000,
+      "runtime": "115 ms",
+      "memory": "17.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "count-pairs-whose-sum-is-less-than-target::python3",
+      "platform": "leetcode",
+      "title": "Count Pairs Whose Sum is Less than Target",
+      "titleSlug": "count-pairs-whose-sum-is-less-than-target",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Binary Search",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1757142983000,
+      "runtime": "26 ms",
+      "memory": "17.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "count-square-submatrices-with-all-ones::python3",
+      "platform": "leetcode",
+      "title": "Count Square Submatrices with All Ones",
+      "titleSlug": "count-square-submatrices-with-all-ones",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Matrix"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776708953000,
+      "runtime": "40 ms",
+      "memory": "22.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "count-the-number-of-fair-pairs::python3",
+      "platform": "leetcode",
+      "title": "Count the Number of Fair Pairs",
+      "titleSlug": "count-the-number-of-fair-pairs",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Binary Search",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1757168091000,
+      "runtime": "267 ms",
+      "memory": "32.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "counting-bits::python3",
+      "platform": "leetcode",
+      "title": "Counting Bits",
+      "titleSlug": "counting-bits",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Dynamic Programming",
+        "Bit Manipulation"
+      ],
+      "topic": "Dynamic Programming",
+      "code": "",
+      "files": [],
+      "timestamp": 1748798966000,
+      "runtime": "11 ms",
+      "memory": "18.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "create-a-dataframe-from-list::pythondata",
+      "platform": "leetcode",
+      "title": "Create a DataFrame from List",
+      "titleSlug": "create-a-dataframe-from-list",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729715291000,
+      "runtime": "390 ms",
+      "memory": "68.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "create-a-new-column::pythondata",
+      "platform": "leetcode",
+      "title": "Create a New Column",
+      "titleSlug": "create-a-new-column",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729715905000,
+      "runtime": "342 ms",
+      "memory": "68.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "create-hello-world-function::javascript",
+      "platform": "leetcode",
+      "title": "Create Hello World Function",
+      "titleSlug": "create-hello-world-function",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "JavaScript",
+        "ext": "js",
+        "slug": "javascript"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729715118000,
+      "runtime": "55 ms",
+      "memory": "49 MB",
+      "skipCommit": true
     },
     {
       "id": "customer-who-visited-but-did-not-make-any-transactions",
@@ -164,6 +1034,252 @@
       "url": "https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/"
     },
     {
+      "id": "customer-who-visited-but-did-not-make-any-transactions::mysql",
+      "platform": "leetcode",
+      "title": "Customer Who Visited but Did Not Make Any Transactions",
+      "titleSlug": "customer-who-visited-but-did-not-make-any-transactions",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777104021000,
+      "runtime": "1440 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "decode-ways::python3",
+      "platform": "leetcode",
+      "title": "Decode Ways",
+      "titleSlug": "decode-ways",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1775915781000,
+      "runtime": "0 ms",
+      "memory": "19.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "delete-and-earn::python3",
+      "platform": "leetcode",
+      "title": "Delete and Earn",
+      "titleSlug": "delete-and-earn",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776852931000,
+      "runtime": "0 ms",
+      "memory": "20.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "delete-duplicate-emails::mysql",
+      "platform": "leetcode",
+      "title": "Delete Duplicate Emails",
+      "titleSlug": "delete-duplicate-emails",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1748870730000,
+      "runtime": "962 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "di-string-match::python3",
+      "platform": "leetcode",
+      "title": "DI String Match",
+      "titleSlug": "di-string-match",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "String",
+        "Greedy"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729540191000,
+      "runtime": "3 ms",
+      "memory": "17.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "display-the-first-three-rows::pythondata",
+      "platform": "leetcode",
+      "title": "Display the First Three Rows",
+      "titleSlug": "display-the-first-three-rows",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729715470000,
+      "runtime": "436 ms",
+      "memory": "68.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "distinct-subsequences::python3",
+      "platform": "leetcode",
+      "title": "Distinct Subsequences",
+      "titleSlug": "distinct-subsequences",
+      "difficulty": "Hard",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1776946572000,
+      "runtime": "413 ms",
+      "memory": "75.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "drop-duplicate-rows::pythondata",
+      "platform": "leetcode",
+      "title": "Drop Duplicate Rows",
+      "titleSlug": "drop-duplicate-rows",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729795647000,
+      "runtime": "393 ms",
+      "memory": "69.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "drop-missing-data::pythondata",
+      "platform": "leetcode",
+      "title": "Drop Missing Data",
+      "titleSlug": "drop-missing-data",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729837664000,
+      "runtime": "393 ms",
+      "memory": "70.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "dungeon-game::python3",
+      "platform": "leetcode",
+      "title": "Dungeon Game",
+      "titleSlug": "dungeon-game",
+      "difficulty": "Hard",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Matrix"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776769484000,
+      "runtime": "3 ms",
+      "memory": "20.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "edit-distance::python3",
+      "platform": "leetcode",
+      "title": "Edit Distance",
+      "titleSlug": "edit-distance",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1776941552000,
+      "runtime": "44 ms",
+      "memory": "22.7 MB",
+      "skipCommit": true
+    },
+    {
       "id": "employee-bonus",
       "title": "Employee Bonus",
       "titleSlug": "employee-bonus",
@@ -178,6 +1294,162 @@
       "timestamp": 1777115023000,
       "code": "",
       "url": "https://leetcode.com/problems/employee-bonus/"
+    },
+    {
+      "id": "employee-bonus::mysql",
+      "platform": "leetcode",
+      "title": "Employee Bonus",
+      "titleSlug": "employee-bonus",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777115023000,
+      "runtime": "878 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "fibonacci-number::python3",
+      "platform": "leetcode",
+      "title": "Fibonacci Number",
+      "titleSlug": "fibonacci-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Recursion",
+        "Memoization"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1729191109000,
+      "runtime": "35 ms",
+      "memory": "16.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "fill-missing-data::pythondata",
+      "platform": "leetcode",
+      "title": "Fill Missing Data",
+      "titleSlug": "fill-missing-data",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729838683000,
+      "runtime": "351 ms",
+      "memory": "68.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-all-k-distant-indices-in-an-array::python3",
+      "platform": "leetcode",
+      "title": "Find All K-Distant Indices in an Array",
+      "titleSlug": "find-all-k-distant-indices-in-an-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1757265155000,
+      "runtime": "175 ms",
+      "memory": "18 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-closest-number-to-zero::java",
+      "platform": "leetcode",
+      "title": "Find Closest Number to Zero",
+      "titleSlug": "find-closest-number-to-zero",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1724419713000,
+      "runtime": "21 ms",
+      "memory": "44.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-closest-number-to-zero::python3",
+      "platform": "leetcode",
+      "title": "Find Closest Number to Zero",
+      "titleSlug": "find-closest-number-to-zero",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1723634014000,
+      "runtime": "123 ms",
+      "memory": "16.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-closest-person::python3",
+      "platform": "leetcode",
+      "title": "Find Closest Person",
+      "titleSlug": "find-closest-person",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1748846155000,
+      "runtime": "4 ms",
+      "memory": "17.6 MB",
+      "skipCommit": true
     },
     {
       "id": "find-customer-referee",
@@ -196,6 +1468,385 @@
       "url": "https://leetcode.com/problems/find-customer-referee/"
     },
     {
+      "id": "find-customer-referee::mysql",
+      "platform": "leetcode",
+      "title": "Find Customer Referee",
+      "titleSlug": "find-customer-referee",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777045371000,
+      "runtime": "485 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "find-greatest-common-divisor-of-array::python3",
+      "platform": "leetcode",
+      "title": "Find Greatest Common Divisor of Array",
+      "titleSlug": "find-greatest-common-divisor-of-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Math",
+        "Number Theory"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1775209937000,
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-if-digit-game-can-be-won::python3",
+      "platform": "leetcode",
+      "title": "Find if Digit Game Can Be Won",
+      "titleSlug": "find-if-digit-game-can-be-won",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729413139000,
+      "runtime": "0 ms",
+      "memory": "16.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-minimum-in-rotated-sorted-array::python3",
+      "platform": "leetcode",
+      "title": "Find Minimum in Rotated Sorted Array",
+      "titleSlug": "find-minimum-in-rotated-sorted-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767187706000,
+      "runtime": "2 ms",
+      "memory": "17.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-numbers-with-even-number-of-digits::java",
+      "platform": "leetcode",
+      "title": "Find Numbers with Even Number of Digits",
+      "titleSlug": "find-numbers-with-even-number-of-digits",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1707563263000,
+      "runtime": "1 ms",
+      "memory": "42.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-peak-element::python3",
+      "platform": "leetcode",
+      "title": "Find Peak Element",
+      "titleSlug": "find-peak-element",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767208319000,
+      "runtime": "0 ms",
+      "memory": "17.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-the-index-of-the-first-occurrence-in-a-string::python3",
+      "platform": "leetcode",
+      "title": "Find the Index of the First Occurrence in a String",
+      "titleSlug": "find-the-index-of-the-first-occurrence-in-a-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Two Pointers",
+        "String",
+        "String Matching"
+      ],
+      "topic": "Two Pointers",
+      "code": "",
+      "files": [],
+      "timestamp": 1758027280000,
+      "runtime": "0 ms",
+      "memory": "17.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-the-key-of-the-numbers::python3",
+      "platform": "leetcode",
+      "title": "Find the Key of the Numbers",
+      "titleSlug": "find-the-key-of-the-numbers",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1729536807000,
+      "runtime": "0 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-the-most-common-response::python3",
+      "platform": "leetcode",
+      "title": "Find the Most Common Response",
+      "titleSlug": "find-the-most-common-response",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1758429498000,
+      "runtime": "1051 ms",
+      "memory": "298.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-the-number-of-ways-to-place-people-i::python3",
+      "platform": "leetcode",
+      "title": "Find the Number of Ways to Place People I",
+      "titleSlug": "find-the-number-of-ways-to-place-people-i",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Math",
+        "Geometry",
+        "Sorting",
+        "Enumeration"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1730044905000,
+      "runtime": "15 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-the-student-that-will-replace-the-chalk::java",
+      "platform": "leetcode",
+      "title": "Find the Student that Will Replace the Chalk",
+      "titleSlug": "find-the-student-that-will-replace-the-chalk",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Simulation",
+        "Prefix Sum"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1726776317000,
+      "runtime": "2 ms",
+      "memory": "56 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-the-student-that-will-replace-the-chalk::python3",
+      "platform": "leetcode",
+      "title": "Find the Student that Will Replace the Chalk",
+      "titleSlug": "find-the-student-that-will-replace-the-chalk",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Simulation",
+        "Prefix Sum"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1726776706000,
+      "runtime": "567 ms",
+      "memory": "30.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "find-the-xor-of-numbers-which-appear-twice::python3",
+      "platform": "leetcode",
+      "title": "Find the XOR of Numbers Which Appear Twice",
+      "titleSlug": "find-the-xor-of-numbers-which-appear-twice",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Bit Manipulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729373687000,
+      "runtime": "0 ms",
+      "memory": "16.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "finding-pairs-with-a-certain-sum::python3",
+      "platform": "leetcode",
+      "title": "Finding Pairs With a Certain Sum",
+      "titleSlug": "finding-pairs-with-a-certain-sum",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Design"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1757356973000,
+      "runtime": "406 ms",
+      "memory": "48.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "first-bad-version::python3",
+      "platform": "leetcode",
+      "title": "First Bad Version",
+      "titleSlug": "first-bad-version",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Binary Search",
+        "Interactive"
+      ],
+      "topic": "Binary Search",
+      "code": "",
+      "files": [],
+      "timestamp": 1729282745000,
+      "runtime": "32 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "frog-jump::python3",
+      "platform": "leetcode",
+      "title": "Frog Jump",
+      "titleSlug": "frog-jump",
+      "difficulty": "Hard",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776684932000,
+      "runtime": "98 ms",
+      "memory": "21 MB",
+      "skipCommit": true
+    },
+    {
       "id": "furthest-point-from-origin",
       "title": "Furthest Point From Origin",
       "titleSlug": "furthest-point-from-origin",
@@ -210,6 +1861,215 @@
       "timestamp": 1777044583000,
       "code": "",
       "url": "https://leetcode.com/problems/furthest-point-from-origin/"
+    },
+    {
+      "id": "furthest-point-from-origin::python3",
+      "platform": "leetcode",
+      "title": "Furthest Point From Origin",
+      "titleSlug": "furthest-point-from-origin",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Counting"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1777044583000,
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "get-the-size-of-a-dataframe::pythondata",
+      "platform": "leetcode",
+      "title": "Get the Size of a DataFrame",
+      "titleSlug": "get-the-size-of-a-dataframe",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729715393000,
+      "runtime": "356 ms",
+      "memory": "68.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "greatest-common-divisor-of-strings::python3",
+      "platform": "leetcode",
+      "title": "Greatest Common Divisor of Strings",
+      "titleSlug": "greatest-common-divisor-of-strings",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "String"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1775208833000,
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "hamming-distance::python3",
+      "platform": "leetcode",
+      "title": "Hamming Distance",
+      "titleSlug": "hamming-distance",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Bit Manipulation"
+      ],
+      "topic": "Bit Manipulation",
+      "code": "",
+      "files": [],
+      "timestamp": 1748867363000,
+      "runtime": "0 ms",
+      "memory": "17.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "happy-number::python3",
+      "platform": "leetcode",
+      "title": "Happy Number",
+      "titleSlug": "happy-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "Math",
+        "Two Pointers"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1729419260000,
+      "runtime": "1 ms",
+      "memory": "16.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "height-checker::java",
+      "platform": "leetcode",
+      "title": "Height Checker",
+      "titleSlug": "height-checker",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Sorting",
+        "Counting Sort"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1726773202000,
+      "runtime": "2 ms",
+      "memory": "41.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "height-checker::python3",
+      "platform": "leetcode",
+      "title": "Height Checker",
+      "titleSlug": "height-checker",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Sorting",
+        "Counting Sort"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1726773598000,
+      "runtime": "28 ms",
+      "memory": "16.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "house-robber::python3",
+      "platform": "leetcode",
+      "title": "House Robber",
+      "titleSlug": "house-robber",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1775833411000,
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "intersection-of-two-arrays::python3",
+      "platform": "leetcode",
+      "title": "Intersection of Two Arrays",
+      "titleSlug": "intersection-of-two-arrays",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Two Pointers",
+        "Binary Search",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767464844000,
+      "runtime": "1 ms",
+      "memory": "17.6 MB",
+      "skipCommit": true
     },
     {
       "id": "invalid-tweets",
@@ -228,68 +2088,1416 @@
       "url": "https://leetcode.com/problems/invalid-tweets/"
     },
     {
-      "id": "minimum-cost-tree-from-leaf-values",
+      "id": "invalid-tweets::mysql",
+      "platform": "leetcode",
+      "title": "Invalid Tweets",
+      "titleSlug": "invalid-tweets",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777054886000,
+      "runtime": "826 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "jump-game::python3",
+      "platform": "leetcode",
+      "title": "Jump Game",
+      "titleSlug": "jump-game",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Greedy"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767338350000,
+      "runtime": "44 ms",
+      "memory": "18.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "koko-eating-bananas::python3",
+      "platform": "leetcode",
+      "title": "Koko Eating Bananas",
+      "titleSlug": "koko-eating-bananas",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767293071000,
+      "runtime": "155 ms",
+      "memory": "18.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "largest-number::python3",
+      "platform": "leetcode",
+      "title": "Largest Number",
+      "titleSlug": "largest-number",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "String",
+        "Greedy",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729533908000,
+      "runtime": "3 ms",
+      "memory": "16.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "last-stone-weight-ii::python3",
+      "platform": "leetcode",
+      "title": "Last Stone Weight II",
+      "titleSlug": "last-stone-weight-ii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1777484846000,
+      "runtime": "3 ms",
+      "memory": "19.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "lemonade-change::java",
+      "platform": "leetcode",
+      "title": "Lemonade Change",
+      "titleSlug": "lemonade-change",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1723702227000,
+      "runtime": "1 ms",
+      "memory": "55.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "lemonade-change::python3",
+      "platform": "leetcode",
+      "title": "Lemonade Change",
+      "titleSlug": "lemonade-change",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Greedy"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776572682000,
+      "runtime": "6 ms",
+      "memory": "23.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "length-of-last-word::python3",
+      "platform": "leetcode",
+      "title": "Length of Last Word",
+      "titleSlug": "length-of-last-word",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1746553799000,
+      "runtime": "0 ms",
+      "memory": "17.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "letter-combinations-of-a-phone-number::python3",
+      "platform": "leetcode",
+      "title": "Letter Combinations of a Phone Number",
+      "titleSlug": "letter-combinations-of-a-phone-number",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "String",
+        "Backtracking"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1753292336000,
+      "runtime": "0 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "linked-list-cycle::python3",
+      "platform": "leetcode",
+      "title": "Linked List Cycle",
+      "titleSlug": "linked-list-cycle",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "Linked List",
+        "Two Pointers"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1729423412000,
+      "runtime": "43 ms",
+      "memory": "19 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "longest-common-prefix::python3",
+      "platform": "leetcode",
+      "title": "Longest Common Prefix",
+      "titleSlug": "longest-common-prefix",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "String",
+        "Trie"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1748762079000,
+      "runtime": "0 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "longest-common-subsequence::python3",
+      "platform": "leetcode",
+      "title": "Longest Common Subsequence",
+      "titleSlug": "longest-common-subsequence",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1776847829000,
+      "runtime": "353 ms",
+      "memory": "44.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "longest-continuous-increasing-subsequence::python3",
+      "platform": "leetcode",
+      "title": "Longest Continuous Increasing Subsequence",
+      "titleSlug": "longest-continuous-increasing-subsequence",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1754933193000,
+      "runtime": "4 ms",
+      "memory": "18.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "longest-palindromic-subsequence::python3",
+      "platform": "leetcode",
+      "title": "Longest Palindromic Subsequence",
+      "titleSlug": "longest-palindromic-subsequence",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1777043970000,
+      "runtime": "580 ms",
+      "memory": "35.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "longest-palindromic-substring::python3",
+      "platform": "leetcode",
+      "title": "Longest Palindromic Substring",
+      "titleSlug": "longest-palindromic-substring",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Two Pointers",
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "Two Pointers",
+      "code": "",
+      "files": [],
+      "timestamp": 1729714837000,
+      "runtime": "1426 ms",
+      "memory": "24.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "longest-substring-without-repeating-characters::python3",
+      "platform": "leetcode",
+      "title": "Longest Substring Without Repeating Characters",
+      "titleSlug": "longest-substring-without-repeating-characters",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sliding Window"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1723375530000,
+      "runtime": "51 ms",
+      "memory": "16.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "magic-squares-in-grid::python3",
+      "platform": "leetcode",
+      "title": "Magic Squares In Grid",
+      "titleSlug": "magic-squares-in-grid",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Matrix"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1777574549000,
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "majority-element-ii::python3",
+      "platform": "leetcode",
+      "title": "Majority Element II",
+      "titleSlug": "majority-element-ii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731269234000,
+      "runtime": "3 ms",
+      "memory": "18.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "majority-element::python3",
+      "platform": "leetcode",
+      "title": "Majority Element",
+      "titleSlug": "majority-element",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Divide and Conquer",
+        "Sorting",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731269111000,
+      "runtime": "7 ms",
+      "memory": "18.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "make-array-zero-by-subtracting-equal-amounts::python3",
+      "platform": "leetcode",
+      "title": "Make Array Zero by Subtracting Equal Amounts",
+      "titleSlug": "make-array-zero-by-subtracting-equal-amounts",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Greedy",
+        "Sorting",
+        "Heap (Priority Queue)",
+        "Simulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1748871945000,
+      "runtime": "3 ms",
+      "memory": "17.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "max-consecutive-ones::java",
+      "platform": "leetcode",
+      "title": "Max Consecutive Ones",
+      "titleSlug": "max-consecutive-ones",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1707560436000,
+      "runtime": "3 ms",
+      "memory": "44.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "maximal-square::python3",
+      "platform": "leetcode",
+      "title": "Maximal Square",
+      "titleSlug": "maximal-square",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Matrix"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776764361000,
+      "runtime": "92 ms",
+      "memory": "29.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "maximum-count-of-positive-integer-and-negative-integer::python3",
+      "platform": "leetcode",
+      "title": "Maximum Count of Positive Integer and Negative Integer",
+      "titleSlug": "maximum-count-of-positive-integer-and-negative-integer",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729541320000,
+      "runtime": "3 ms",
+      "memory": "16.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "maximum-depth-of-binary-tree::python3",
+      "platform": "leetcode",
+      "title": "Maximum Depth of Binary Tree",
+      "titleSlug": "maximum-depth-of-binary-tree",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Tree",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Binary Tree"
+      ],
+      "topic": "Tree",
+      "code": "",
+      "files": [],
+      "timestamp": 1753208852000,
+      "runtime": "3 ms",
+      "memory": "18.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "maximum-number-of-operations-with-the-same-score-i::python3",
+      "platform": "leetcode",
+      "title": "Maximum Number of Operations With the Same Score I",
+      "titleSlug": "maximum-number-of-operations-with-the-same-score-i",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Simulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1754849200000,
+      "runtime": "0 ms",
+      "memory": "17.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "maximum-subarray::python3",
+      "platform": "leetcode",
+      "title": "Maximum Subarray",
+      "titleSlug": "maximum-subarray",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Divide and Conquer",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767342752000,
+      "runtime": "94 ms",
+      "memory": "30 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "median-of-two-sorted-arrays::python3",
+      "platform": "leetcode",
+      "title": "Median of Two Sorted Arrays",
+      "titleSlug": "median-of-two-sorted-arrays",
+      "difficulty": "Hard",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search",
+        "Divide and Conquer"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1723381264000,
+      "runtime": "65 ms",
+      "memory": "16.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "merge-strings-alternately::java",
+      "platform": "leetcode",
+      "title": "Merge Strings Alternately",
+      "titleSlug": "merge-strings-alternately",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "topic": "Two Pointers",
+      "code": "",
+      "files": [],
+      "timestamp": 1724264849000,
+      "runtime": "1 ms",
+      "memory": "41.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "merge-strings-alternately::python3",
+      "platform": "leetcode",
+      "title": "Merge Strings Alternately",
+      "titleSlug": "merge-strings-alternately",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "topic": "Two Pointers",
+      "code": "",
+      "files": [],
+      "timestamp": 1774344800000,
+      "runtime": "56 ms",
+      "memory": "19.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "merge-two-sorted-lists::python3",
+      "platform": "leetcode",
+      "title": "Merge Two Sorted Lists",
+      "titleSlug": "merge-two-sorted-lists",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Linked List",
+        "Recursion"
+      ],
+      "topic": "Linked List",
+      "code": "",
+      "files": [],
+      "timestamp": 1753856636000,
+      "runtime": "1 ms",
+      "memory": "17.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "method-chaining::pythondata",
+      "platform": "leetcode",
+      "title": "Method Chaining",
+      "titleSlug": "method-chaining",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729937534000,
+      "runtime": "373 ms",
+      "memory": "70.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "min-cost-climbing-stairs::python3",
+      "platform": "leetcode",
+      "title": "Min Cost Climbing Stairs",
+      "titleSlug": "min-cost-climbing-stairs",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1775832871000,
+      "runtime": "1 ms",
+      "memory": "19.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimize-maximum-pair-sum-in-array::python3",
+      "platform": "leetcode",
+      "title": "Minimize Maximum Pair Sum in Array",
+      "titleSlug": "minimize-maximum-pair-sum-in-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Greedy",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1754850478000,
+      "runtime": "930 ms",
+      "memory": "31.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-ascii-delete-sum-for-two-strings::python3",
+      "platform": "leetcode",
+      "title": "Minimum ASCII Delete Sum for Two Strings",
+      "titleSlug": "minimum-ascii-delete-sum-for-two-strings",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1776892351000,
+      "runtime": "263 ms",
+      "memory": "23.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-cost-for-tickets::python3",
+      "platform": "leetcode",
+      "title": "Minimum Cost For Tickets",
+      "titleSlug": "minimum-cost-for-tickets",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776611538000,
+      "runtime": "3 ms",
+      "memory": "19.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-cost-tree-from-leaf-values::python3",
+      "platform": "leetcode",
       "title": "Minimum Cost Tree From Leaf Values",
       "titleSlug": "minimum-cost-tree-from-leaf-values",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
+      "difficulty": "Medium",
       "lang": {
-        "name": "python3",
-        "ext": "python3",
+        "name": "Python3",
+        "ext": "py",
         "slug": "python3"
       },
-      "tags": [],
-      "timestamp": 1777370154000,
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Stack",
+        "Greedy",
+        "Monotonic Stack"
+      ],
+      "topic": "Array",
       "code": "",
-      "url": "https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/"
+      "files": [],
+      "timestamp": 1777370154000,
+      "runtime": "119 ms",
+      "memory": "19.5 MB",
+      "skipCommit": true
     },
     {
-      "id": "minimum-time-to-make-rope-colorful",
+      "id": "minimum-index-of-a-valid-split::python3",
+      "platform": "leetcode",
+      "title": "Minimum Index of a Valid Split",
+      "titleSlug": "minimum-index-of-a-valid-split",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731521488000,
+      "runtime": "67 ms",
+      "memory": "33.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-moves-to-reach-target-score::python3",
+      "platform": "leetcode",
+      "title": "Minimum Moves to Reach Target Score",
+      "titleSlug": "minimum-moves-to-reach-target-score",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Greedy"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1758374078000,
+      "runtime": "2 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-operations-to-exceed-threshold-value-i::python3",
+      "platform": "leetcode",
+      "title": "Minimum Operations to Exceed Threshold Value I",
+      "titleSlug": "minimum-operations-to-exceed-threshold-value-i",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731268101000,
+      "runtime": "0 ms",
+      "memory": "16.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-path-sum::python3",
+      "platform": "leetcode",
+      "title": "Minimum Path Sum",
+      "titleSlug": "minimum-path-sum",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Matrix"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776706915000,
+      "runtime": "11 ms",
+      "memory": "21.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-positive-sum-subarray::python3",
+      "platform": "leetcode",
+      "title": "Minimum Positive Sum Subarray ",
+      "titleSlug": "minimum-positive-sum-subarray",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Sliding Window",
+        "Prefix Sum"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1732416710000,
+      "runtime": "59 ms",
+      "memory": "16.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-sum-of-mountain-triplets-i::python3",
+      "platform": "leetcode",
+      "title": "Minimum Sum of Mountain Triplets I",
+      "titleSlug": "minimum-sum-of-mountain-triplets-i",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1730047003000,
+      "runtime": "57 ms",
+      "memory": "16.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-sum-of-mountain-triplets-ii::python3",
+      "platform": "leetcode",
+      "title": "Minimum Sum of Mountain Triplets II",
+      "titleSlug": "minimum-sum-of-mountain-triplets-ii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1730049504000,
+      "runtime": "161 ms",
+      "memory": "32.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "minimum-time-to-make-rope-colorful::python3",
+      "platform": "leetcode",
       "title": "Minimum Time to Make Rope Colorful",
       "titleSlug": "minimum-time-to-make-rope-colorful",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
+      "difficulty": "Medium",
       "lang": {
-        "name": "python3",
-        "ext": "python3",
+        "name": "Python3",
+        "ext": "py",
         "slug": "python3"
       },
-      "tags": [],
-      "timestamp": 1777333492000,
+      "tags": [
+        "Array",
+        "String",
+        "Dynamic Programming",
+        "Greedy"
+      ],
+      "topic": "Array",
       "code": "",
-      "url": "https://leetcode.com/problems/minimum-time-to-make-rope-colorful/"
+      "files": [],
+      "timestamp": 1777333492000,
+      "runtime": "88 ms",
+      "memory": "27.5 MB",
+      "skipCommit": true
     },
     {
-      "id": "palindromic-substrings",
+      "id": "missing-number::python3",
+      "platform": "leetcode",
+      "title": "Missing Number",
+      "titleSlug": "missing-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Math",
+        "Binary Search",
+        "Bit Manipulation",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1746510386000,
+      "runtime": "0 ms",
+      "memory": "18.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "modify-columns::pythondata",
+      "platform": "leetcode",
+      "title": "Modify Columns",
+      "titleSlug": "modify-columns",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729837816000,
+      "runtime": "377 ms",
+      "memory": "69.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "most-frequent-even-element::python3",
+      "platform": "leetcode",
+      "title": "Most Frequent Even Element",
+      "titleSlug": "most-frequent-even-element",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731270519000,
+      "runtime": "7 ms",
+      "memory": "17 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "n-th-tribonacci-number::python3",
+      "platform": "leetcode",
+      "title": "N-th Tribonacci Number",
+      "titleSlug": "n-th-tribonacci-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Memoization"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1729191409000,
+      "runtime": "0 ms",
+      "memory": "16.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "next-greater-element-i::python3",
+      "platform": "leetcode",
+      "title": "Next Greater Element I",
+      "titleSlug": "next-greater-element-i",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Stack",
+        "Monotonic Stack"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1748797354000,
+      "runtime": "0 ms",
+      "memory": "18.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "number-of-1-bits::python3",
+      "platform": "leetcode",
+      "title": "Number of 1 Bits",
+      "titleSlug": "number-of-1-bits",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Divide and Conquer",
+        "Bit Manipulation"
+      ],
+      "topic": "Divide and Conquer",
+      "code": "",
+      "files": [],
+      "timestamp": 1748864639000,
+      "runtime": "0 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "number-of-employees-who-met-the-target::python3",
+      "platform": "leetcode",
+      "title": "Number of Employees Who Met the Target",
+      "titleSlug": "number-of-employees-who-met-the-target",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731268425000,
+      "runtime": "0 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "palindrome-number::python3",
+      "platform": "leetcode",
+      "title": "Palindrome Number",
+      "titleSlug": "palindrome-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1723273055000,
+      "runtime": "57 ms",
+      "memory": "16.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "palindromic-substrings::python3",
+      "platform": "leetcode",
       "title": "Palindromic Substrings",
       "titleSlug": "palindromic-substrings",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
+      "difficulty": "Medium",
       "lang": {
-        "name": "python3",
-        "ext": "python3",
+        "name": "Python3",
+        "ext": "py",
         "slug": "python3"
       },
-      "tags": [],
-      "timestamp": 1777331650000,
+      "tags": [
+        "Two Pointers",
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "Two Pointers",
       "code": "",
-      "url": "https://leetcode.com/problems/palindromic-substrings/"
+      "files": [],
+      "timestamp": 1777331650000,
+      "runtime": "207 ms",
+      "memory": "27.3 MB",
+      "skipCommit": true
     },
     {
-      "id": "partition-equal-subset-sum",
+      "id": "partition-equal-subset-sum::python3",
+      "platform": "leetcode",
       "title": "Partition Equal Subset Sum",
       "titleSlug": "partition-equal-subset-sum",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
+      "difficulty": "Medium",
       "lang": {
-        "name": "python3",
-        "ext": "python3",
+        "name": "Python3",
+        "ext": "py",
         "slug": "python3"
       },
-      "tags": [],
-      "timestamp": 1777460975000,
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
       "code": "",
-      "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+      "files": [],
+      "timestamp": 1777460975000,
+      "runtime": "585 ms",
+      "memory": "19.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "pascals-triangle::python3",
+      "platform": "leetcode",
+      "title": "Pascal's Triangle",
+      "titleSlug": "pascals-triangle",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1748798288000,
+      "runtime": "0 ms",
+      "memory": "18 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "perfect-squares::python3",
+      "platform": "leetcode",
+      "title": "Perfect Squares",
+      "titleSlug": "perfect-squares",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Breadth-First Search"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1775882113000,
+      "runtime": "1285 ms",
+      "memory": "19.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "plus-one::python3",
+      "platform": "leetcode",
+      "title": "Plus One",
+      "titleSlug": "plus-one",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Math"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729278249000,
+      "runtime": "0 ms",
+      "memory": "16.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "power-of-four::python3",
+      "platform": "leetcode",
+      "title": "Power of Four",
+      "titleSlug": "power-of-four",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Bit Manipulation",
+        "Recursion"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1748845822000,
+      "runtime": "2 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "power-of-three::python3",
+      "platform": "leetcode",
+      "title": "Power of Three",
+      "titleSlug": "power-of-three",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Recursion"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1748801773000,
+      "runtime": "4 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "power-of-two::python3",
+      "platform": "leetcode",
+      "title": "Power of Two",
+      "titleSlug": "power-of-two",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Bit Manipulation",
+        "Recursion"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1748800884000,
+      "runtime": "0 ms",
+      "memory": "17.7 MB",
+      "skipCommit": true
     },
     {
       "id": "product-sales-analysis-i",
@@ -308,6 +3516,52 @@
       "url": "https://leetcode.com/problems/product-sales-analysis-i/"
     },
     {
+      "id": "product-sales-analysis-i::mysql",
+      "platform": "leetcode",
+      "title": "Product Sales Analysis I",
+      "titleSlug": "product-sales-analysis-i",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777095239000,
+      "runtime": "1254 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "ransom-note::python3",
+      "platform": "leetcode",
+      "title": "Ransom Note",
+      "titleSlug": "ransom-note",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "String",
+        "Counting"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1746479514000,
+      "runtime": "16 ms",
+      "memory": "18.1 MB",
+      "skipCommit": true
+    },
+    {
       "id": "recyclable-and-low-fat-products",
       "title": "Recyclable and Low Fat Products",
       "titleSlug": "recyclable-and-low-fat-products",
@@ -322,6 +3576,94 @@
       "timestamp": 1777045102000,
       "code": "",
       "url": "https://leetcode.com/problems/recyclable-and-low-fat-products/"
+    },
+    {
+      "id": "recyclable-and-low-fat-products::mysql",
+      "platform": "leetcode",
+      "title": "Recyclable and Low Fat Products",
+      "titleSlug": "recyclable-and-low-fat-products",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777045102000,
+      "runtime": "627 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "remove-duplicates-from-sorted-array::python3",
+      "platform": "leetcode",
+      "title": "Remove Duplicates from Sorted Array",
+      "titleSlug": "remove-duplicates-from-sorted-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729192119000,
+      "runtime": "58 ms",
+      "memory": "18 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "remove-element::python3",
+      "platform": "leetcode",
+      "title": "Remove Element",
+      "titleSlug": "remove-element",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729192238000,
+      "runtime": "0 ms",
+      "memory": "16.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "rename-columns::pythondata",
+      "platform": "leetcode",
+      "title": "Rename Columns",
+      "titleSlug": "rename-columns",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729838137000,
+      "runtime": "332 ms",
+      "memory": "69.5 MB",
+      "skipCommit": true
     },
     {
       "id": "replace-employee-id-with-the-unique-identifier",
@@ -340,6 +3682,222 @@
       "url": "https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/"
     },
     {
+      "id": "replace-employee-id-with-the-unique-identifier::mysql",
+      "platform": "leetcode",
+      "title": "Replace Employee ID With The Unique Identifier",
+      "titleSlug": "replace-employee-id-with-the-unique-identifier",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
+      "code": "",
+      "files": [],
+      "timestamp": 1777093595000,
+      "runtime": "1229 ms",
+      "memory": "0.0B",
+      "skipCommit": true
+    },
+    {
+      "id": "reshape-data-concatenate::pythondata",
+      "platform": "leetcode",
+      "title": "Reshape Data: Concatenate",
+      "titleSlug": "reshape-data-concatenate",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729838819000,
+      "runtime": "443 ms",
+      "memory": "69 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "reshape-data-melt::pythondata",
+      "platform": "leetcode",
+      "title": "Reshape Data: Melt",
+      "titleSlug": "reshape-data-melt",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729937409000,
+      "runtime": "375 ms",
+      "memory": "69.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "reshape-data-pivot::pythondata",
+      "platform": "leetcode",
+      "title": "Reshape Data: Pivot",
+      "titleSlug": "reshape-data-pivot",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729872212000,
+      "runtime": "464 ms",
+      "memory": "70.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "return-length-of-arguments-passed::javascript",
+      "platform": "leetcode",
+      "title": "Return Length of Arguments Passed",
+      "titleSlug": "return-length-of-arguments-passed",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "JavaScript",
+        "ext": "js",
+        "slug": "javascript"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1723361457000,
+      "runtime": "52 ms",
+      "memory": "48.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "reverse-bits::python3",
+      "platform": "leetcode",
+      "title": "Reverse Bits",
+      "titleSlug": "reverse-bits",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Divide and Conquer",
+        "Bit Manipulation"
+      ],
+      "topic": "Divide and Conquer",
+      "code": "",
+      "files": [],
+      "timestamp": 1748800142000,
+      "runtime": "46 ms",
+      "memory": "17.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "reverse-integer::python3",
+      "platform": "leetcode",
+      "title": "Reverse Integer",
+      "titleSlug": "reverse-integer",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1725076382000,
+      "runtime": "36 ms",
+      "memory": "16.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "reverse-linked-list::python3",
+      "platform": "leetcode",
+      "title": "Reverse Linked List",
+      "titleSlug": "reverse-linked-list",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Linked List",
+        "Recursion"
+      ],
+      "topic": "Linked List",
+      "code": "",
+      "files": [],
+      "timestamp": 1775973487000,
+      "runtime": "3 ms",
+      "memory": "20.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "reverse-string::cpp",
+      "platform": "leetcode",
+      "title": "Reverse String",
+      "titleSlug": "reverse-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C++",
+        "ext": "cpp",
+        "slug": "cpp"
+      },
+      "tags": [
+        "Two Pointers",
+        "String"
+      ],
+      "topic": "Two Pointers",
+      "code": "",
+      "files": [],
+      "timestamp": 1704614743000,
+      "runtime": "21 ms",
+      "memory": "23.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "rings-and-rods::python3",
+      "platform": "leetcode",
+      "title": "Rings and Rods",
+      "titleSlug": "rings-and-rods",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "String"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1729424179000,
+      "runtime": "0 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
       "id": "rising-temperature",
       "title": "Rising Temperature",
       "titleSlug": "rising-temperature",
@@ -356,52 +3914,962 @@
       "url": "https://leetcode.com/problems/rising-temperature/"
     },
     {
-      "id": "stone-game",
-      "title": "Stone Game",
-      "titleSlug": "stone-game",
+      "id": "rising-temperature::mysql",
       "platform": "leetcode",
-      "difficulty": "Unknown",
+      "title": "Rising Temperature",
+      "titleSlug": "rising-temperature",
+      "difficulty": "Easy",
       "lang": {
-        "name": "python3",
-        "ext": "python3",
-        "slug": "python3"
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
       },
-      "tags": [],
-      "timestamp": 1777218408000,
+      "tags": [
+        "Database"
+      ],
+      "topic": "Database",
       "code": "",
-      "url": "https://leetcode.com/problems/stone-game/"
+      "files": [],
+      "timestamp": 1777107821000,
+      "runtime": "496 ms",
+      "memory": "0.0B",
+      "skipCommit": true
     },
     {
-      "id": "stone-game-vii",
+      "id": "roman-to-integer::python3",
+      "platform": "leetcode",
+      "title": "Roman to Integer",
+      "titleSlug": "roman-to-integer",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "Math",
+        "String"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1723471216000,
+      "runtime": "56 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "score-of-a-string::c",
+      "platform": "leetcode",
+      "title": "Score of a String",
+      "titleSlug": "score-of-a-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "C",
+        "ext": "c",
+        "slug": "c"
+      },
+      "tags": [
+        "String"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1713448827000,
+      "runtime": "0 ms",
+      "memory": "5.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "score-of-a-string::java",
+      "platform": "leetcode",
+      "title": "Score of a String",
+      "titleSlug": "score-of-a-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "String"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1713453923000,
+      "runtime": "1 ms",
+      "memory": "42.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "score-of-a-string::python3",
+      "platform": "leetcode",
+      "title": "Score of a String",
+      "titleSlug": "score-of-a-string",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1713449268000,
+      "runtime": "32 ms",
+      "memory": "16.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "search-in-rotated-sorted-array-ii::python3",
+      "platform": "leetcode",
+      "title": "Search in Rotated Sorted Array II",
+      "titleSlug": "search-in-rotated-sorted-array-ii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767187029000,
+      "runtime": "0 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "search-in-rotated-sorted-array::python3",
+      "platform": "leetcode",
+      "title": "Search in Rotated Sorted Array",
+      "titleSlug": "search-in-rotated-sorted-array",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1767187867000,
+      "runtime": "0 ms",
+      "memory": "17.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "search-insert-position::python3",
+      "platform": "leetcode",
+      "title": "Search Insert Position",
+      "titleSlug": "search-insert-position",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Binary Search"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729281793000,
+      "runtime": "0 ms",
+      "memory": "17.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "select-data::pythondata",
+      "platform": "leetcode",
+      "title": "Select Data",
+      "titleSlug": "select-data",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "pythondata",
+        "ext": "txt",
+        "slug": "pythondata"
+      },
+      "tags": [],
+      "topic": "Uncategorized",
+      "code": "",
+      "files": [],
+      "timestamp": 1729715616000,
+      "runtime": "322 ms",
+      "memory": "70.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "shift-distance-between-two-strings::python3",
+      "platform": "leetcode",
+      "title": "Shift Distance Between Two Strings",
+      "titleSlug": "shift-distance-between-two-strings",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "String",
+        "Prefix Sum"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1732373827000,
+      "runtime": "2445 ms",
+      "memory": "17.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "shortest-common-supersequence::python3",
+      "platform": "leetcode",
+      "title": "Shortest Common Supersequence ",
+      "titleSlug": "shortest-common-supersequence",
+      "difficulty": "Hard",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Dynamic Programming"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1776968026000,
+      "runtime": "342 ms",
+      "memory": "44.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "single-number-ii::python3",
+      "platform": "leetcode",
+      "title": "Single Number II",
+      "titleSlug": "single-number-ii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Bit Manipulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729373096000,
+      "runtime": "0 ms",
+      "memory": "18.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "single-number-iii::python3",
+      "platform": "leetcode",
+      "title": "Single Number III",
+      "titleSlug": "single-number-iii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Bit Manipulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729373179000,
+      "runtime": "2 ms",
+      "memory": "18.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "single-number::python3",
+      "platform": "leetcode",
+      "title": "Single Number",
+      "titleSlug": "single-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Bit Manipulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729372978000,
+      "runtime": "13 ms",
+      "memory": "18.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "slowest-key::python3",
+      "platform": "leetcode",
+      "title": "Slowest Key",
+      "titleSlug": "slowest-key",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "String"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1746553615000,
+      "runtime": "0 ms",
+      "memory": "17.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "smallest-missing-integer-greater-than-sequential-prefix-sum::python3",
+      "platform": "leetcode",
+      "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",
+      "titleSlug": "smallest-missing-integer-greater-than-sequential-prefix-sum",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1748773293000,
+      "runtime": "0 ms",
+      "memory": "17.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "smallest-number-in-infinite-set::python3",
+      "platform": "leetcode",
+      "title": "Smallest Number in Infinite Set",
+      "titleSlug": "smallest-number-in-infinite-set",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "Design",
+        "Heap (Priority Queue)",
+        "Ordered Set"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1758373115000,
+      "runtime": "22 ms",
+      "memory": "18.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "solving-questions-with-brainpower::python3",
+      "platform": "leetcode",
+      "title": "Solving Questions With Brainpower",
+      "titleSlug": "solving-questions-with-brainpower",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776658842000,
+      "runtime": "67 ms",
+      "memory": "55.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "sort-characters-by-frequency::python3",
+      "platform": "leetcode",
+      "title": "Sort Characters By Frequency",
+      "titleSlug": "sort-characters-by-frequency",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Hash Table",
+        "String",
+        "Sorting",
+        "Heap (Priority Queue)",
+        "Bucket Sort",
+        "Counting"
+      ],
+      "topic": "Hash Table",
+      "code": "",
+      "files": [],
+      "timestamp": 1732127378000,
+      "runtime": "6 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "split-the-array::java",
+      "platform": "leetcode",
+      "title": "Split the Array",
+      "titleSlug": "split-the-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731249926000,
+      "runtime": "2 ms",
+      "memory": "42.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "split-the-array::python",
+      "platform": "leetcode",
+      "title": "Split the Array",
+      "titleSlug": "split-the-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python",
+        "ext": "py",
+        "slug": "python"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731250114000,
+      "runtime": "8 ms",
+      "memory": "11.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "split-the-array::python3",
+      "platform": "leetcode",
+      "title": "Split the Array",
+      "titleSlug": "split-the-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Counting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1731250137000,
+      "runtime": "0 ms",
+      "memory": "16.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "sqrtx::python3",
+      "platform": "leetcode",
+      "title": "Sqrt(x)",
+      "titleSlug": "sqrtx",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Binary Search"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1755092258000,
+      "runtime": "3 ms",
+      "memory": "17.8 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "squares-of-a-sorted-array::java",
+      "platform": "leetcode",
+      "title": "Squares of a Sorted Array",
+      "titleSlug": "squares-of-a-sorted-array",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Java",
+        "ext": "java",
+        "slug": "java"
+      },
+      "tags": [
+        "Array",
+        "Two Pointers",
+        "Sorting"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1708183559000,
+      "runtime": "8 ms",
+      "memory": "47.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "stone-game-vii::python3",
+      "platform": "leetcode",
       "title": "Stone Game VII",
       "titleSlug": "stone-game-vii",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
+      "difficulty": "Medium",
       "lang": {
-        "name": "python3",
-        "ext": "python3",
+        "name": "Python3",
+        "ext": "py",
         "slug": "python3"
       },
-      "tags": [],
-      "timestamp": 1777217330000,
+      "tags": [
+        "Array",
+        "Math",
+        "Dynamic Programming",
+        "Game Theory"
+      ],
+      "topic": "Array",
       "code": "",
-      "url": "https://leetcode.com/problems/stone-game-vii/"
+      "files": [],
+      "timestamp": 1777217330000,
+      "runtime": "1386 ms",
+      "memory": "42.9 MB",
+      "skipCommit": true
     },
     {
-      "id": "target-sum",
-      "title": "Target Sum",
-      "titleSlug": "target-sum",
+      "id": "stone-game::python3",
       "platform": "leetcode",
-      "difficulty": "Unknown",
+      "title": "Stone Game",
+      "titleSlug": "stone-game",
+      "difficulty": "Medium",
       "lang": {
-        "name": "python3",
-        "ext": "python3",
+        "name": "Python3",
+        "ext": "py",
         "slug": "python3"
       },
-      "tags": [],
-      "timestamp": 1777463681000,
+      "tags": [
+        "Array",
+        "Math",
+        "Dynamic Programming",
+        "Game Theory"
+      ],
+      "topic": "Array",
       "code": "",
-      "url": "https://leetcode.com/problems/target-sum/"
+      "files": [],
+      "timestamp": 1777218408000,
+      "runtime": "131 ms",
+      "memory": "25.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "string-to-integer-atoi::python3",
+      "platform": "leetcode",
+      "title": "String to Integer (atoi)",
+      "titleSlug": "string-to-integer-atoi",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1723360999000,
+      "runtime": "39 ms",
+      "memory": "16.7 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "sum-of-digits-of-string-after-convert::python3",
+      "platform": "leetcode",
+      "title": "Sum of Digits of String After Convert",
+      "titleSlug": "sum-of-digits-of-string-after-convert",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Simulation"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1729415590000,
+      "runtime": "3 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "target-sum::python3",
+      "platform": "leetcode",
+      "title": "Target Sum",
+      "titleSlug": "target-sum",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Backtracking"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1777463681000,
+      "runtime": "15 ms",
+      "memory": "19.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "tenth-line::bash",
+      "platform": "leetcode",
+      "title": "Tenth Line",
+      "titleSlug": "tenth-line",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Bash",
+        "ext": "sh",
+        "slug": "bash"
+      },
+      "tags": [
+        "Shell"
+      ],
+      "topic": "Shell",
+      "code": "",
+      "files": [],
+      "timestamp": 1748870903000,
+      "runtime": "21 ms",
+      "memory": "4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "top-k-frequent-elements::python3",
+      "platform": "leetcode",
+      "title": "Top K Frequent Elements",
+      "titleSlug": "top-k-frequent-elements",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table",
+        "Divide and Conquer",
+        "Sorting",
+        "Heap (Priority Queue)",
+        "Bucket Sort",
+        "Counting",
+        "Quickselect"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1732126927000,
+      "runtime": "3 ms",
+      "memory": "20.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "total-hamming-distance::python3",
+      "platform": "leetcode",
+      "title": "Total Hamming Distance",
+      "titleSlug": "total-hamming-distance",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Math",
+        "Bit Manipulation"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1748869685000,
+      "runtime": "114 ms",
+      "memory": "20.1 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "triangle::python3",
+      "platform": "leetcode",
+      "title": "Triangle",
+      "titleSlug": "triangle",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776574519000,
+      "runtime": "0 ms",
+      "memory": "20.2 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "two-sum::python3",
+      "platform": "leetcode",
+      "title": "Two Sum",
+      "titleSlug": "two-sum",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Hash Table"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1729613082000,
+      "runtime": "0 ms",
+      "memory": "17.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "ugly-number::python3",
+      "platform": "leetcode",
+      "title": "Ugly Number",
+      "titleSlug": "ugly-number",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1746508341000,
+      "runtime": "0 ms",
+      "memory": "17.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "uncrossed-lines::python3",
+      "platform": "leetcode",
+      "title": "Uncrossed Lines",
+      "titleSlug": "uncrossed-lines",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776857356000,
+      "runtime": "47 ms",
+      "memory": "19.5 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "unique-paths-ii::python3",
+      "platform": "leetcode",
+      "title": "Unique Paths II",
+      "titleSlug": "unique-paths-ii",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Matrix"
+      ],
+      "topic": "Array",
+      "code": "",
+      "files": [],
+      "timestamp": 1776706156000,
+      "runtime": "0 ms",
+      "memory": "19.3 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "unique-paths::python3",
+      "platform": "leetcode",
+      "title": "Unique Paths",
+      "titleSlug": "unique-paths",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "Math",
+        "Dynamic Programming",
+        "Combinatorics"
+      ],
+      "topic": "Math",
+      "code": "",
+      "files": [],
+      "timestamp": 1775832660000,
+      "runtime": "0 ms",
+      "memory": "19.4 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "valid-parentheses::python3",
+      "platform": "leetcode",
+      "title": "Valid Parentheses",
+      "titleSlug": "valid-parentheses",
+      "difficulty": "Easy",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String",
+        "Stack"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1729447151000,
+      "runtime": "4 ms",
+      "memory": "16.6 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "word-frequency::bash",
+      "platform": "leetcode",
+      "title": "Word Frequency",
+      "titleSlug": "word-frequency",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Bash",
+        "ext": "sh",
+        "slug": "bash"
+      },
+      "tags": [
+        "Shell"
+      ],
+      "topic": "Shell",
+      "code": "",
+      "files": [],
+      "timestamp": 1748870128000,
+      "runtime": "86 ms",
+      "memory": "3.9 MB",
+      "skipCommit": true
+    },
+    {
+      "id": "zigzag-conversion::python3",
+      "platform": "leetcode",
+      "title": "Zigzag Conversion",
+      "titleSlug": "zigzag-conversion",
+      "difficulty": "Medium",
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "tags": [
+        "String"
+      ],
+      "topic": "String",
+      "code": "",
+      "files": [],
+      "timestamp": 1730981168000,
+      "runtime": "11 ms",
+      "memory": "16.7 MB",
+      "skipCommit": true
     }
   ]
 }
