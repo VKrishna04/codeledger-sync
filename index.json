@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-03T12:29:06.047Z",
+  "updatedAt": "2026-05-03T12:30:07.986Z",
   "stats": {
     "total": 211,
     "easy": 127,
@@ -3876,32 +3876,48 @@
       "skipCommit": true
     },
     {
-      "id": "get-the-size-of-a-dataframe::pythondata",
       "platform": "leetcode",
+      "id": "get-the-size-of-a-dataframe::pythondata",
+      "submissionId": null,
       "title": "Get the Size of a DataFrame",
       "titleSlug": "get-the-size-of-a-dataframe",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef getDataframeSize(players: pd.DataFrame) -> List[int]:\n    return list(players.shape)",
+      "files": [
+        {
+          "path": "topics/Untagged/get-the-size-of-a-dataframe/Pandas.txt",
+          "content": "import pandas as pd\n\ndef getDataframeSize(players: pd.DataFrame) -> List[int]:\n    return list(players.shape)"
+        },
+        {
+          "path": "topics/Untagged/get-the-size-of-a-dataframe/README.md",
+          "content": "# [2878] Get the Size of a DataFrame\n**Difficulty:** Easy  |  **Acceptance:** 84.8%  |  **Likes:** 156 / **Dislikes:** 14\n**Tags:** —\n## Problem\nDataFrame players:\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| player_id   | int    |\n| name        | object |\n| age         | int    |\n| position    | object |\n| ...         | ...    |\n+-------------+--------+\n\nWrite a solution to calculate and display the number of rows and columns of players.\n\nReturn the result as an array:\n\n[number of rows, number of columns]\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput:\n+-----------+----------+-----+-------------+--------------------+\n| player_id | name     | age | position    | team               |\n+-----------+----------+-----+-------------+--------------------+\n| 846       | Mason    | 21  | Forward     | RealMadrid         |\n| 749       | Riley    | 30  | Winger      | Barcelona          |\n| 155       | Bob      | 28  | Striker     | ManchesterUnited   |\n| 583       | Isabella | 32  | Goalkeeper  | Liverpool          |\n| 388       | Zachary  | 24  | Midfielder  | BayernMunich       |\n| 883       | Ava      | 23  | Defender    | Chelsea            |\n| 355       | Violet   | 18  | Striker     | Juventus           |\n| 247       | Thomas   | 27  | Striker     | ParisSaint-Germain |\n| 761       | Jack     | 33  | Midfielder  | ManchesterCity     |\n| 642       | Charlie  | 36  | Center-back | Arsenal            |\n+-----------+----------+-----+-------------+--------------------+\nOutput:\n[10, 5]\nExplanation:\nThis DataFrame contains 10 rows and 5 columns.\n## My Submission\n\n- Runtime: 356 ms (beats 5.3%)\n- Memory: 68.8 MB (beats 5.3%)\n"
+        },
+        {
+          "path": "topics/Untagged/get-the-size-of-a-dataframe/hints.md",
+          "content": "# Hints — Get the Size of a DataFrame\n\n### Hint 1\n\nConsider using a built-in function in pandas library to get the size of a DataFrame.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715393000,
       "runtime": "356 ms",
       "memory": "68.8 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.267199999999959,
+      "memoryPct": 5.308700000000002,
+      "timestamp": 1729715393000,
+      "acRate": 84.81556146521405,
+      "likes": 156,
+      "dislikes": 14,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame <code>players:</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| player_id   | int    |\n| name        | object |\n| age         | int    |\n| position    | object |\n| ...         | ...    |\n+-------------+--------+\n</pre>\n\n<p>Write a solution to calculate and display the <strong>number of rows and columns</strong> of <code>players</code>.</p>\n\n<p>Return the result as an array:</p>\n\n<p><code>[number of rows, number of columns]</code></p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:\n</strong>+-----------+----------+-----+-------------+--------------------+\n| player_id | name     | age | position    | team               |\n+-----------+----------+-----+-------------+--------------------+\n| 846       | Mason    | 21  | Forward     | RealMadrid         |\n| 749       | Riley    | 30  | Winger      | Barcelona          |\n| 155       | Bob      | 28  | Striker     | ManchesterUnited   |\n| 583       | Isabella | 32  | Goalkeeper  | Liverpool          |\n| 388       | Zachary  | 24  | Midfielder  | BayernMunich       |\n| 883       | Ava      | 23  | Defender    | Chelsea            |\n| 355       | Violet   | 18  | Striker     | Juventus           |\n| 247       | Thomas   | 27  | Striker     | ParisSaint-Germain |\n| 761       | Jack     | 33  | Midfielder  | ManchesterCity     |\n| 642       | Charlie  | 36  | Center-back | Arsenal            |\n+-----------+----------+-----+-------------+--------------------+<strong>\nOutput:\n</strong>[10, 5]\n<strong>Explanation:</strong>\nThis DataFrame contains 10 rows and 5 columns.\n</pre>\n",
-      "hints": [
-        "Consider using a built-in function in pandas library to get the size of a DataFrame."
-      ],
-      "acRate": 84.81418041478315,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/get-the-size-of-a-dataframe/submissions/"
     },
     {
       "id": "greatest-common-divisor-of-strings::python3",
