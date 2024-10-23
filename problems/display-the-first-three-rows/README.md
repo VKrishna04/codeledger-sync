@@ -1,11 +1,7 @@
-# Display the First Three Rows
-
-**Difficulty:** Easy  |  **Acceptance:** 93.0%
-
+# [2879] Display the First Three Rows
+**Difficulty:** Easy  |  **Acceptance:** 93.0%  |  **Likes:** 123 / **Dislikes:** 26
 **Tags:** —
-
 ## Problem
-
 DataFrame: employees
 +-------------+--------+
 | Column Name | Type   |
@@ -43,8 +39,8 @@ Output:
 +-------------+---------+-------------+--------+
 Explanation: 
 Only the first 3 rows are displayed.
-
 ## My Submission
 
-- Runtime: 436 ms
-- Memory: 68.9 MB
+- Runtime: 436 ms (beats 5.0%)
+- Memory: 68.9 MB (beats 11.6%)
+- Solve time: 19s
