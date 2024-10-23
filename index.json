@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-03T16:16:00.471Z",
+  "updatedAt": "2026-05-03T16:17:23.327Z",
   "stats": {
     "total": 211,
     "easy": 127,
@@ -2466,32 +2466,48 @@
       "skipCommit": true
     },
     {
-      "id": "display-the-first-three-rows::pythondata",
       "platform": "leetcode",
+      "id": "display-the-first-three-rows::pythondata",
+      "submissionId": null,
       "title": "Display the First Three Rows",
       "titleSlug": "display-the-first-three-rows",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:\n    return employees.head(3)",
+      "files": [
+        {
+          "path": "topics/Untagged/display-the-first-three-rows/Pandas.txt",
+          "content": "import pandas as pd\n\ndef selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:\n    return employees.head(3)"
+        },
+        {
+          "path": "topics/Untagged/display-the-first-three-rows/README.md",
+          "content": "# [2879] Display the First Three Rows\n**Difficulty:** Easy  |  **Acceptance:** 93.0%  |  **Likes:** 123 / **Dislikes:** 26\n**Tags:** —\n## Problem\nDataFrame: employees\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| employee_id | int    |\n| name        | object |\n| department  | object |\n| salary      | int    |\n+-------------+--------+\n\nWrite a solution to display the first 3 rows of this DataFrame.\n\n&nbsp;\nExample 1:\n\nInput:\nDataFrame employees\n+-------------+-----------+-----------------------+--------+\n| employee_id | name      | department            | salary |\n+-------------+-----------+-----------------------+--------+\n| 3           | Bob       | Operations            | 48675  |\n| 90          | Alice     | Sales                 | 11096  |\n| 9           | Tatiana   | Engineering           | 33805  |\n| 60          | Annabelle | InformationTechnology | 37678  |\n| 49          | Jonathan  | HumanResources        | 23793  |\n| 43          | Khaled    | Administration        | 40454  |\n+-------------+-----------+-----------------------+--------+\nOutput:\n+-------------+---------+-------------+--------+\n| employee_id | name    | department  | salary |\n+-------------+---------+-------------+--------+\n| 3           | Bob     | Operations  | 48675  |\n| 90          | Alice   | Sales       | 11096  |\n| 9           | Tatiana | Engineering | 33805  |\n+-------------+---------+-------------+--------+\nExplanation: \nOnly the first 3 rows are displayed.\n## My Submission\n\n- Runtime: 436 ms (beats 5.2%)\n- Memory: 68.9 MB (beats 12.1%)\n"
+        },
+        {
+          "path": "topics/Untagged/display-the-first-three-rows/hints.md",
+          "content": "# Hints — Display the First Three Rows\n\n### Hint 1\n\nConsider using a built-in function in pandas library to retrieve the initial rows.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715470000,
       "runtime": "436 ms",
       "memory": "68.9 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.173100000000005,
+      "memoryPct": 12.09430000000002,
+      "timestamp": 1729715470000,
+      "acRate": 92.9772946158819,
+      "likes": 123,
+      "dislikes": 26,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame: <code>employees</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| employee_id | int    |\n| name        | object |\n| department  | object |\n| salary      | int    |\n+-------------+--------+\n</pre>\n\n<p>Write a solution to display the <strong>first <code>3</code> </strong>rows<strong> </strong>of this DataFrame.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:\n</strong>DataFrame employees\n+-------------+-----------+-----------------------+--------+\n| employee_id | name      | department            | salary |\n+-------------+-----------+-----------------------+--------+\n| 3           | Bob       | Operations            | 48675  |\n| 90          | Alice     | Sales                 | 11096  |\n| 9           | Tatiana   | Engineering           | 33805  |\n| 60          | Annabelle | InformationTechnology | 37678  |\n| 49          | Jonathan  | HumanResources        | 23793  |\n| 43          | Khaled    | Administration        | 40454  |\n+-------------+-----------+-----------------------+--------+\n<strong>Output:</strong>\n+-------------+---------+-------------+--------+\n| employee_id | name    | department  | salary |\n+-------------+---------+-------------+--------+\n| 3           | Bob     | Operations  | 48675  |\n| 90          | Alice   | Sales       | 11096  |\n| 9           | Tatiana | Engineering | 33805  |\n+-------------+---------+-------------+--------+\n<strong>Explanation:</strong> \nOnly the first 3 rows are displayed.</pre>\n",
-      "hints": [
-        "Consider using a built-in function in pandas library to retrieve the initial rows."
-      ],
-      "acRate": 92.97359872527356,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/display-the-first-three-rows/submissions/"
     },
     {
       "id": "distinct-subsequences::python3",
@@ -2535,60 +2551,92 @@
       "skipCommit": true
     },
     {
-      "id": "drop-duplicate-rows::pythondata",
       "platform": "leetcode",
+      "id": "drop-duplicate-rows::pythondata",
+      "submissionId": null,
       "title": "Drop Duplicate Rows",
       "titleSlug": "drop-duplicate-rows",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:\n    return customers.drop_duplicates(subset = \"email\")",
+      "files": [
+        {
+          "path": "topics/Untagged/drop-duplicate-rows/Pandas.txt",
+          "content": "import pandas as pd\n\ndef dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:\n    return customers.drop_duplicates(subset = \"email\")"
+        },
+        {
+          "path": "topics/Untagged/drop-duplicate-rows/README.md",
+          "content": "# [2882] Drop Duplicate Rows\n**Difficulty:** Easy  |  **Acceptance:** 85.1%  |  **Likes:** 134 / **Dislikes:** 6\n**Tags:** —\n## Problem\nDataFrame customers\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| customer_id | int    |\n| name        | object |\n| email       | object |\n+-------------+--------+\n\nThere are some duplicate rows in the DataFrame based on the email column.\n\nWrite a solution to remove these duplicate rows and keep only the first occurrence.\n\nThe result format is in the following example.\n\n&nbsp;\n\nExample 1:\nInput:\n+-------------+---------+---------------------+\n| customer_id | name    | email               |\n+-------------+---------+---------------------+\n| 1           | Ella    | emily@example.com   |\n| 2           | David   | michael@example.com |\n| 3           | Zachary | sarah@example.com   |\n| 4           | Alice   | john@example.com    |\n| 5           | Finn    | john@example.com    |\n| 6           | Violet  | alice@example.com   |\n+-------------+---------+---------------------+\nOutput:  \n+-------------+---------+---------------------+\n| customer_id | name    | email               |\n+-------------+---------+---------------------+\n| 1           | Ella    | emily@example.com   |\n| 2           | David   | michael@example.com |\n| 3           | Zachary | sarah@example.com   |\n| 4           | Alice   | john@example.com    |\n| 6           | Violet  | alice@example.com   |\n+-------------+---------+---------------------+\nExplanation:\nAlic (customer_id = 4) and Finn (customer_id = 5) both use john@example.com, so only the first occurrence of this email is retained.\n## My Submission\n\n- Runtime: 393 ms (beats 5.0%)\n- Memory: 69.8 MB (beats 11.9%)\n"
+        },
+        {
+          "path": "topics/Untagged/drop-duplicate-rows/hints.md",
+          "content": "# Hints — Drop Duplicate Rows\n\n### Hint 1\n\nConsider using a build-in function in pandas library to remove the duplicate rows based on specified data.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729795647000,
       "runtime": "393 ms",
       "memory": "69.8 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.000800000000092,
+      "memoryPct": 11.881399999999974,
+      "timestamp": 1729795647000,
+      "acRate": 85.13343562896772,
+      "likes": 134,
+      "dislikes": 6,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame customers\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| customer_id | int    |\n| name        | object |\n| email       | object |\n+-------------+--------+\n</pre>\n\n<p>There are some duplicate rows in the DataFrame based on the <code>email</code> column.</p>\n\n<p>Write a solution to remove these duplicate rows and keep only the <strong>first</strong> occurrence.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<pre>\n<strong class=\"example\">Example 1:</strong>\n<strong>Input:</strong>\n+-------------+---------+---------------------+\n| customer_id | name    | email               |\n+-------------+---------+---------------------+\n| 1           | Ella    | emily@example.com   |\n| 2           | David   | michael@example.com |\n| 3           | Zachary | sarah@example.com   |\n| 4           | Alice   | john@example.com    |\n| 5           | Finn    | john@example.com    |\n| 6           | Violet  | alice@example.com   |\n+-------------+---------+---------------------+\n<strong>Output: </strong> \n+-------------+---------+---------------------+\n| customer_id | name    | email               |\n+-------------+---------+---------------------+\n| 1           | Ella    | emily@example.com   |\n| 2           | David   | michael@example.com |\n| 3           | Zachary | sarah@example.com   |\n| 4           | Alice   | john@example.com    |\n| 6           | Violet  | alice@example.com   |\n+-------------+---------+---------------------+\n<strong>Explanation:</strong>\nAlic (customer_id = 4) and Finn (customer_id = 5) both use john@example.com, so only the first occurrence of this email is retained.\n</pre>\n",
-      "hints": [
-        "Consider using a build-in function in pandas library to remove the duplicate rows based on specified data."
-      ],
-      "acRate": 85.1340608513406,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/drop-duplicate-rows/submissions/"
     },
     {
-      "id": "drop-missing-data::pythondata",
       "platform": "leetcode",
+      "id": "drop-missing-data::pythondata",
+      "submissionId": null,
       "title": "Drop Missing Data",
       "titleSlug": "drop-missing-data",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef dropMissingData(students: pd.DataFrame) -> pd.DataFrame:\n    return students.dropna(subset = 'name')",
+      "files": [
+        {
+          "path": "topics/Untagged/drop-missing-data/Pandas.txt",
+          "content": "import pandas as pd\n\ndef dropMissingData(students: pd.DataFrame) -> pd.DataFrame:\n    return students.dropna(subset = 'name')"
+        },
+        {
+          "path": "topics/Untagged/drop-missing-data/README.md",
+          "content": "# [2883] Drop Missing Data\n**Difficulty:** Easy  |  **Acceptance:** 64.5%  |  **Likes:** 103 / **Dislikes:** 7\n**Tags:** —\n## Problem\nDataFrame students\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\nThere are some rows having missing values in the name column.\n\nWrite a solution to remove the rows with missing values.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput:\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 32         | Piper   | 5   |\n| 217        | None    | 19  |\n| 779        | Georgia | 20  |\n| 849        | Willow  | 14  |\n+------------+---------+-----+\nOutput:\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 32         | Piper   | 5   |\n| 779        | Georgia | 20  | \n| 849        | Willow  | 14  | \n+------------+---------+-----+\nExplanation: \nStudent with id 217 havs empty value in the name column, so it will be removed.\n## My Submission\n\n- Runtime: 393 ms (beats 5.2%)\n- Memory: 70.1 MB (beats 6.8%)\n"
+        },
+        {
+          "path": "topics/Untagged/drop-missing-data/hints.md",
+          "content": "# Hints — Drop Missing Data\n\n### Hint 1\n\nConsider using a build-in function in pandas library to remove the rows with missing values based on specified data.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729837664000,
       "runtime": "393 ms",
       "memory": "70.1 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.173500000000017,
+      "memoryPct": 6.771299999999989,
+      "timestamp": 1729837664000,
+      "acRate": 64.53463372683919,
+      "likes": 103,
+      "dislikes": 7,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame students\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n</pre>\n\n<p>There are some rows having missing values in the <code>name</code> column.</p>\n\n<p>Write a solution to remove the rows with missing values.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:\n</strong>+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 32         | Piper   | 5   |\n| 217        | None    | 19  |\n| 779        | Georgia | 20  |\n| 849        | Willow  | 14  |\n+------------+---------+-----+\n<strong>Output:\n</strong>+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 32         | Piper   | 5   |\n| 779        | Georgia | 20  | \n| 849        | Willow  | 14  | \n+------------+---------+-----+\n<strong>Explanation:</strong> \nStudent with id 217 havs empty value in the name column, so it will be removed.</pre>\n",
-      "hints": [
-        "Consider using a build-in function in pandas library to remove the rows with missing values based on specified data."
-      ],
-      "acRate": 64.53171614417764,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/drop-missing-data/submissions/"
     },
     {
       "id": "dungeon-game::python3",
@@ -9092,32 +9140,48 @@
       "skipCommit": true
     },
     {
-      "id": "select-data::pythondata",
       "platform": "leetcode",
+      "id": "select-data::pythondata",
+      "submissionId": null,
       "title": "Select Data",
       "titleSlug": "select-data",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef selectData(students: pd.DataFrame) -> pd.DataFrame:\n    return students.loc[students[\"student_id\"]==101,[\"name\",\"age\"]]",
+      "files": [
+        {
+          "path": "topics/Untagged/select-data/Pandas.txt",
+          "content": "import pandas as pd\n\ndef selectData(students: pd.DataFrame) -> pd.DataFrame:\n    return students.loc[students[\"student_id\"]==101,[\"name\",\"age\"]]"
+        },
+        {
+          "path": "topics/Untagged/select-data/README.md",
+          "content": "# [2880] Select Data\n**Difficulty:** Easy  |  **Acceptance:** 78.5%  |  **Likes:** 136 / **Dislikes:** 8\n**Tags:** —\n## Problem\nDataFrame students\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\nWrite a solution to select the name and age of the student with student_id = 101.\n\nThe result format is in the following example.\n\n&nbsp;\n\nExample 1:\nInput:\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 101        | Ulysses | 13  |\n| 53         | William | 10  |\n| 128        | Henry   | 6   |\n| 3          | Henry   | 11  |\n+------------+---------+-----+\nOutput:\n+---------+-----+\n| name    | age | \n+---------+-----+\n| Ulysses | 13  |\n+---------+-----+\nExplanation:\nStudent Ulysses has student_id = 101, we select the name and age.\n## My Submission\n\n- Runtime: 322 ms (beats 7.9%)\n- Memory: 70.2 MB (beats 8.7%)\n"
+        },
+        {
+          "path": "topics/Untagged/select-data/hints.md",
+          "content": "# Hints — Select Data\n\n### Hint 1\n\nConsider applying both row and column filtering to select the desired data.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715616000,
       "runtime": "322 ms",
       "memory": "70.2 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 7.946499999999954,
+      "memoryPct": 8.745100000000004,
+      "timestamp": 1729715616000,
+      "acRate": 78.49073549980587,
+      "likes": 136,
+      "dislikes": 8,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame students\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\n</pre>\n\n<p>Write a solution to select the name and age of the student with <code>student_id = 101</code>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<pre>\n<strong>Example 1:\nInput:</strong>\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 101        | Ulysses | 13  |\n| 53         | William | 10  |\n| 128        | Henry   | 6   |\n| 3          | Henry   | 11  |\n+------------+---------+-----+\n<strong>Output:</strong>\n+---------+-----+\n| name    | age | \n+---------+-----+\n| Ulysses | 13  |\n+---------+-----+\n<strong>Explanation:\n</strong>Student Ulysses has student_id = 101, we select the name and age.</pre>\n",
-      "hints": [
-        "Consider applying both row and column filtering to select the desired data."
-      ],
-      "acRate": 78.49791637402257,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/select-data/submissions/"
     },
     {
       "id": "shift-distance-between-two-strings::python3",
