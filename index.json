@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-03T16:14:39.916Z",
+  "updatedAt": "2026-05-03T16:16:00.471Z",
   "stats": {
     "total": 211,
     "easy": 127,
@@ -1011,32 +1011,48 @@
       "skipCommit": true
     },
     {
-      "id": "change-data-type::pythondata",
       "platform": "leetcode",
+      "id": "change-data-type::pythondata",
+      "submissionId": null,
       "title": "Change Data Type",
       "titleSlug": "change-data-type",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef changeDatatype(students: pd.DataFrame) -> pd.DataFrame:\n    return students.astype({'grade':int})",
+      "files": [
+        {
+          "path": "topics/Untagged/change-data-type/Pandas.txt",
+          "content": "import pandas as pd\n\ndef changeDatatype(students: pd.DataFrame) -> pd.DataFrame:\n    return students.astype({'grade':int})"
+        },
+        {
+          "path": "topics/Untagged/change-data-type/README.md",
+          "content": "# [2886] Change Data Type\n**Difficulty:** Easy  |  **Acceptance:** 87.3%  |  **Likes:** 90 / **Dislikes:** 9\n**Tags:** —\n## Problem\nDataFrame students\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n| grade       | float  |\n+-------------+--------+\n\nWrite a solution to correct the errors:\n\nThe grade column is stored as floats,&nbsp;convert it to integers.\n\nThe result format is in the following example.\n\n&nbsp;\n\nExample 1:\nInput:\nDataFrame students:\n+------------+------+-----+-------+\n| student_id | name | age | grade |\n+------------+------+-----+-------+\n| 1          | Ava  | 6   | 73.0  |\n| 2          | Kate | 15  | 87.0  |\n+------------+------+-----+-------+\nOutput:\n+------------+------+-----+-------+\n| student_id | name | age | grade |\n+------------+------+-----+-------+\n| 1          | Ava  | 6   | 73    |\n| 2          | Kate | 15  | 87    |\n+------------+------+-----+-------+\nExplanation: \nThe data types of the column grade is converted to int.\n## My Submission\n\n- Runtime: 474 ms (beats 5.1%)\n- Memory: 68.9 MB (beats 5.3%)\n"
+        },
+        {
+          "path": "topics/Untagged/change-data-type/hints.md",
+          "content": "# Hints — Change Data Type\n\n### Hint 1\n\nConsider using a build-in function in pandas library with a dictionary to convert the datatype of columns as specified.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729838254000,
       "runtime": "474 ms",
       "memory": "68.9 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.085199999999994,
+      "memoryPct": 5.254100000000001,
+      "timestamp": 1729838254000,
+      "acRate": 87.29035825169768,
+      "likes": 90,
+      "dislikes": 9,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame <code>students</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n| grade       | float  |\n+-------------+--------+\n</pre>\n\n<p>Write a solution to correct the errors:</p>\n\n<p>The <code>grade</code> column is stored as floats,&nbsp;convert it to integers.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<pre>\n<strong class=\"example\">Example 1:</strong>\n<strong>Input:\n</strong>DataFrame students:\n+------------+------+-----+-------+\n| student_id | name | age | grade |\n+------------+------+-----+-------+\n| 1          | Ava  | 6   | 73.0  |\n| 2          | Kate | 15  | 87.0  |\n+------------+------+-----+-------+\n<strong>Output:\n</strong>+------------+------+-----+-------+\n| student_id | name | age | grade |\n+------------+------+-----+-------+\n| 1          | Ava  | 6   | 73    |\n| 2          | Kate | 15  | 87    |\n+------------+------+-----+-------+\n<strong>Explanation:</strong> \nThe data types of the column grade is converted to int.</pre>\n",
-      "hints": [
-        "Consider using a build-in function in pandas library with a dictionary to convert the datatype of columns as specified."
-      ],
-      "acRate": 87.30043850312913,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/change-data-type/submissions/"
     },
     {
       "id": "check-if-all-characters-have-equal-number-of-occurrences::python3",
@@ -6903,32 +6919,48 @@
       "skipCommit": true
     },
     {
-      "id": "modify-columns::pythondata",
       "platform": "leetcode",
+      "id": "modify-columns::pythondata",
+      "submissionId": null,
       "title": "Modify Columns",
       "titleSlug": "modify-columns",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:\n    employees['salary'] *= 2\n    return employees",
+      "files": [
+        {
+          "path": "topics/Untagged/modify-columns/Pandas.txt",
+          "content": "import pandas as pd\n\ndef modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:\n    employees['salary'] *= 2\n    return employees"
+        },
+        {
+          "path": "topics/Untagged/modify-columns/README.md",
+          "content": "# [2884] Modify Columns\n**Difficulty:** Easy  |  **Acceptance:** 92.3%  |  **Likes:** 96 / **Dislikes:** 7\n**Tags:** —\n## Problem\nDataFrame employees\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| salary      | int    |\n+-------------+--------+\n\nA company intends to give its employees a pay rise.\n\nWrite a solution to modify the salary column by multiplying each salary by 2.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput:\nDataFrame employees\n+---------+--------+\n| name    | salary |\n+---------+--------+\n| Jack    | 19666  |\n| Piper   | 74754  |\n| Mia     | 62509  |\n| Ulysses | 54866  |\n+---------+--------+\nOutput:\n+---------+--------+\n| name    | salary |\n+---------+--------+\n| Jack    | 39332  |\n| Piper   | 149508 |\n| Mia     | 125018 |\n| Ulysses | 109732 |\n+---------+--------+\nExplanation:\nEvery salary has been doubled.\n## My Submission\n\n- Runtime: 377 ms (beats 5.1%)\n- Memory: 69.2 MB (beats 6.7%)\n"
+        },
+        {
+          "path": "topics/Untagged/modify-columns/hints.md",
+          "content": "# Hints — Modify Columns\n\n### Hint 1\n\nConsidering multiplying each salary value by 2, using a simple assignment operation. The calculation of the value is done column-wise.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729837816000,
       "runtime": "377 ms",
       "memory": "69.2 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.14329999999995,
+      "memoryPct": 6.729200000000008,
+      "timestamp": 1729837816000,
+      "acRate": 92.27360369187976,
+      "likes": 96,
+      "dislikes": 7,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame <code>employees</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| salary      | int    |\n+-------------+--------+\n</pre>\n\n<p>A company intends to give its employees a pay rise.</p>\n\n<p>Write a solution to <strong>modify</strong> the <code>salary</code> column by multiplying each salary by 2.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:\n</strong>DataFrame employees\n+---------+--------+\n| name    | salary |\n+---------+--------+\n| Jack    | 19666  |\n| Piper   | 74754  |\n| Mia     | 62509  |\n| Ulysses | 54866  |\n+---------+--------+\n<strong>Output:\n</strong>+---------+--------+\n| name    | salary |\n+---------+--------+\n| Jack    | 39332  |\n| Piper   | 149508 |\n| Mia     | 125018 |\n| Ulysses | 109732 |\n+---------+--------+\n<strong>Explanation:\n</strong>Every salary has been doubled.</pre>\n",
-      "hints": [
-        "Considering multiplying each salary value by 2, using a simple assignment operation. The calculation of the value is done column-wise."
-      ],
-      "acRate": 92.27245984399416,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/modify-columns/submissions/"
     },
     {
       "id": "most-frequent-even-element::python3",
@@ -8231,32 +8263,48 @@
       "skipCommit": true
     },
     {
-      "id": "rename-columns::pythondata",
       "platform": "leetcode",
+      "id": "rename-columns::pythondata",
+      "submissionId": null,
       "title": "Rename Columns",
       "titleSlug": "rename-columns",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef renameColumns(students: pd.DataFrame) -> pd.DataFrame:\n    return students.rename(columns = {'id': 'student_id', 'first': 'first_name', 'last': 'last_name', 'age': 'age_in_years'})",
+      "files": [
+        {
+          "path": "topics/Untagged/rename-columns/Pandas.txt",
+          "content": "import pandas as pd\n\ndef renameColumns(students: pd.DataFrame) -> pd.DataFrame:\n    return students.rename(columns = {'id': 'student_id', 'first': 'first_name', 'last': 'last_name', 'age': 'age_in_years'})"
+        },
+        {
+          "path": "topics/Untagged/rename-columns/README.md",
+          "content": "# [2885] Rename Columns\n**Difficulty:** Easy  |  **Acceptance:** 85.2%  |  **Likes:** 83 / **Dislikes:** 3\n**Tags:** —\n## Problem\nDataFrame students\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| id          | int    |\n| first       | object |\n| last        | object |\n| age         | int    |\n+-------------+--------+\n\nWrite a solution to rename the columns as follows:\n\n\tid to student_id\n\tfirst to first_name\n\tlast to last_name\n\tage to age_in_years\n\nThe result format is in the following example.\n\n&nbsp;\n\nExample 1:\nInput:\n+----+---------+----------+-----+\n| id | first   | last     | age |\n+----+---------+----------+-----+\n| 1  | Mason   | King     | 6   |\n| 2  | Ava     | Wright   | 7   |\n| 3  | Taylor  | Hall     | 16  |\n| 4  | Georgia | Thompson | 18  |\n| 5  | Thomas  | Moore    | 10  |\n+----+---------+----------+-----+\nOutput:\n+------------+------------+-----------+--------------+\n| student_id | first_name | last_name | age_in_years |\n+------------+------------+-----------+--------------+\n| 1          | Mason      | King      | 6            |\n| 2          | Ava        | Wright    | 7            |\n| 3          | Taylor     | Hall      | 16           |\n| 4          | Georgia    | Thompson  | 18           |\n| 5          | Thomas     | Moore     | 10           |\n+------------+------------+-----------+--------------+\nExplanation: \nThe column names are changed accordingly.\n## My Submission\n\n- Runtime: 332 ms (beats 5.1%)\n- Memory: 69.5 MB (beats 10.6%)\n"
+        },
+        {
+          "path": "topics/Untagged/rename-columns/hints.md",
+          "content": "# Hints — Rename Columns\n\n### Hint 1\n\nConsider using a build-in function in pandas library with a dictionary to rename the columns as specified.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729838137000,
       "runtime": "332 ms",
       "memory": "69.5 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.075099999999988,
+      "memoryPct": 10.622599999999998,
+      "timestamp": 1729838137000,
+      "acRate": 85.2387902928779,
+      "likes": 83,
+      "dislikes": 3,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame <code>students</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| id          | int    |\n| first       | object |\n| last        | object |\n| age         | int    |\n+-------------+--------+\n</pre>\n\n<p>Write a solution to rename the columns as follows:</p>\n\n<ul>\n\t<li><code>id</code> to <code>student_id</code></li>\n\t<li><code>first</code> to <code>first_name</code></li>\n\t<li><code>last</code> to <code>last_name</code></li>\n\t<li><code>age</code> to <code>age_in_years</code></li>\n</ul>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<pre>\n<strong class=\"example\">Example 1:</strong>\n<strong>Input:\n</strong>+----+---------+----------+-----+\n| id | first   | last     | age |\n+----+---------+----------+-----+\n| 1  | Mason   | King     | 6   |\n| 2  | Ava     | Wright   | 7   |\n| 3  | Taylor  | Hall     | 16  |\n| 4  | Georgia | Thompson | 18  |\n| 5  | Thomas  | Moore    | 10  |\n+----+---------+----------+-----+\n<strong>Output:</strong>\n+------------+------------+-----------+--------------+\n| student_id | first_name | last_name | age_in_years |\n+------------+------------+-----------+--------------+\n| 1          | Mason      | King      | 6            |\n| 2          | Ava        | Wright    | 7            |\n| 3          | Taylor     | Hall      | 16           |\n| 4          | Georgia    | Thompson  | 18           |\n| 5          | Thomas     | Moore     | 10           |\n+------------+------------+-----------+--------------+\n<strong>Explanation:</strong> \nThe column names are changed accordingly.</pre>\n",
-      "hints": [
-        "Consider using a build-in function in pandas library with a dictionary to rename the columns as specified."
-      ],
-      "acRate": 85.2438200176132,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/rename-columns/submissions/"
     },
     {
       "id": "replace-employee-id-with-the-unique-identifier::mysql",
