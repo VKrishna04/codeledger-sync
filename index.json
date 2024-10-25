@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-03T12:32:57.262Z",
+  "updatedAt": "2026-05-03T16:14:39.916Z",
   "stats": {
     "total": 211,
     "easy": 127,
@@ -2829,32 +2829,48 @@
       "skipCommit": true
     },
     {
-      "id": "fill-missing-data::pythondata",
       "platform": "leetcode",
+      "id": "fill-missing-data::pythondata",
+      "submissionId": null,
       "title": "Fill Missing Data",
       "titleSlug": "fill-missing-data",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:\n    products['quantity'].fillna(value = 0, inplace = True)\n    return products",
+      "files": [
+        {
+          "path": "topics/Untagged/fill-missing-data/Pandas.txt",
+          "content": "import pandas as pd\n\ndef fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:\n    products['quantity'].fillna(value = 0, inplace = True)\n    return products"
+        },
+        {
+          "path": "topics/Untagged/fill-missing-data/README.md",
+          "content": "# [2887] Fill Missing Data\n**Difficulty:** Easy  |  **Acceptance:** 72.5%  |  **Likes:** 90 / **Dislikes:** 3\n**Tags:** —\n## Problem\nDataFrame products\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| quantity    | int    |\n| price       | int    |\n+-------------+--------+\n\nWrite a solution to fill in the missing value as 0 in the quantity column.\n\nThe result format is in the following example.\n\n&nbsp;\n\nExample 1:\nInput:+-----------------+----------+-------+\n| name            | quantity | price |\n+-----------------+----------+-------+\n| Wristwatch      | None     | 135   |\n| WirelessEarbuds | None     | 821   |\n| GolfClubs       | 779      | 9319  |\n| Printer         | 849      | 3051  |\n+-----------------+----------+-------+\nOutput:\n+-----------------+----------+-------+\n| name            | quantity | price |\n+-----------------+----------+-------+\n| Wristwatch      | 0        | 135   |\n| WirelessEarbuds | 0        | 821   |\n| GolfClubs       | 779      | 9319  |\n| Printer         | 849      | 3051  |\n+-----------------+----------+-------+\nExplanation: \nThe quantity for Wristwatch and WirelessEarbuds are filled by 0.\n## My Submission\n\n- Runtime: 351 ms (beats 5.0%)\n- Memory: 68.1 MB (beats 13.5%)\n"
+        },
+        {
+          "path": "topics/Untagged/fill-missing-data/hints.md",
+          "content": "# Hints — Fill Missing Data\n\n### Hint 1\n\nConsider using a build-in function in pandas library to fill the missing values of specified columns.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729838683000,
       "runtime": "351 ms",
       "memory": "68.1 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.021399999999958,
+      "memoryPct": 13.488999999999997,
+      "timestamp": 1729838683000,
+      "acRate": 72.46124926812733,
+      "likes": 90,
+      "dislikes": 3,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame <code>products</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| quantity    | int    |\n| price       | int    |\n+-------------+--------+\n</pre>\n\n<p>Write a solution to fill in the missing value as <code><strong>0</strong></code> in the <code>quantity</code> column.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<pre>\n<strong class=\"example\">Example 1:</strong>\n<strong>Input:</strong>+-----------------+----------+-------+\n| name            | quantity | price |\n+-----------------+----------+-------+\n| Wristwatch      | None     | 135   |\n| WirelessEarbuds | None     | 821   |\n| GolfClubs       | 779      | 9319  |\n| Printer         | 849      | 3051  |\n+-----------------+----------+-------+\n<strong>Output:\n</strong>+-----------------+----------+-------+\n| name            | quantity | price |\n+-----------------+----------+-------+\n| Wristwatch      | 0        | 135   |\n| WirelessEarbuds | 0        | 821   |\n| GolfClubs       | 779      | 9319  |\n| Printer         | 849      | 3051  |\n+-----------------+----------+-------+\n<strong>Explanation:</strong> \nThe quantity for Wristwatch and WirelessEarbuds are filled by 0.</pre>\n",
-      "hints": [
-        "Consider using a build-in function in pandas library to fill the missing values of specified columns."
-      ],
-      "acRate": 72.45680375549784,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/fill-missing-data/submissions/"
     },
     {
       "id": "find-all-k-distant-indices-in-an-array::python3",
