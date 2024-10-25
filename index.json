@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-03T12:31:50.214Z",
+  "updatedAt": "2026-05-03T12:32:57.262Z",
   "stats": {
     "total": 211,
     "easy": 127,
@@ -8276,32 +8276,48 @@
       "skipCommit": true
     },
     {
-      "id": "reshape-data-concatenate::pythondata",
       "platform": "leetcode",
+      "id": "reshape-data-concatenate::pythondata",
+      "submissionId": null,
       "title": "Reshape Data: Concatenate",
       "titleSlug": "reshape-data-concatenate",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef concatenateTables(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:\n    return pd.concat([df1, df2], axis=0)",
+      "files": [
+        {
+          "path": "topics/Untagged/reshape-data-concatenate/Pandas.txt",
+          "content": "import pandas as pd\n\ndef concatenateTables(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:\n    return pd.concat([df1, df2], axis=0)"
+        },
+        {
+          "path": "topics/Untagged/reshape-data-concatenate/README.md",
+          "content": "# [2888] Reshape Data: Concatenate\n**Difficulty:** Easy  |  **Acceptance:** 90.4%  |  **Likes:** 91 / **Dislikes:** 7\n**Tags:** —\n## Problem\nDataFrame df1\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\nDataFrame df2\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\nWrite a solution to concatenate these two DataFrames vertically into one DataFrame.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput:\ndf1\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 1          | Mason   | 8   |\n| 2          | Ava     | 6   |\n| 3          | Taylor  | 15  |\n| 4          | Georgia | 17  |\n+------------+---------+-----+\ndf2\n+------------+------+-----+\n| student_id | name | age |\n+------------+------+-----+\n| 5          | Leo  | 7   |\n| 6          | Alex | 7   |\n+------------+------+-----+\nOutput:\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 1          | Mason   | 8   |\n| 2          | Ava     | 6   |\n| 3          | Taylor  | 15  |\n| 4          | Georgia | 17  |\n| 5          | Leo     | 7   |\n| 6          | Alex    | 7   |\n+------------+---------+-----+\nExplanation:\nThe two DataFramess are stacked vertically, and their rows are combined.\n## My Submission\n\n- Runtime: 443 ms (beats 5.2%)\n- Memory: 69 MB (beats 7.0%)\n"
+        },
+        {
+          "path": "topics/Untagged/reshape-data-concatenate/hints.md",
+          "content": "# Hints — Reshape Data: Concatenate\n\n### Hint 1\n\nConsider using a built-in function in pandas library with the appropriate axis argument.\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729838819000,
       "runtime": "443 ms",
       "memory": "69 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.235099999999925,
+      "memoryPct": 7.042999999999995,
+      "timestamp": 1729838819000,
+      "acRate": 90.40958968073309,
+      "likes": 91,
+      "dislikes": 7,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame <code>df1</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\nDataFrame <code>df2</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\n</pre>\n\n<p>Write a solution to concatenate these two DataFrames <strong>vertically</strong> into one DataFrame.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:\ndf1</strong>\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 1          | Mason   | 8   |\n| 2          | Ava     | 6   |\n| 3          | Taylor  | 15  |\n| 4          | Georgia | 17  |\n+------------+---------+-----+\n<strong>df2\n</strong>+------------+------+-----+\n| student_id | name | age |\n+------------+------+-----+\n| 5          | Leo  | 7   |\n| 6          | Alex | 7   |\n+------------+------+-----+\n<strong>Output:</strong>\n+------------+---------+-----+\n| student_id | name    | age |\n+------------+---------+-----+\n| 1          | Mason   | 8   |\n| 2          | Ava     | 6   |\n| 3          | Taylor  | 15  |\n| 4          | Georgia | 17  |\n| 5          | Leo     | 7   |\n| 6          | Alex    | 7   |\n+------------+---------+-----+\n<strong>Explanation:\n</strong>The two DataFramess are stacked vertically, and their rows are combined.</pre>\n",
-      "hints": [
-        "Consider using a built-in function in pandas library with the appropriate axis argument."
-      ],
-      "acRate": 90.41610071711285,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/reshape-data-concatenate/submissions/"
     },
     {
       "platform": "leetcode",
@@ -8348,32 +8364,48 @@
       "submissionsUrl": "https://leetcode.com/problems/reshape-data-melt/submissions/"
     },
     {
-      "id": "reshape-data-pivot::pythondata",
       "platform": "leetcode",
+      "id": "reshape-data-pivot::pythondata",
+      "submissionId": null,
       "title": "Reshape Data: Pivot",
       "titleSlug": "reshape-data-pivot",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef pivotTable(weather: pd.DataFrame) -> pd.DataFrame:\n    return weather.pivot(index = 'month', columns = 'city', values = 'temperature')",
+      "files": [
+        {
+          "path": "topics/Untagged/reshape-data-pivot/Pandas.txt",
+          "content": "import pandas as pd\n\ndef pivotTable(weather: pd.DataFrame) -> pd.DataFrame:\n    return weather.pivot(index = 'month', columns = 'city', values = 'temperature')"
+        },
+        {
+          "path": "topics/Untagged/reshape-data-pivot/README.md",
+          "content": "# [2889] Reshape Data: Pivot\n**Difficulty:** Easy  |  **Acceptance:** 83.0%  |  **Likes:** 137 / **Dislikes:** 16\n**Tags:** —\n## Problem\nDataFrame weather\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| city        | object |\n| month       | object |\n| temperature | int    |\n+-------------+--------+\n\nWrite a solution to pivot the data so that each row represents temperatures for a specific month, and each city is a separate column.\n\nThe result format is in the following example.\n\n&nbsp;\n\nExample 1:\nInput:\n+--------------+----------+-------------+\n| city         | month    | temperature |\n+--------------+----------+-------------+\n| Jacksonville | January  | 13          |\n| Jacksonville | February | 23          |\n| Jacksonville | March    | 38          |\n| Jacksonville | April    | 5           |\n| Jacksonville | May      | 34          |\n| ElPaso       | January  | 20          |\n| ElPaso       | February | 6           |\n| ElPaso       | March    | 26          |\n| ElPaso       | April    | 2           |\n| ElPaso       | May      | 43          |\n+--------------+----------+-------------+\nOutput:\n+----------+--------+--------------+\n| month    | ElPaso | Jacksonville |\n+----------+--------+--------------+\n| April    | 2      | 5            |\n| February | 6      | 23           |\n| January  | 20     | 13           |\n| March    | 26     | 38           |\n| May      | 43     | 34           |\n+----------+--------+--------------+\nExplanation:\nThe table is pivoted, each column represents a city, and each row represents a specific month.\n## My Submission\n\n- Runtime: 464 ms (beats 5.1%)\n- Memory: 70.1 MB (beats 6.5%)\n"
+        },
+        {
+          "path": "topics/Untagged/reshape-data-pivot/hints.md",
+          "content": "# Hints — Reshape Data: Pivot\n\n### Hint 1\n\nConsider using a built-in function in pandas library to transform the data\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729872212000,
       "runtime": "464 ms",
       "memory": "70.1 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.088299999999975,
+      "memoryPct": 6.507500000000009,
+      "timestamp": 1729872212000,
+      "acRate": 83.03607070432881,
+      "likes": 137,
+      "dislikes": 16,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame <code>weather</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| city        | object |\n| month       | object |\n| temperature | int    |\n+-------------+--------+\n</pre>\n\n<p>Write a solution to <strong>pivot</strong> the data so that each row represents temperatures for a specific month, and each city is a separate column.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<pre>\n<strong class=\"example\">Example 1:</strong>\n<strong>Input:</strong>\n+--------------+----------+-------------+\n| city         | month    | temperature |\n+--------------+----------+-------------+\n| Jacksonville | January  | 13          |\n| Jacksonville | February | 23          |\n| Jacksonville | March    | 38          |\n| Jacksonville | April    | 5           |\n| Jacksonville | May      | 34          |\n| ElPaso       | January  | 20          |\n| ElPaso       | February | 6           |\n| ElPaso       | March    | 26          |\n| ElPaso       | April    | 2           |\n| ElPaso       | May      | 43          |\n+--------------+----------+-------------+\n<strong>Output:</strong><code>\n+----------+--------+--------------+\n| month    | ElPaso | Jacksonville |\n+----------+--------+--------------+\n| April    | 2      | 5            |\n| February | 6      | 23           |\n| January  | 20     | 13           |\n| March    | 26     | 38           |\n| May      | 43     | 34           |\n+----------+--------+--------------+</code>\n<strong>Explanation:\n</strong>The table is pivoted, each column represents a city, and each row represents a specific month.</pre>\n",
-      "hints": [
-        "Consider using a built-in function in pandas library to transform the data"
-      ],
-      "acRate": 83.03861796738288,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/reshape-data-pivot/submissions/"
     },
     {
       "id": "return-length-of-arguments-passed::javascript",
