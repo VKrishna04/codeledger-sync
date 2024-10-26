@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-03T10:10:57.046Z",
+  "updatedAt": "2026-05-03T12:29:06.047Z",
   "stats": {
-    "total": 212,
+    "total": 211,
     "easy": 127,
-    "medium": 77,
+    "medium": 76,
     "hard": 7
   },
   "problems": [
@@ -51,56 +51,6 @@
         }
       ],
       "elapsedSeconds": null
-    },
-    {
-      "platform": "leetcode",
-      "id": "1263",
-      "title": "Number of Dice Rolls With Target Sum",
-      "titleSlug": "number-of-dice-rolls-with-target-sum",
-      "difficulty": "Medium",
-      "topic": "Dynamic Programming",
-      "tags": [
-        "Dynamic Programming"
-      ],
-      "canonical": null,
-      "code": "class Solution:\n    def numRollsToTarget(self, n: int, k: int, target: int) -> int:\n        m = (10 ** 9) + 7\n        if n*k < target:\n            return 0\n        dp = [[0]*(target+1) for _ in range(n+1)]\n        dp[0][0] = 1\n\n        for i in range(1, n+1):\n            for j in range(1, target+1):\n                for f in range(1, k+1):\n                    if j - f < 0:\n                        continue\n                    dp[i][j] = (dp[i-1][j-f] + dp[i][j]) % m\n        return dp[-1][-1]",
-      "files": [
-        {
-          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/Python3.py",
-          "content": "class Solution:\n    def numRollsToTarget(self, n: int, k: int, target: int) -> int:\n        m = (10 ** 9) + 7\n        if n*k < target:\n            return 0\n        dp = [[0]*(target+1) for _ in range(n+1)]\n        dp[0][0] = 1\n\n        for i in range(1, n+1):\n            for j in range(1, target+1):\n                for f in range(1, k+1):\n                    if j - f < 0:\n                        continue\n                    dp[i][j] = (dp[i-1][j-f] + dp[i][j]) % m\n        return dp[-1][-1]"
-        },
-        {
-          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/README.md",
-          "content": "# [1155] Number of Dice Rolls With Target Sum\n**Difficulty:** Medium  |  **Acceptance:** 62.3%  |  **Likes:** 5336 / **Dislikes:** 186\n**Tags:** `Dynamic Programming`\n## Problem\nYou have n dice, and each dice has k faces numbered from 1 to k.\n\nGiven three integers n, k, and target, return the number of possible ways (out of the kn total ways) to roll the dice, so the sum of the face-up numbers equals target. Since the answer may be too large, return it modulo 109 + 7.\n\n&nbsp;\nExample 1:\n\nInput: n = 1, k = 6, target = 3\nOutput: 1\nExplanation: You throw one die with 6 faces.\nThere is only one way to get a sum of 3.\n\nExample 2:\n\nInput: n = 2, k = 6, target = 7\nOutput: 6\nExplanation: You throw two dice, each with 6 faces.\nThere are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.\n\nExample 3:\n\nInput: n = 30, k = 30, target = 500\nOutput: 222616187\nExplanation: The answer must be returned modulo 109 + 7.\n\n&nbsp;\nConstraints:\n\n\t1 <= n, k <= 30\n\t1 <= target <= 1000\n## My Submission\n\n- Runtime: 97 ms (beats 86.0%)\n- Memory: 19.7 MB (beats 69.6%)\n- Solve time: 39m 49s\n\n## Similar Problems\n\n- [Equal Sum Arrays With Minimum Number of Operations](https://leetcode.com/problems/equal-sum-arrays-with-minimum-number-of-operations/) — Medium\n- [Find Missing Observations](https://leetcode.com/problems/find-missing-observations/) — Medium\n"
-        }
-      ],
-      "lang": {
-        "name": "Python3",
-        "ext": "py"
-      },
-      "runtime": "97 ms",
-      "memory": "19.7 MB",
-      "runtimePct": 85.95199999999993,
-      "memoryPct": 69.62230000000001,
-      "timestamp": 1777615130000,
-      "acRate": 62.316840037210085,
-      "likes": 5336,
-      "dislikes": 186,
-      "similar": [
-        {
-          "difficulty": "Medium",
-          "titleSlug": "equal-sum-arrays-with-minimum-number-of-operations",
-          "title": "Equal Sum Arrays With Minimum Number of Operations",
-          "isPaidOnly": false
-        },
-        {
-          "difficulty": "Medium",
-          "titleSlug": "find-missing-observations",
-          "title": "Find Missing Observations",
-          "isPaidOnly": false
-        }
-      ],
-      "elapsedSeconds": 2389
     },
     {
       "id": "3sum::python3",
@@ -6163,30 +6113,44 @@
       "skipCommit": true
     },
     {
-      "id": "method-chaining::pythondata",
       "platform": "leetcode",
+      "id": "method-chaining::pythondata",
+      "submissionId": null,
       "title": "Method Chaining",
       "titleSlug": "method-chaining",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:\n    return animals[animals['weight'] > 100].sort_values(by='weight', ascending=False)[['name']]",
+      "files": [
+        {
+          "path": "topics/Untagged/method-chaining/Pandas.txt",
+          "content": "import pandas as pd\n\ndef findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:\n    return animals[animals['weight'] > 100].sort_values(by='weight', ascending=False)[['name']]"
+        },
+        {
+          "path": "topics/Untagged/method-chaining/README.md",
+          "content": "# [2891] Method Chaining\n**Difficulty:** Easy  |  **Acceptance:** 76.1%  |  **Likes:** 109 / **Dislikes:** 6\n**Tags:** —\n## Problem\nDataFrame animals\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| species     | object |\n| age         | int    |\n| weight      | int    |\n+-------------+--------+\n\nWrite a solution to list the names of animals that weigh strictly more than 100 kilograms.\n\nReturn the&nbsp;animals sorted by weight in descending order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nDataFrame animals:\n+----------+---------+-----+--------+\n| name     | species | age | weight |\n+----------+---------+-----+--------+\n| Tatiana  | Snake   | 98  | 464    |\n| Khaled   | Giraffe | 50  | 41     |\n| Alex     | Leopard | 6   | 328    |\n| Jonathan | Monkey  | 45  | 463    |\n| Stefan   | Bear    | 100 | 50     |\n| Tommy    | Panda   | 26  | 349    |\n+----------+---------+-----+--------+\nOutput: \n+----------+\n| name     |\n+----------+\n| Tatiana  |\n| Jonathan |\n| Tommy    |\n| Alex     |\n+----------+\nExplanation: \nAll animals weighing more than 100 should be included in the results table.\nTatiana's weight is 464, Jonathan's weight is 463, Tommy's weight is 349, and Alex's weight is 328.\nThe results should be sorted in descending order of weight.\n\n&nbsp;\nIn Pandas, method chaining enables us to&nbsp;perform operations on a DataFrame without breaking up each operation into a separate line or creating multiple temporary variables.&nbsp;\n\nCan you complete this&nbsp;task in just one line of code using method chaining?\n## My Submission\n\n- Runtime: 373 ms (beats 5.1%)\n- Memory: 70.3 MB (beats 9.1%)\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729937534000,
       "runtime": "373 ms",
       "memory": "70.3 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.064700000000043,
+      "memoryPct": 9.12370000000001,
+      "timestamp": 1729937534000,
+      "acRate": 76.08094916272434,
+      "likes": 109,
+      "dislikes": 6,
+      "similar": [],
       "problemStatement": "<pre>\nDataFrame <code>animals</code>\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| species     | object |\n| age         | int    |\n| weight      | int    |\n+-------------+--------+\n</pre>\n\n<p>Write a solution to list the names of animals that weigh <strong>strictly more than</strong> <code>100</code> kilograms.</p>\n\n<p>Return the&nbsp;animals sorted by weight in <strong>descending order</strong>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nDataFrame animals:\n+----------+---------+-----+--------+\n| name     | species | age | weight |\n+----------+---------+-----+--------+\n| Tatiana  | Snake   | 98  | 464    |\n| Khaled   | Giraffe | 50  | 41     |\n| Alex     | Leopard | 6   | 328    |\n| Jonathan | Monkey  | 45  | 463    |\n| Stefan   | Bear    | 100 | 50     |\n| Tommy    | Panda   | 26  | 349    |\n+----------+---------+-----+--------+\n<strong>Output:</strong> \n+----------+\n| name     |\n+----------+\n| Tatiana  |\n| Jonathan |\n| Tommy    |\n| Alex     |\n+----------+\n<strong>Explanation:</strong> \nAll animals weighing more than 100 should be included in the results table.\nTatiana&#39;s weight is 464, Jonathan&#39;s weight is 463, Tommy&#39;s weight is 349, and Alex&#39;s weight is 328.\nThe results should be sorted in descending order of weight.</pre>\n\n<p>&nbsp;</p>\n<p>In Pandas, <strong>method chaining</strong> enables us to&nbsp;perform operations on a DataFrame without breaking up each operation into a separate line or creating multiple temporary variables.&nbsp;</p>\n\n<p>Can you complete this&nbsp;task in just <strong>one line </strong>of code using method chaining?</p>\n",
-      "hints": null,
-      "acRate": 76.08372162934015,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": null,
+      "hasSimilar": false,
+      "submissionsUrl": "https://leetcode.com/problems/method-chaining/submissions/"
     },
     {
       "id": "min-cost-climbing-stairs::python3",
@@ -7271,7 +7235,7 @@
       "runtimePct": 66.3547999999999,
       "memoryPct": 72.89699999999993,
       "timestamp": 1777803043000,
-      "acRate": 62.31988663336021,
+      "acRate": 62.31960272894439,
       "likes": 5336,
       "dislikes": 186,
       "similar": [
@@ -7294,37 +7258,45 @@
       "submissionsUrl": "https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/submissions/"
     },
     {
-      "id": "number-of-dice-rolls-with-target-sum::python3",
       "platform": "leetcode",
+      "id": "number-of-dice-rolls-with-target-sum::python3",
+      "submissionId": null,
       "title": "Number of Dice Rolls With Target Sum",
       "titleSlug": "number-of-dice-rolls-with-target-sum",
       "difficulty": "Medium",
-      "lang": {
-        "name": "Python3",
-        "ext": "py",
-        "slug": "python3"
-      },
+      "topic": "Dynamic Programming",
       "tags": [
         "Dynamic Programming"
       ],
-      "topic": "Dynamic Programming",
+      "canonical": null,
       "code": "class Solution:\n    def numRollsToTarget(self, n: int, k: int, target: int) -> int:\n        m = (10 ** 9) + 7\n        if n*k < target:\n            return 0\n        dp = [[0]*(target+1) for _ in range(n+1)]\n        dp[0][0] = 1\n\n        for i in range(1, n+1):\n            for j in range(1, target+1):\n                for f in range(1, k+1):\n                    if j - f < 0:\n                        continue\n                    dp[i][j] = (dp[i-1][j-f] + dp[i][j]) % m\n        return dp[-1][-1]",
       "files": [
         {
           "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/Python3.py",
           "content": "class Solution:\n    def numRollsToTarget(self, n: int, k: int, target: int) -> int:\n        m = (10 ** 9) + 7\n        if n*k < target:\n            return 0\n        dp = [[0]*(target+1) for _ in range(n+1)]\n        dp[0][0] = 1\n\n        for i in range(1, n+1):\n            for j in range(1, target+1):\n                for f in range(1, k+1):\n                    if j - f < 0:\n                        continue\n                    dp[i][j] = (dp[i-1][j-f] + dp[i][j]) % m\n        return dp[-1][-1]"
+        },
+        {
+          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/README.md",
+          "content": "# [1155] Number of Dice Rolls With Target Sum\n**Difficulty:** Medium  |  **Acceptance:** 62.3%  |  **Likes:** 5336 / **Dislikes:** 186\n**Tags:** `Dynamic Programming`\n## Problem\nYou have n dice, and each dice has k faces numbered from 1 to k.\n\nGiven three integers n, k, and target, return the number of possible ways (out of the kn total ways) to roll the dice, so the sum of the face-up numbers equals target. Since the answer may be too large, return it modulo 109 + 7.\n\n&nbsp;\nExample 1:\n\nInput: n = 1, k = 6, target = 3\nOutput: 1\nExplanation: You throw one die with 6 faces.\nThere is only one way to get a sum of 3.\n\nExample 2:\n\nInput: n = 2, k = 6, target = 7\nOutput: 6\nExplanation: You throw two dice, each with 6 faces.\nThere are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.\n\nExample 3:\n\nInput: n = 30, k = 30, target = 500\nOutput: 222616187\nExplanation: The answer must be returned modulo 109 + 7.\n\n&nbsp;\nConstraints:\n\n\t1 <= n, k <= 30\n\t1 <= target <= 1000\n## My Submission\n\n- Runtime: 97 ms (beats 86.2%)\n- Memory: 19.7 MB (beats 69.9%)\n\n## Similar Problems\n\n- [Equal Sum Arrays With Minimum Number of Operations](https://leetcode.com/problems/equal-sum-arrays-with-minimum-number-of-operations/) — Medium\n- [Find Missing Observations](https://leetcode.com/problems/find-missing-observations/) — Medium\n"
+        },
+        {
+          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/hints.md",
+          "content": "# Hints — Number of Dice Rolls With Target Sum\n\n### Hint 1\n\nUse dynamic programming.  The states are how many dice are remaining, and what sum total you have rolled so far.\n"
         }
       ],
-      "timestamp": 1777615130000,
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
       "runtime": "97 ms",
       "memory": "19.7 MB",
-      "runtimePct": 85.95199999999993,
-      "memoryPct": 69.62230000000001,
-      "problemStatement": "<p>You have <code>n</code> dice, and each dice has <code>k</code> faces numbered from <code>1</code> to <code>k</code>.</p>\n\n<p>Given three integers <code>n</code>, <code>k</code>, and <code>target</code>, return <em>the number of possible ways (out of the </em><code>k<sup>n</sup></code><em> total ways) </em><em>to roll the dice, so the sum of the face-up numbers equals </em><code>target</code>. Since the answer may be too large, return it <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, k = 6, target = 3\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> You throw one die with 6 faces.\nThere is only one way to get a sum of 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2, k = 6, target = 7\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> You throw two dice, each with 6 faces.\nThere are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 30, k = 30, target = 500\n<strong>Output:</strong> 222616187\n<strong>Explanation:</strong> The answer must be returned modulo 10<sup>9</sup> + 7.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n, k &lt;= 30</code></li>\n\t<li><code>1 &lt;= target &lt;= 1000</code></li>\n</ul>\n",
-      "hints": [
-        "Use dynamic programming.  The states are how many dice are remaining, and what sum total you have rolled so far."
-      ],
-      "acRate": 62.3170421729706,
+      "runtimePct": 86.16749999999995,
+      "memoryPct": 69.8915,
+      "timestamp": 1777615130000,
+      "acRate": 62.31960272894439,
+      "likes": 5336,
+      "dislikes": 186,
       "similar": [
         {
           "difficulty": "Medium",
@@ -7339,7 +7311,10 @@
           "isPaidOnly": false
         }
       ],
-      "skipCommit": true
+      "problemStatement": "<p>You have <code>n</code> dice, and each dice has <code>k</code> faces numbered from <code>1</code> to <code>k</code>.</p>\n\n<p>Given three integers <code>n</code>, <code>k</code>, and <code>target</code>, return <em>the number of possible ways (out of the </em><code>k<sup>n</sup></code><em> total ways) </em><em>to roll the dice, so the sum of the face-up numbers equals </em><code>target</code>. Since the answer may be too large, return it <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, k = 6, target = 3\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> You throw one die with 6 faces.\nThere is only one way to get a sum of 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2, k = 6, target = 7\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> You throw two dice, each with 6 faces.\nThere are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 30, k = 30, target = 500\n<strong>Output:</strong> 222616187\n<strong>Explanation:</strong> The answer must be returned modulo 10<sup>9</sup> + 7.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n, k &lt;= 30</code></li>\n\t<li><code>1 &lt;= target &lt;= 1000</code></li>\n</ul>\n",
+      "elapsedSeconds": null,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/submissions/"
     },
     {
       "id": "number-of-employees-who-met-the-target::python3",
