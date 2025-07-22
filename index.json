@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-07T20:15:16.124Z",
+  "updatedAt": "2026-05-08T11:45:35.853Z",
   "stats": {
     "total": 211,
     "easy": 127,
@@ -793,34 +793,51 @@
       "skipCommit": true
     },
     {
-      "id": "binary-tree-level-order-traversal::python3",
       "platform": "leetcode",
+      "id": "binary-tree-level-order-traversal::python3",
+      "submissionId": null,
       "title": "Binary Tree Level Order Traversal",
       "titleSlug": "binary-tree-level-order-traversal",
       "difficulty": "Medium",
-      "lang": {
-        "name": "Python3",
-        "ext": "py",
-        "slug": "python3"
-      },
+      "topic": "Tree",
       "tags": [
         "Tree",
         "Breadth-First Search",
         "Binary Tree"
       ],
-      "topic": "Tree",
-      "code": "",
-      "files": [],
-      "timestamp": 1753211566000,
+      "canonical": {
+        "id": "binary-tree-level-order-traversal",
+        "title": "Binary Tree Level Order Traversal"
+      },
+      "readmeContent": "# [102] Binary Tree Level Order Traversal\n**Difficulty:** Medium  |  **Acceptance:** 72.6%  |  **Likes:** 17108 / **Dislikes:** 383\n**Tags:** `Tree`, `Breadth-First Search`, `Binary Tree`\n## Problem\nGiven the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).\n\n&nbsp;\nExample 1:\n\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[9,20],[15,7]]\n\nExample 2:\n\nInput: root = [1]\nOutput: [[1]]\n\nExample 3:\n\nInput: root = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the tree is in the range [0, 2000].\n\t-1000 <= Node.val <= 1000\n## My Submission\n\n- Runtime: 558 ms (beats 1.3%)\n- Memory: 19.9 MB (beats 60.8%)\n- Solve time: 1h 9m 6s\n\n## Similar Problems\n\n- [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) — Medium\n- [Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) — Medium\n- [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) — Easy\n- [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/) — Easy\n- [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) — Medium\n",
+      "code": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:\n        res = []\n        q = collections.deque()\n        if root:\n            q.append(root)\n        print(q)\n        while q:\n            val = []\n            \n            for _ in range(len(q)):\n                node = q.popleft()\n                val.append(node.val)\n                if node.left:\n                    q.append(node.left)\n                if node.right:\n                    q.append(node.right)\n            res.append(val)\n        return res",
+      "files": [
+        {
+          "path": "problems/binary-tree-level-order-traversal/leetcode/Python3.py",
+          "content": "# Definition for a binary tree node.\n# class TreeNode:\n#     def __init__(self, val=0, left=None, right=None):\n#         self.val = val\n#         self.left = left\n#         self.right = right\nclass Solution:\n    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:\n        res = []\n        q = collections.deque()\n        if root:\n            q.append(root)\n        print(q)\n        while q:\n            val = []\n            \n            for _ in range(len(q)):\n                node = q.popleft()\n                val.append(node.val)\n                if node.left:\n                    q.append(node.left)\n                if node.right:\n                    q.append(node.right)\n            res.append(val)\n        return res"
+        },
+        {
+          "path": "problems/binary-tree-level-order-traversal/README.md",
+          "content": "# [102] Binary Tree Level Order Traversal\n**Difficulty:** Medium  |  **Acceptance:** 72.6%  |  **Likes:** 17108 / **Dislikes:** 383\n**Tags:** `Tree`, `Breadth-First Search`, `Binary Tree`\n## Problem\nGiven the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).\n\n&nbsp;\nExample 1:\n\nInput: root = [3,9,20,null,null,15,7]\nOutput: [[3],[9,20],[15,7]]\n\nExample 2:\n\nInput: root = [1]\nOutput: [[1]]\n\nExample 3:\n\nInput: root = []\nOutput: []\n\n&nbsp;\nConstraints:\n\n\tThe number of nodes in the tree is in the range [0, 2000].\n\t-1000 <= Node.val <= 1000\n## My Submission\n\n- Runtime: 558 ms (beats 1.3%)\n- Memory: 19.9 MB (beats 60.8%)\n- Solve time: 1h 9m 6s\n\n## Similar Problems\n\n- [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) — Medium\n- [Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/) — Medium\n- [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) — Easy\n- [Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/) — Easy\n- [N-ary Tree Level Order Traversal](https://leetcode.com/problems/n-ary-tree-level-order-traversal/) — Medium\n"
+        },
+        {
+          "path": "problems/binary-tree-level-order-traversal/hints.md",
+          "content": "# Hints — Binary Tree Level Order Traversal\n\n### Hint 1\n\nUse a queue to perform BFS.\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
       "runtime": "558 ms",
       "memory": "19.9 MB",
-      "runtimePct": null,
-      "memoryPct": null,
-      "problemStatement": "<p>Given the <code>root</code> of a binary tree, return <em>the level order traversal of its nodes&#39; values</em>. (i.e., from left to right, level by level).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg\" style=\"width: 277px; height: 302px;\" />\n<pre>\n<strong>Input:</strong> root = [3,9,20,null,null,15,7]\n<strong>Output:</strong> [[3],[9,20],[15,7]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1]\n<strong>Output:</strong> [[1]]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 2000]</code>.</li>\n\t<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>\n</ul>\n",
-      "hints": [
-        "Use a queue to perform BFS."
-      ],
-      "acRate": 72.57151843404455,
+      "runtimePct": 1.2846999999999973,
+      "memoryPct": 60.779700000000005,
+      "timestamp": 1753211567000,
+      "acRate": 72.61092967096094,
+      "likes": 17108,
+      "dislikes": 383,
       "similar": [
         {
           "difficulty": "Medium",
@@ -839,12 +856,6 @@
           "titleSlug": "minimum-depth-of-binary-tree",
           "title": "Minimum Depth of Binary Tree",
           "isPaidOnly": false
-        },
-        {
-          "difficulty": "Medium",
-          "titleSlug": "binary-tree-vertical-order-traversal",
-          "title": "Binary Tree Vertical Order Traversal",
-          "isPaidOnly": true
         },
         {
           "difficulty": "Easy",
@@ -877,7 +888,10 @@
           "isPaidOnly": false
         }
       ],
-      "skipCommit": true
+      "problemStatement": "<p>Given the <code>root</code> of a binary tree, return <em>the level order traversal of its nodes&#39; values</em>. (i.e., from left to right, level by level).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/02/19/tree1.jpg\" style=\"width: 277px; height: 302px;\" />\n<pre>\n<strong>Input:</strong> root = [3,9,20,null,null,15,7]\n<strong>Output:</strong> [[3],[9,20],[15,7]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1]\n<strong>Output:</strong> [[1]]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 2000]</code>.</li>\n\t<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>\n</ul>\n",
+      "elapsedSeconds": 4146,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/binary-tree-level-order-traversal/submissions/"
     },
     {
       "id": "can-make-arithmetic-progression-from-sequence::python3",
