@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-01T06:53:19.357Z",
+  "updatedAt": "2026-05-01T07:03:22.871Z",
   "stats": {
     "total": 213,
     "easy": 126,
@@ -697,28 +697,97 @@
       "skipCommit": true
     },
     {
-      "id": "coin-change::python3",
       "platform": "leetcode",
+      "id": "coin-change::python3",
       "title": "Coin Change",
       "titleSlug": "coin-change",
       "difficulty": "Medium",
-      "lang": {
-        "name": "Python3",
-        "ext": "py",
-        "slug": "python3"
-      },
+      "topic": "Array",
       "tags": [
         "Array",
         "Dynamic Programming",
         "Breadth-First Search"
       ],
-      "topic": "Array",
-      "code": "",
-      "files": [],
-      "timestamp": 1758441308000,
+      "canonical": {
+        "id": "coin-change",
+        "title": "Coin Change"
+      },
+      "code": "class Solution:\n    def coinChange(self, coins: List[int], amount: int) -> int:\n        dp = [float('inf')] * (amount + 1)\n        dp[0] = 0\n        for curr_amt in range(1,amount+1):\n            for coin in coins:\n                if curr_amt - coin >= 0 and dp[curr_amt - coin] != float('inf'):\n                    dp[curr_amt] = min(dp[curr_amt], 1 + dp[curr_amt - coin])\n        \n        if dp[amount] == float('inf'):\n            return -1\n        else:\n            return dp[amount]\n\n        # if amount == 0:\n        #     return 0\n        # count = 0\n        # coins.sort(reverse=True)\n\n        # for i in coins:\n        #     print(f\"coin -> {i}\")\n        #     while i <= amount:\n        #         count += 1\n        #         print(f\"  amount -> {amount}, new amount -> {amount - i}\")\n        #         amount -= i\n        # if count == 0 or amount != 0:\n        #     return -1\n        # return count",
+      "files": [
+        {
+          "path": "topics/Array/coin-change/Python3.py",
+          "content": "class Solution:\n    def coinChange(self, coins: List[int], amount: int) -> int:\n        dp = [float('inf')] * (amount + 1)\n        dp[0] = 0\n        for curr_amt in range(1,amount+1):\n            for coin in coins:\n                if curr_amt - coin >= 0 and dp[curr_amt - coin] != float('inf'):\n                    dp[curr_amt] = min(dp[curr_amt], 1 + dp[curr_amt - coin])\n        \n        if dp[amount] == float('inf'):\n            return -1\n        else:\n            return dp[amount]\n\n        # if amount == 0:\n        #     return 0\n        # count = 0\n        # coins.sort(reverse=True)\n\n        # for i in coins:\n        #     print(f\"coin -> {i}\")\n        #     while i <= amount:\n        #         count += 1\n        #         print(f\"  amount -> {amount}, new amount -> {amount - i}\")\n        #         amount -= i\n        # if count == 0 or amount != 0:\n        #     return -1\n        # return count"
+        },
+        {
+          "path": "topics/Array/coin-change/README.md",
+          "content": "# [322] Coin Change\n**Difficulty:** Medium  |  **Acceptance:** 48.3%  |  **Likes:** 20983 / **Dislikes:** 548\n**Tags:** `Array`, `Dynamic Programming`, `Breadth-First Search`\n## Problem\nYou are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.\n\nReturn the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.\n\nYou may assume that you have an infinite number of each kind of coin.\n\n&nbsp;\nExample 1:\n\nInput: coins = [1,2,5], amount = 11\nOutput: 3\nExplanation: 11 = 5 + 5 + 1\n\nExample 2:\n\nInput: coins = [2], amount = 3\nOutput: -1\n\nExample 3:\n\nInput: coins = [1], amount = 0\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= coins.length <= 12\n\t1 <= coins[i] <= 231 - 1\n\t0 <= amount <= 104\n## My Submission\n\n- Runtime: 1245 ms (beats 7.2%)\n- Memory: 18.1 MB (beats 100.0%)\n\n## Similar Problems\n\n- [Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/) — Medium\n- [Maximum Value of K Coins From Piles](https://leetcode.com/problems/maximum-value-of-k-coins-from-piles/) — Hard\n- [Minimum Number of Operations to Convert Time](https://leetcode.com/problems/minimum-number-of-operations-to-convert-time/) — Easy\n- [Minimum Cost to Split an Array](https://leetcode.com/problems/minimum-cost-to-split-an-array/) — Hard\n- [Count of Sub-Multisets With Bounded Sum](https://leetcode.com/problems/count-of-sub-multisets-with-bounded-sum/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
       "runtime": "1245 ms",
       "memory": "18.1 MB",
-      "skipCommit": true
+      "runtimePct": 7.15309999999964,
+      "memoryPct": 100,
+      "timestamp": 1758441308000,
+      "acRate": 48.31133890036851,
+      "likes": 20983,
+      "dislikes": 548,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-cost-for-tickets",
+          "title": "Minimum Cost For Tickets",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "maximum-value-of-k-coins-from-piles",
+          "title": "Maximum Value of K Coins From Piles",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Easy",
+          "titleSlug": "minimum-number-of-operations-to-convert-time",
+          "title": "Minimum Number of Operations to Convert Time",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "minimum-cost-to-split-an-array",
+          "title": "Minimum Cost to Split an Array",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Hard",
+          "titleSlug": "count-of-sub-multisets-with-bounded-sum",
+          "title": "Count of Sub-Multisets With Bounded Sum",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "length-of-the-longest-subsequence-that-sums-to-target",
+          "title": "Length of the Longest Subsequence That Sums to Target",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-number-of-coins-to-be-added",
+          "title": "Minimum Number of Coins to be Added",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "inverse-coin-change",
+          "title": "Inverse Coin Change",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You are given an integer array <code>coins</code> representing coins of different denominations and an integer <code>amount</code> representing a total amount of money.</p>\n\n<p>Return <em>the fewest number of coins that you need to make up that amount</em>. If that amount of money cannot be made up by any combination of the coins, return <code>-1</code>.</p>\n\n<p>You may assume that you have an infinite number of each kind of coin.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> coins = [1,2,5], amount = 11\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> 11 = 5 + 5 + 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> coins = [2], amount = 3\n<strong>Output:</strong> -1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> coins = [1], amount = 0\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= coins.length &lt;= 12</code></li>\n\t<li><code>1 &lt;= coins[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>0 &lt;= amount &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
+      "elapsedSeconds": null
     },
     {
       "platform": "leetcode",
@@ -740,7 +809,7 @@
         },
         {
           "path": "topics/Array/combination-sum-iv/README.md",
-          "content": "# [377] Combination Sum IV\n**Difficulty:** Medium  |  **Acceptance:** 55.1%  |  **Likes:** 7782 / **Dislikes:** 702\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an array of distinct integers nums and a target integer target, return the number of possible combinations that add up to&nbsp;target.\n\nThe test cases are generated so that the answer can fit in a 32-bit integer.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3], target = 4\nOutput: 7\nExplanation:\nThe possible combination ways are:\n(1, 1, 1, 1)\n(1, 1, 2)\n(1, 2, 1)\n(1, 3)\n(2, 1, 1)\n(2, 2)\n(3, 1)\nNote that different sequences are counted as different combinations.\n\nExample 2:\n\nInput: nums = [9], target = 3\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 200\n\t1 <= nums[i] <= 1000\n\tAll the elements of nums are unique.\n\t1 <= target <= 1000\n\n&nbsp;\nFollow up: What if negative numbers are allowed in the given array? How does it change the problem? What limitation we need to add to the question to allow negative numbers?\n## My Submission\n\n- Runtime: 40 ms (beats 96.5%)\n- Memory: 19.2 MB (beats 67.2%)\n- Solve time: 12m 6s\n\n## Similar Problems\n\n- [Combination Sum](https://leetcode.com/problems/combination-sum/) — Medium\n- [Ways to Express an Integer as Sum of Powers](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/) — Medium\n"
+          "content": "# [377] Combination Sum IV\n**Difficulty:** Medium  |  **Acceptance:** 55.1%  |  **Likes:** 7782 / **Dislikes:** 702\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an array of distinct integers nums and a target integer target, return the number of possible combinations that add up to&nbsp;target.\n\nThe test cases are generated so that the answer can fit in a 32-bit integer.\n\n&nbsp;\nExample 1:\n\nInput: nums = [1,2,3], target = 4\nOutput: 7\nExplanation:\nThe possible combination ways are:\n(1, 1, 1, 1)\n(1, 1, 2)\n(1, 2, 1)\n(1, 3)\n(2, 1, 1)\n(2, 2)\n(3, 1)\nNote that different sequences are counted as different combinations.\n\nExample 2:\n\nInput: nums = [9], target = 3\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\t1 <= nums.length <= 200\n\t1 <= nums[i] <= 1000\n\tAll the elements of nums are unique.\n\t1 <= target <= 1000\n\n&nbsp;\nFollow up: What if negative numbers are allowed in the given array? How does it change the problem? What limitation we need to add to the question to allow negative numbers?\n## My Submission\n\n- Runtime: 40 ms (beats 96.5%)\n- Memory: 19.2 MB (beats 67.2%)\n- Solve time: 18m 18s\n\n## Similar Problems\n\n- [Combination Sum](https://leetcode.com/problems/combination-sum/) — Medium\n- [Ways to Express an Integer as Sum of Powers](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/) — Medium\n"
         }
       ],
       "lang": {
@@ -753,7 +822,7 @@
       "runtimePct": 96.49180000000001,
       "memoryPct": 67.22189999999999,
       "timestamp": 1777618259000,
-      "acRate": 55.09260229439757,
+      "acRate": 55.0925428182509,
       "likes": 7782,
       "dislikes": 702,
       "similar": [
@@ -771,7 +840,7 @@
         }
       ],
       "problemStatement": "<p>Given an array of <strong>distinct</strong> integers <code>nums</code> and a target integer <code>target</code>, return <em>the number of possible combinations that add up to</em>&nbsp;<code>target</code>.</p>\n\n<p>The test cases are generated so that the answer can fit in a <strong>32-bit</strong> integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3], target = 4\n<strong>Output:</strong> 7\n<strong>Explanation:</strong>\nThe possible combination ways are:\n(1, 1, 1, 1)\n(1, 1, 2)\n(1, 2, 1)\n(1, 3)\n(2, 1, 1)\n(2, 2)\n(3, 1)\nNote that different sequences are counted as different combinations.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [9], target = 3\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 200</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>\n\t<li>All the elements of <code>nums</code> are <strong>unique</strong>.</li>\n\t<li><code>1 &lt;= target &lt;= 1000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> What if negative numbers are allowed in the given array? How does it change the problem? What limitation we need to add to the question to allow negative numbers?</p>\n",
-      "elapsedSeconds": 726
+      "elapsedSeconds": 1098
     },
     {
       "id": "consecutive-characters::python3",
