@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-03T07:13:24.081Z",
+  "updatedAt": "2026-05-03T07:32:40.825Z",
   "stats": {
     "total": 221,
     "easy": 127,
@@ -559,37 +559,44 @@
       "url": "https://leetcode.com/problems/article-views-i/"
     },
     {
-      "id": "article-views-i::mysql",
       "platform": "leetcode",
+      "id": "article-views-i::mysql",
+      "submissionId": null,
       "title": "Article Views I",
       "titleSlug": "article-views-i",
       "difficulty": "Easy",
-      "lang": {
-        "name": "MySQL",
-        "ext": "sql",
-        "slug": "mysql"
-      },
+      "topic": "Database",
       "tags": [
         "Database"
       ],
-      "topic": "Database",
+      "canonical": null,
       "code": "# Write your MySQL query statement below\nselect distinct author_id as id\nfrom Views\nwhere author_id = viewer_id\norder by id ASC",
       "files": [
         {
           "path": "topics/Database/article-views-i/MySQL.sql",
           "content": "# Write your MySQL query statement below\nselect distinct author_id as id\nfrom Views\nwhere author_id = viewer_id\norder by id ASC"
+        },
+        {
+          "path": "topics/Database/article-views-i/README.md",
+          "content": "# [1148] Article Views I\n**Difficulty:** Easy  |  **Acceptance:** 76.7%  |  **Likes:** 2295 / **Dislikes:** 144\n**Tags:** `Database`\n## Problem\nTable: Views\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| article_id    | int     |\n| author_id     | int     |\n| viewer_id     | int     |\n| view_date     | date    |\n+---------------+---------+\nThere is no primary key (column with unique values) for this table, the table may have duplicate rows.\nEach row of this table indicates that some viewer viewed an article (written by some author) on some date. \nNote that equal author_id and viewer_id indicate the same person.\n\n&nbsp;\n\nWrite a solution to find all the authors that viewed at least one of their own articles.\n\nReturn the result table sorted by id in ascending order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nViews table:\n+------------+-----------+-----------+------------+\n| article_id | author_id | viewer_id | view_date  |\n+------------+-----------+-----------+------------+\n| 1          | 3         | 5         | 2019-08-01 |\n| 1          | 3         | 6         | 2019-08-02 |\n| 2          | 7         | 7         | 2019-08-01 |\n| 2          | 7         | 6         | 2019-08-02 |\n| 4          | 7         | 1         | 2019-07-22 |\n| 3          | 4         | 4         | 2019-07-21 |\n| 3          | 4         | 4         | 2019-07-21 |\n+------------+-----------+-----------+------------+\nOutput: \n+------+\n| id   |\n+------+\n| 4    |\n| 7    |\n+------+\n## My Submission\n\n- Runtime: 404 ms (beats 63.9%)\n- Memory: 0B (beats 100.0%)\n- Solve time: 5s\n"
         }
       ],
-      "timestamp": 1777054016000,
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
       "runtime": "404 ms",
       "memory": "0B",
-      "runtimePct": 62.388700000000036,
+      "runtimePct": 63.866699999999966,
       "memoryPct": 100,
+      "timestamp": 1777054016000,
+      "acRate": 76.65896526465396,
+      "likes": 2295,
+      "dislikes": 144,
+      "similar": [],
       "problemStatement": "<p>Table: <code>Views</code></p>\n\n<pre>\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| article_id    | int     |\n| author_id     | int     |\n| viewer_id     | int     |\n| view_date     | date    |\n+---------------+---------+\nThere is no primary key (column with unique values) for this table, the table may have duplicate rows.\nEach row of this table indicates that some viewer viewed an article (written by some author) on some date. \nNote that equal author_id and viewer_id indicate the same person.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to find all the authors that viewed at least one of their own articles.</p>\n\n<p>Return the result table sorted by <code>id</code> in ascending order.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nViews table:\n+------------+-----------+-----------+------------+\n| article_id | author_id | viewer_id | view_date  |\n+------------+-----------+-----------+------------+\n| 1          | 3         | 5         | 2019-08-01 |\n| 1          | 3         | 6         | 2019-08-02 |\n| 2          | 7         | 7         | 2019-08-01 |\n| 2          | 7         | 6         | 2019-08-02 |\n| 4          | 7         | 1         | 2019-07-22 |\n| 3          | 4         | 4         | 2019-07-21 |\n| 3          | 4         | 4         | 2019-07-21 |\n+------------+-----------+-----------+------------+\n<strong>Output:</strong> \n+------+\n| id   |\n+------+\n| 4    |\n| 7    |\n+------+\n</pre>\n",
-      "hints": null,
-      "acRate": 76.6587519851443,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": 5
     },
     {
       "id": "assign-cookies::python3",
