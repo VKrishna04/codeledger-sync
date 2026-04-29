@@ -1,13 +1,376 @@
 {
-  "version": 1,
-  "owner": "VKrishna04",
-  "repo": "codeledger-sync",
-  "createdAt": "2026-04-30T17:40:21.311Z",
-  "problems": [],
+  "updatedAt": "2026-04-30T18:36:41.186Z",
   "stats": {
-    "total": 0,
+    "total": 21,
     "easy": 0,
-    "medium": 0,
+    "medium": 1,
     "hard": 0
-  }
+  },
+  "problems": [
+    {
+      "platform": "leetcode",
+      "id": "1130",
+      "title": "Last Stone Weight II",
+      "titleSlug": "last-stone-weight-ii",
+      "difficulty": "Medium",
+      "topic": "Array",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "canonical": null,
+      "code": "class Solution:\n    def lastStoneWeightII(self, stones: List[int]) -> int:\n        totsum = sum(stones)\n        target = totsum // 2\n        dp = [False] * (target + 1)\n        dp[0] = True\n        for stone in stones:\n            for w in range(target, stone - 1, -1):\n                if dp[w] or dp[w-stone]:\n                    dp[w] = True\n         \n        for i in range(len(dp)-1,-1,-1):\n            if dp[i]:\n                return totsum - 2*i",
+      "files": [
+        {
+          "path": "topics/Array/last-stone-weight-ii/Python3.py",
+          "content": "class Solution:\n    def lastStoneWeightII(self, stones: List[int]) -> int:\n        totsum = sum(stones)\n        target = totsum // 2\n        dp = [False] * (target + 1)\n        dp[0] = True\n        for stone in stones:\n            for w in range(target, stone - 1, -1):\n                if dp[w] or dp[w-stone]:\n                    dp[w] = True\n         \n        for i in range(len(dp)-1,-1,-1):\n            if dp[i]:\n                return totsum - 2*i"
+        },
+        {
+          "path": "topics/Array/last-stone-weight-ii/README.md",
+          "content": "# [1049] Last Stone Weight II\n**Difficulty:** Medium  |  **Acceptance:** 59.7%  |  **Likes:** 3386 / **Dislikes:** 144\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nYou are given an array of integers stones where stones[i] is the weight of the ith stone.\n\nWe are playing a game with the stones. On each turn, we choose any two stones and smash them together. Suppose the stones have weights x and y with x <= y. The result of this smash is:\n\n\tIf x == y, both stones are destroyed, and\n\tIf x != y, the stone of weight x is destroyed, and the stone of weight y has new weight y - x.\n\nAt the end of the game, there is at most one stone left.\n\nReturn the smallest possible weight of the left stone. If there are no stones left, return 0.\n\n&nbsp;\nExample 1:\n\nInput: stones = [2,7,4,1,8,1]\nOutput: 1\nExplanation:\nWe can combine 2 and 4 to get 2, so the array converts to [2,7,1,8,1] then,\nwe can combine 7 and 8 to get 1, so the array converts to [2,1,1,1] then,\nwe can combine 2 and 1 to get 1, so the array converts to [1,1,1] then,\nwe can combine 1 and 1 to get 0, so the array converts to [1], then that's the optimal value.\n\nExample 2:\n\nInput: stones = [31,26,33,21,40]\nOutput: 5\n\n&nbsp;\nConstraints:\n\n\t1 <= stones.length <= 30\n\t1 <= stones[i] <= 100\n## My Submission\n\n- Runtime: 3 ms (beats 95.7%)\n- Memory: 19.4 MB (beats 64.6%)\n\n## Similar Problems\n\n- [Partition Array Into Two Arrays to Minimize Sum Difference](https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/) — Hard\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py"
+      },
+      "runtime": "3 ms",
+      "memory": "19.4 MB",
+      "runtimePct": 95.6521,
+      "memoryPct": 64.57589999999999,
+      "timestamp": 1777484846000,
+      "acRate": 59.69642825708099,
+      "likes": 3386,
+      "dislikes": 144,
+      "similar": [
+        {
+          "difficulty": "Hard",
+          "titleSlug": "partition-array-into-two-arrays-to-minimize-sum-difference",
+          "title": "Partition Array Into Two Arrays to Minimize Sum Difference",
+          "isPaidOnly": false
+        }
+      ],
+      "elapsedSeconds": null
+    },
+    {
+      "id": "article-views-i",
+      "title": "Article Views I",
+      "titleSlug": "article-views-i",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777054016000,
+      "code": "",
+      "url": "https://leetcode.com/problems/article-views-i/"
+    },
+    {
+      "id": "average-time-of-process-per-machine",
+      "title": "Average Time of Process per Machine",
+      "titleSlug": "average-time-of-process-per-machine",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777114835000,
+      "code": "",
+      "url": "https://leetcode.com/problems/average-time-of-process-per-machine/"
+    },
+    {
+      "id": "big-countries",
+      "title": "Big Countries",
+      "titleSlug": "big-countries",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777048368000,
+      "code": "",
+      "url": "https://leetcode.com/problems/big-countries/"
+    },
+    {
+      "id": "customer-who-visited-but-did-not-make-any-transactions",
+      "title": "Customer Who Visited but Did Not Make Any Transactions",
+      "titleSlug": "customer-who-visited-but-did-not-make-any-transactions",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777104021000,
+      "code": "",
+      "url": "https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/"
+    },
+    {
+      "id": "employee-bonus",
+      "title": "Employee Bonus",
+      "titleSlug": "employee-bonus",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777115023000,
+      "code": "",
+      "url": "https://leetcode.com/problems/employee-bonus/"
+    },
+    {
+      "id": "find-customer-referee",
+      "title": "Find Customer Referee",
+      "titleSlug": "find-customer-referee",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777045371000,
+      "code": "",
+      "url": "https://leetcode.com/problems/find-customer-referee/"
+    },
+    {
+      "id": "furthest-point-from-origin",
+      "title": "Furthest Point From Origin",
+      "titleSlug": "furthest-point-from-origin",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777044583000,
+      "code": "",
+      "url": "https://leetcode.com/problems/furthest-point-from-origin/"
+    },
+    {
+      "id": "invalid-tweets",
+      "title": "Invalid Tweets",
+      "titleSlug": "invalid-tweets",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777054886000,
+      "code": "",
+      "url": "https://leetcode.com/problems/invalid-tweets/"
+    },
+    {
+      "id": "last-stone-weight-ii",
+      "title": "Last Stone Weight II",
+      "titleSlug": "last-stone-weight-ii",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777484846000,
+      "code": "",
+      "url": "https://leetcode.com/problems/last-stone-weight-ii/"
+    },
+    {
+      "id": "minimum-cost-tree-from-leaf-values",
+      "title": "Minimum Cost Tree From Leaf Values",
+      "titleSlug": "minimum-cost-tree-from-leaf-values",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777370154000,
+      "code": "",
+      "url": "https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/"
+    },
+    {
+      "id": "minimum-time-to-make-rope-colorful",
+      "title": "Minimum Time to Make Rope Colorful",
+      "titleSlug": "minimum-time-to-make-rope-colorful",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777333492000,
+      "code": "",
+      "url": "https://leetcode.com/problems/minimum-time-to-make-rope-colorful/"
+    },
+    {
+      "id": "palindromic-substrings",
+      "title": "Palindromic Substrings",
+      "titleSlug": "palindromic-substrings",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777331650000,
+      "code": "",
+      "url": "https://leetcode.com/problems/palindromic-substrings/"
+    },
+    {
+      "id": "partition-equal-subset-sum",
+      "title": "Partition Equal Subset Sum",
+      "titleSlug": "partition-equal-subset-sum",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777460975000,
+      "code": "",
+      "url": "https://leetcode.com/problems/partition-equal-subset-sum/"
+    },
+    {
+      "id": "product-sales-analysis-i",
+      "title": "Product Sales Analysis I",
+      "titleSlug": "product-sales-analysis-i",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777095239000,
+      "code": "",
+      "url": "https://leetcode.com/problems/product-sales-analysis-i/"
+    },
+    {
+      "id": "recyclable-and-low-fat-products",
+      "title": "Recyclable and Low Fat Products",
+      "titleSlug": "recyclable-and-low-fat-products",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777045102000,
+      "code": "",
+      "url": "https://leetcode.com/problems/recyclable-and-low-fat-products/"
+    },
+    {
+      "id": "replace-employee-id-with-the-unique-identifier",
+      "title": "Replace Employee ID With The Unique Identifier",
+      "titleSlug": "replace-employee-id-with-the-unique-identifier",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777093595000,
+      "code": "",
+      "url": "https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/"
+    },
+    {
+      "id": "rising-temperature",
+      "title": "Rising Temperature",
+      "titleSlug": "rising-temperature",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "mysql",
+        "ext": "mysql",
+        "slug": "mysql"
+      },
+      "tags": [],
+      "timestamp": 1777107821000,
+      "code": "",
+      "url": "https://leetcode.com/problems/rising-temperature/"
+    },
+    {
+      "id": "stone-game",
+      "title": "Stone Game",
+      "titleSlug": "stone-game",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777218408000,
+      "code": "",
+      "url": "https://leetcode.com/problems/stone-game/"
+    },
+    {
+      "id": "stone-game-vii",
+      "title": "Stone Game VII",
+      "titleSlug": "stone-game-vii",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777217330000,
+      "code": "",
+      "url": "https://leetcode.com/problems/stone-game-vii/"
+    },
+    {
+      "id": "target-sum",
+      "title": "Target Sum",
+      "titleSlug": "target-sum",
+      "platform": "leetcode",
+      "difficulty": "Unknown",
+      "lang": {
+        "name": "python3",
+        "ext": "python3",
+        "slug": "python3"
+      },
+      "tags": [],
+      "timestamp": 1777463681000,
+      "code": "",
+      "url": "https://leetcode.com/problems/target-sum/"
+    }
+  ]
 }
