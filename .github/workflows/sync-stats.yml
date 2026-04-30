@@ -1,0 +1,12 @@
+name: Sync Stats
+on:
+  push:
+    branches: [main, master]
+    paths: ["index.json"]
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stats updated
+        run: echo "index.json updated"
