@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-05-01T09:41:15.469Z",
+  "updatedAt": "2026-05-01T13:44:00.595Z",
   "stats": {
-    "total": 215,
-    "easy": 126,
+    "total": 198,
+    "easy": 109,
     "medium": 72,
     "hard": 5
   },
@@ -101,41 +101,6 @@
         }
       ],
       "elapsedSeconds": 2389
-    },
-    {
-      "platform": "leetcode",
-      "id": "3062",
-      "title": "Create a DataFrame from List",
-      "titleSlug": "create-a-dataframe-from-list",
-      "difficulty": "Easy",
-      "topic": "Uncategorized",
-      "tags": [],
-      "canonical": null,
-      "code": "import pandas as pd\n\ndef createDataframe(student_data: List[List[int]]) -> pd.DataFrame:\n    return pd.DataFrame(student_data, columns = [\"student_id\", \"age\"])",
-      "files": [
-        {
-          "path": "topics/Uncategorized/create-a-dataframe-from-list/Pandas.txt",
-          "content": "import pandas as pd\n\ndef createDataframe(student_data: List[List[int]]) -> pd.DataFrame:\n    return pd.DataFrame(student_data, columns = [\"student_id\", \"age\"])"
-        },
-        {
-          "path": "topics/Uncategorized/create-a-dataframe-from-list/README.md",
-          "content": "# [2877] Create a DataFrame from List\n**Difficulty:** Easy  |  **Acceptance:** 81.0%  |  **Likes:** 292 / **Dislikes:** 12\n**Tags:** —\n## Problem\nWrite a solution to create a DataFrame from a 2D list called student_data. This 2D list contains the IDs and ages of some students.\n\nThe DataFrame should have two columns, student_id and age, and be in the same order as the original 2D list.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput:\nstudent_data:\n[\n  [1, 15],\n  [2, 11],\n  [3, 11],\n  [4, 20]\n]\nOutput:\n+------------+-----+\n| student_id | age |\n+------------+-----+\n| 1          | 15  |\n| 2          | 11  |\n| 3          | 11  |\n| 4          | 20  |\n+------------+-----+\nExplanation:\nA DataFrame was created on top of student_data, with two columns named student_id and age.\n## My Submission\n\n- Runtime: 390 ms (beats 5.0%)\n- Memory: 68.5 MB (beats 5.9%)\n"
-        }
-      ],
-      "lang": {
-        "name": "Pandas",
-        "ext": "txt"
-      },
-      "runtime": "390 ms",
-      "memory": "68.5 MB",
-      "runtimePct": 5.038700000000027,
-      "memoryPct": 5.932899999999987,
-      "timestamp": 1729715291000,
-      "acRate": 80.98951158722937,
-      "likes": 292,
-      "dislikes": 12,
-      "similar": [],
-      "elapsedSeconds": null
     },
     {
       "id": "3sum::python3",
@@ -603,26 +568,6 @@
       "timestamp": 1746512029000,
       "runtime": "0 ms",
       "memory": "17.6 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "change-data-type::pythondata",
-      "platform": "leetcode",
-      "title": "Change Data Type",
-      "titleSlug": "change-data-type",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729838254000,
-      "runtime": "474 ms",
-      "memory": "68.9 MB",
       "skipCommit": true
     },
     {
@@ -1201,66 +1146,6 @@
       "skipCommit": true
     },
     {
-      "id": "create-a-dataframe-from-list::pythondata",
-      "platform": "leetcode",
-      "title": "Create a DataFrame from List",
-      "titleSlug": "create-a-dataframe-from-list",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715291000,
-      "runtime": "390 ms",
-      "memory": "68.5 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "create-a-new-column::pythondata",
-      "platform": "leetcode",
-      "title": "Create a New Column",
-      "titleSlug": "create-a-new-column",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715905000,
-      "runtime": "342 ms",
-      "memory": "68.6 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "create-hello-world-function::javascript",
-      "platform": "leetcode",
-      "title": "Create Hello World Function",
-      "titleSlug": "create-hello-world-function",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "JavaScript",
-        "ext": "js",
-        "slug": "javascript"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715118000,
-      "runtime": "55 ms",
-      "memory": "49 MB",
-      "skipCommit": true
-    },
-    {
       "id": "customer-who-visited-but-did-not-make-any-transactions",
       "title": "Customer Who Visited but Did Not Make Any Transactions",
       "titleSlug": "customer-who-visited-but-did-not-make-any-transactions",
@@ -1393,26 +1278,6 @@
       "skipCommit": true
     },
     {
-      "id": "display-the-first-three-rows::pythondata",
-      "platform": "leetcode",
-      "title": "Display the First Three Rows",
-      "titleSlug": "display-the-first-three-rows",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715470000,
-      "runtime": "436 ms",
-      "memory": "68.9 MB",
-      "skipCommit": true
-    },
-    {
       "id": "distinct-subsequences::python3",
       "platform": "leetcode",
       "title": "Distinct Subsequences",
@@ -1433,46 +1298,6 @@
       "timestamp": 1776946572000,
       "runtime": "413 ms",
       "memory": "75.7 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "drop-duplicate-rows::pythondata",
-      "platform": "leetcode",
-      "title": "Drop Duplicate Rows",
-      "titleSlug": "drop-duplicate-rows",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729795647000,
-      "runtime": "393 ms",
-      "memory": "69.8 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "drop-missing-data::pythondata",
-      "platform": "leetcode",
-      "title": "Drop Missing Data",
-      "titleSlug": "drop-missing-data",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729837664000,
-      "runtime": "393 ms",
-      "memory": "70.1 MB",
       "skipCommit": true
     },
     {
@@ -1583,26 +1408,6 @@
       "timestamp": 1729191109000,
       "runtime": "35 ms",
       "memory": "16.5 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "fill-missing-data::pythondata",
-      "platform": "leetcode",
-      "title": "Fill Missing Data",
-      "titleSlug": "fill-missing-data",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729838683000,
-      "runtime": "351 ms",
-      "memory": "68.1 MB",
       "skipCommit": true
     },
     {
@@ -2126,26 +1931,6 @@
       "timestamp": 1777044583000,
       "runtime": "0 ms",
       "memory": "19.3 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "get-the-size-of-a-dataframe::pythondata",
-      "platform": "leetcode",
-      "title": "Get the Size of a DataFrame",
-      "titleSlug": "get-the-size-of-a-dataframe",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715393000,
-      "runtime": "356 ms",
-      "memory": "68.8 MB",
       "skipCommit": true
     },
     {
@@ -2704,29 +2489,53 @@
       "skipCommit": true
     },
     {
-      "id": "magic-squares-in-grid::python3",
       "platform": "leetcode",
+      "id": "magic-squares-in-grid::python3",
       "title": "Magic Squares In Grid",
       "titleSlug": "magic-squares-in-grid",
       "difficulty": "Medium",
-      "lang": {
-        "name": "Python3",
-        "ext": "py",
-        "slug": "python3"
-      },
+      "topic": "Array",
       "tags": [
         "Array",
         "Hash Table",
         "Math",
         "Matrix"
       ],
-      "topic": "Array",
-      "code": "",
-      "files": [],
-      "timestamp": 1777574549000,
+      "canonical": null,
+      "code": "class Solution:\n    def numMagicSquaresInside(self, grid: List[List[int]]) -> int:\n        if len(grid) < 3 or len(grid[0]) < 3:\n            print(\"0\")\n        def is_magic(mag):\n            flatmag = [item for row in mag for item in row]\n            flatmag = [item for item in flatmag if 1 <= item <= 9]\n            if len(flatmag) != 9 or set(flatmag) != {1, 2, 3, 4, 5, 6, 7, 8, 9}:\n                return False\n            return (sum(mag[0]) == sum(mag[1]) == sum(mag[2]) == \n                    sum(mag[i][0] for i in range(3)) == \n                    sum(mag[i][1] for i in range(3)) == \n                    sum(mag[i][2] for i in range(3)) == \n                    mag[0][0] + mag[1][1] + mag[2][2] == \n                    mag[0][2] + mag[1][1] + mag[2][0])\n        \n        rowlen = len(grid)\n        collen = len(grid[0])\n        magic_count = 0\n        \n        for row in range(rowlen - 2):\n            for col in range(collen - 2):\n                mag = [grid[row+i][col:col+3] for i in range(3)]\n                if is_magic(mag):\n                    magic_count += 1\n        \n        return magic_count",
+      "files": [
+        {
+          "path": "topics/Array/magic-squares-in-grid/Python3.py",
+          "content": "class Solution:\n    def numMagicSquaresInside(self, grid: List[List[int]]) -> int:\n        if len(grid) < 3 or len(grid[0]) < 3:\n            print(\"0\")\n        def is_magic(mag):\n            flatmag = [item for row in mag for item in row]\n            flatmag = [item for item in flatmag if 1 <= item <= 9]\n            if len(flatmag) != 9 or set(flatmag) != {1, 2, 3, 4, 5, 6, 7, 8, 9}:\n                return False\n            return (sum(mag[0]) == sum(mag[1]) == sum(mag[2]) == \n                    sum(mag[i][0] for i in range(3)) == \n                    sum(mag[i][1] for i in range(3)) == \n                    sum(mag[i][2] for i in range(3)) == \n                    mag[0][0] + mag[1][1] + mag[2][2] == \n                    mag[0][2] + mag[1][1] + mag[2][0])\n        \n        rowlen = len(grid)\n        collen = len(grid[0])\n        magic_count = 0\n        \n        for row in range(rowlen - 2):\n            for col in range(collen - 2):\n                mag = [grid[row+i][col:col+3] for i in range(3)]\n                if is_magic(mag):\n                    magic_count += 1\n        \n        return magic_count"
+        },
+        {
+          "path": "topics/Array/magic-squares-in-grid/README.md",
+          "content": "# [840] Magic Squares In Grid\n**Difficulty:** Medium  |  **Acceptance:** 55.1%  |  **Likes:** 1109 / **Dislikes:** 1904\n**Tags:** `Array`, `Hash Table`, `Math`, `Matrix`\n## Problem\nA 3 x 3 magic square is a 3 x 3 grid filled with distinct numbers from 1 to 9 such that each row, column, and both diagonals all have the same sum.\n\nGiven a row x col grid of integers, how many 3 x 3 magic square subgrids are there?\n\nNote: while a magic square can only contain numbers from 1 to 9, grid may contain numbers up to 15.\n\n&nbsp;\nExample 1:\n\nInput: grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]\nOutput: 1\nExplanation: \nThe following subgrid is a 3 x 3 magic square:\n\nwhile this one is not:\n\nIn total, there is only one magic square inside the given grid.\n\nExample 2:\n\nInput: grid = [[8]]\nOutput: 0\n\n&nbsp;\nConstraints:\n\n\trow == grid.length\n\tcol == grid[i].length\n\t1 <= row, col <= 10\n\t0 <= grid[i][j] <= 15\n## My Submission\n\n- Runtime: 0 ms (beats 100.0%)\n- Memory: 19.3 MB (beats 84.3%)\n\n## Similar Problems\n\n- [Largest Magic Square](https://leetcode.com/problems/largest-magic-square/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
       "runtime": "0 ms",
       "memory": "19.3 MB",
-      "skipCommit": true
+      "runtimePct": 100,
+      "memoryPct": 84.27770000000001,
+      "timestamp": 1777574549000,
+      "acRate": 55.14676564618206,
+      "likes": 1109,
+      "dislikes": 1904,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "largest-magic-square",
+          "title": "Largest Magic Square",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>A <code>3 x 3</code> <strong>magic square</strong> is a <code>3 x 3</code> grid filled with distinct numbers <strong>from </strong>1<strong> to </strong>9 such that each row, column, and both diagonals all have the same sum.</p>\n\n<p>Given a <code>row x col</code> <code>grid</code> of integers, how many <code>3 x 3</code> magic square subgrids are there?</p>\n\n<p>Note: while a magic square can only contain numbers from 1 to 9, <code>grid</code> may contain numbers up to 15.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/11/magic_main.jpg\" style=\"width: 322px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> grid = [[4,3,8,4],[9,5,1,9],[2,7,6,2]]\n<strong>Output:</strong> 1\n<strong>Explanation: </strong>\nThe following subgrid is a 3 x 3 magic square:\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/11/magic_valid.jpg\" style=\"width: 242px; height: 242px;\" />\nwhile this one is not:\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/11/magic_invalid.jpg\" style=\"width: 242px; height: 242px;\" />\nIn total, there is only one magic square inside the given grid.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[8]]\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>row == grid.length</code></li>\n\t<li><code>col == grid[i].length</code></li>\n\t<li><code>1 &lt;= row, col &lt;= 10</code></li>\n\t<li><code>0 &lt;= grid[i][j] &lt;= 15</code></li>\n</ul>\n",
+      "elapsedSeconds": null
     },
     {
       "id": "majority-element-ii::python3",
@@ -3039,26 +2848,6 @@
       "timestamp": 1753856636000,
       "runtime": "1 ms",
       "memory": "17.6 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "method-chaining::pythondata",
-      "platform": "leetcode",
-      "title": "Method Chaining",
-      "titleSlug": "method-chaining",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729937534000,
-      "runtime": "373 ms",
-      "memory": "70.3 MB",
       "skipCommit": true
     },
     {
@@ -3395,26 +3184,6 @@
       "skipCommit": true
     },
     {
-      "id": "modify-columns::pythondata",
-      "platform": "leetcode",
-      "title": "Modify Columns",
-      "titleSlug": "modify-columns",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729837816000,
-      "runtime": "377 ms",
-      "memory": "69.2 MB",
-      "skipCommit": true
-    },
-    {
       "id": "most-frequent-even-element::python3",
       "platform": "leetcode",
       "title": "Most Frequent Even Element",
@@ -3553,7 +3322,7 @@
         },
         {
           "path": "topics/Array/ones-and-zeroes/README.md",
-          "content": "# [474] Ones and Zeroes\n**Difficulty:** Medium  |  **Acceptance:** 53.3%  |  **Likes:** 6091 / **Dislikes:** 509\n**Tags:** `Array`, `String`, `Dynamic Programming`\n## Problem\nYou are given an array of binary strings strs and two integers m and n.\n\nReturn the size of the largest subset of strs such that there are at most m 0's and n 1's in the subset.\n\nA set x is a subset of a set y if all elements of x are also elements of y.\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"10\",\"0001\",\"111001\",\"1\",\"0\"], m = 5, n = 3\nOutput: 4\nExplanation: The largest subset with at most 5 0's and 3 1's is {\"10\", \"0001\", \"1\", \"0\"}, so the answer is 4.\nOther valid but smaller subsets include {\"0001\", \"1\"} and {\"10\", \"1\", \"0\"}.\n{\"111001\"} is an invalid subset because it contains 4 1's, greater than the maximum of 3.\n\nExample 2:\n\nInput: strs = [\"10\",\"0\",\"1\"], m = 1, n = 1\nOutput: 2\nExplanation: The largest subset is {\"0\", \"1\"}, so the answer is 2.\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 600\n\t1 <= strs[i].length <= 100\n\tstrs[i] consists only of digits '0' and '1'.\n\t1 <= m, n <= 100\n## My Submission\n\n- Runtime: 1301 ms (beats 36.4%)\n- Memory: 19.5 MB (beats 51.0%)\n\n## Similar Problems\n\n- [Non-negative Integers without Consecutive Ones](https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/) — Hard\n- [All Divisions With the Highest Score of a Binary Array](https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/) — Medium\n"
+          "content": "# [474] Ones and Zeroes\n**Difficulty:** Medium  |  **Acceptance:** 53.3%  |  **Likes:** 6091 / **Dislikes:** 509\n**Tags:** `Array`, `String`, `Dynamic Programming`\n## Problem\nYou are given an array of binary strings strs and two integers m and n.\n\nReturn the size of the largest subset of strs such that there are at most m 0's and n 1's in the subset.\n\nA set x is a subset of a set y if all elements of x are also elements of y.\n\n&nbsp;\nExample 1:\n\nInput: strs = [\"10\",\"0001\",\"111001\",\"1\",\"0\"], m = 5, n = 3\nOutput: 4\nExplanation: The largest subset with at most 5 0's and 3 1's is {\"10\", \"0001\", \"1\", \"0\"}, so the answer is 4.\nOther valid but smaller subsets include {\"0001\", \"1\"} and {\"10\", \"1\", \"0\"}.\n{\"111001\"} is an invalid subset because it contains 4 1's, greater than the maximum of 3.\n\nExample 2:\n\nInput: strs = [\"10\",\"0\",\"1\"], m = 1, n = 1\nOutput: 2\nExplanation: The largest subset is {\"0\", \"1\"}, so the answer is 2.\n\n&nbsp;\nConstraints:\n\n\t1 <= strs.length <= 600\n\t1 <= strs[i].length <= 100\n\tstrs[i] consists only of digits '0' and '1'.\n\t1 <= m, n <= 100\n## My Submission\n\n- Runtime: 1301 ms (beats 36.4%)\n- Memory: 19.5 MB (beats 51.0%)\n- Solve time: 1m 49s\n\n## Similar Problems\n\n- [Non-negative Integers without Consecutive Ones](https://leetcode.com/problems/non-negative-integers-without-consecutive-ones/) — Hard\n- [All Divisions With the Highest Score of a Binary Array](https://leetcode.com/problems/all-divisions-with-the-highest-score-of-a-binary-array/) — Medium\n"
         }
       ],
       "lang": {
@@ -3566,7 +3335,7 @@
       "runtimePct": 36.427099999999186,
       "memoryPct": 51.01189999999998,
       "timestamp": 1777628464000,
-      "acRate": 53.29073356078226,
+      "acRate": 53.29103873742874,
       "likes": 6091,
       "dislikes": 509,
       "similar": [
@@ -3584,7 +3353,7 @@
         }
       ],
       "problemStatement": "<p>You are given an array of binary strings <code>strs</code> and two integers <code>m</code> and <code>n</code>.</p>\n\n<p>Return <em>the size of the largest subset of <code>strs</code> such that there are <strong>at most</strong> </em><code>m</code><em> </em><code>0</code><em>&#39;s and </em><code>n</code><em> </em><code>1</code><em>&#39;s in the subset</em>.</p>\n\n<p>A set <code>x</code> is a <strong>subset</strong> of a set <code>y</code> if all elements of <code>x</code> are also elements of <code>y</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;10&quot;,&quot;0001&quot;,&quot;111001&quot;,&quot;1&quot;,&quot;0&quot;], m = 5, n = 3\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The largest subset with at most 5 0&#39;s and 3 1&#39;s is {&quot;10&quot;, &quot;0001&quot;, &quot;1&quot;, &quot;0&quot;}, so the answer is 4.\nOther valid but smaller subsets include {&quot;0001&quot;, &quot;1&quot;} and {&quot;10&quot;, &quot;1&quot;, &quot;0&quot;}.\n{&quot;111001&quot;} is an invalid subset because it contains 4 1&#39;s, greater than the maximum of 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;10&quot;,&quot;0&quot;,&quot;1&quot;], m = 1, n = 1\n<strong>Output:</strong> 2\n<b>Explanation:</b> The largest subset is {&quot;0&quot;, &quot;1&quot;}, so the answer is 2.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= strs.length &lt;= 600</code></li>\n\t<li><code>1 &lt;= strs[i].length &lt;= 100</code></li>\n\t<li><code>strs[i]</code> consists only of digits <code>&#39;0&#39;</code> and <code>&#39;1&#39;</code>.</li>\n\t<li><code>1 &lt;= m, n &lt;= 100</code></li>\n</ul>\n",
-      "elapsedSeconds": null
+      "elapsedSeconds": 109
     },
     {
       "id": "palindrome-number::python3",
@@ -3943,26 +3712,6 @@
       "skipCommit": true
     },
     {
-      "id": "rename-columns::pythondata",
-      "platform": "leetcode",
-      "title": "Rename Columns",
-      "titleSlug": "rename-columns",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729838137000,
-      "runtime": "332 ms",
-      "memory": "69.5 MB",
-      "skipCommit": true
-    },
-    {
       "id": "replace-employee-id-with-the-unique-identifier",
       "title": "Replace Employee ID With The Unique Identifier",
       "titleSlug": "replace-employee-id-with-the-unique-identifier",
@@ -3998,86 +3747,6 @@
       "timestamp": 1777093595000,
       "runtime": "1229 ms",
       "memory": "0.0B",
-      "skipCommit": true
-    },
-    {
-      "id": "reshape-data-concatenate::pythondata",
-      "platform": "leetcode",
-      "title": "Reshape Data: Concatenate",
-      "titleSlug": "reshape-data-concatenate",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729838819000,
-      "runtime": "443 ms",
-      "memory": "69 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "reshape-data-melt::pythondata",
-      "platform": "leetcode",
-      "title": "Reshape Data: Melt",
-      "titleSlug": "reshape-data-melt",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729937409000,
-      "runtime": "375 ms",
-      "memory": "69.6 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "reshape-data-pivot::pythondata",
-      "platform": "leetcode",
-      "title": "Reshape Data: Pivot",
-      "titleSlug": "reshape-data-pivot",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729872212000,
-      "runtime": "464 ms",
-      "memory": "70.1 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "return-length-of-arguments-passed::javascript",
-      "platform": "leetcode",
-      "title": "Return Length of Arguments Passed",
-      "titleSlug": "return-length-of-arguments-passed",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "JavaScript",
-        "ext": "js",
-        "slug": "javascript"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1723361457000,
-      "runtime": "52 ms",
-      "memory": "48.7 MB",
       "skipCommit": true
     },
     {
@@ -4389,26 +4058,6 @@
       "timestamp": 1729281793000,
       "runtime": "0 ms",
       "memory": "17.3 MB",
-      "skipCommit": true
-    },
-    {
-      "id": "select-data::pythondata",
-      "platform": "leetcode",
-      "title": "Select Data",
-      "titleSlug": "select-data",
-      "difficulty": "Easy",
-      "lang": {
-        "name": "pythondata",
-        "ext": "txt",
-        "slug": "pythondata"
-      },
-      "tags": [],
-      "topic": "Uncategorized",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715616000,
-      "runtime": "322 ms",
-      "memory": "70.2 MB",
       "skipCommit": true
     },
     {
@@ -5123,6 +4772,45 @@
       "runtime": "4 ms",
       "memory": "16.6 MB",
       "skipCommit": true
+    },
+    {
+      "platform": "leetcode",
+      "id": "valid-phone-numbers::bash",
+      "title": "Valid Phone Numbers",
+      "titleSlug": "valid-phone-numbers",
+      "difficulty": "Easy",
+      "topic": "Shell",
+      "tags": [
+        "Shell"
+      ],
+      "canonical": null,
+      "code": "# Read from the file file.txt and output all valid phone numbers to stdout.\ngrep -E '^([0-9]{3}-|\\([0-9]{3}\\) )[0-9]{3}-[0-9]{4}$' file.txt\n",
+      "files": [
+        {
+          "path": "topics/Shell/valid-phone-numbers/Bash.sh",
+          "content": "# Read from the file file.txt and output all valid phone numbers to stdout.\ngrep -E '^([0-9]{3}-|\\([0-9]{3}\\) )[0-9]{3}-[0-9]{4}$' file.txt\n"
+        },
+        {
+          "path": "topics/Shell/valid-phone-numbers/README.md",
+          "content": "# [193] Valid Phone Numbers\n**Difficulty:** Easy  |  **Acceptance:** 29.6%  |  **Likes:** 486 / **Dislikes:** 983\n**Tags:** `Shell`\n## Problem\nGiven a text file file.txt that contains a list of phone numbers (one per line), write a one-liner bash script to print all valid phone numbers.\n\nYou may assume that a valid phone number must appear in one of the following two formats: (xxx) xxx-xxxx or xxx-xxx-xxxx. (x means a digit)\n\nYou may also assume each line in the text file must not contain leading or trailing white spaces.\n\nExample:\n\nAssume that file.txt has the following content:\n\n987-123-4567\n123 456 7890\n(123) 456-7890\n\nYour script should output the following valid phone numbers:\n\n987-123-4567\n(123) 456-7890\n## My Submission\n\n- Runtime: 63 ms (beats 61.7%)\n- Memory: 3.4 MB (beats 72.0%)\n"
+        }
+      ],
+      "lang": {
+        "name": "Bash",
+        "ext": "sh",
+        "slug": "bash"
+      },
+      "runtime": "63 ms",
+      "memory": "3.4 MB",
+      "runtimePct": 61.65950000000001,
+      "memoryPct": 72.0493,
+      "timestamp": 1777643023000,
+      "acRate": 29.567728564795416,
+      "likes": 486,
+      "dislikes": 983,
+      "similar": [],
+      "problemStatement": "<p>Given a text file <code>file.txt</code> that contains a list of phone numbers (one per line), write a one-liner bash script to print all valid phone numbers.</p>\n\n<p>You may assume that a valid phone number must appear in one of the following two formats: (xxx) xxx-xxxx or xxx-xxx-xxxx. (x means a digit)</p>\n\n<p>You may also assume each line in the text file must not contain leading or trailing white spaces.</p>\n\n<p><strong class=\"example\">Example:</strong></p>\n\n<p>Assume that <code>file.txt</code> has the following content:</p>\n\n<pre>\n987-123-4567\n123 456 7890\n(123) 456-7890\n</pre>\n\n<p>Your script should output the following valid phone numbers:</p>\n\n<pre>\n987-123-4567\n(123) 456-7890\n</pre>\n",
+      "elapsedSeconds": null
     },
     {
       "id": "word-frequency::bash",
