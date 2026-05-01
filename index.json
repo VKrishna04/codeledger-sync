@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-04-30T19:24:20.866Z",
+  "updatedAt": "2026-05-01T05:59:59.371Z",
   "stats": {
-    "total": 211,
+    "total": 212,
     "easy": 126,
-    "medium": 68,
+    "medium": 69,
     "hard": 5
   },
   "problems": [
@@ -47,6 +47,56 @@
           "difficulty": "Hard",
           "titleSlug": "partition-array-into-two-arrays-to-minimize-sum-difference",
           "title": "Partition Array Into Two Arrays to Minimize Sum Difference",
+          "isPaidOnly": false
+        }
+      ],
+      "elapsedSeconds": null
+    },
+    {
+      "platform": "leetcode",
+      "id": "1263",
+      "title": "Number of Dice Rolls With Target Sum",
+      "titleSlug": "number-of-dice-rolls-with-target-sum",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "Dynamic Programming"
+      ],
+      "canonical": null,
+      "code": "class Solution:\n    def numRollsToTarget(self, n: int, k: int, target: int) -> int:\n        m = (10 ** 9) + 7\n        if n*k < target:\n            return 0\n        dp = [[0]*(target+1) for _ in range(n+1)]\n        dp[0][0] = 1\n\n        for i in range(1, n+1):\n            for j in range(1, target+1):\n                for f in range(1, k+1):\n                    if j - f < 0:\n                        continue\n                    dp[i][j] = (dp[i-1][j-f] + dp[i][j]) % m\n        return dp[-1][-1]",
+      "files": [
+        {
+          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/Python3.py",
+          "content": "class Solution:\n    def numRollsToTarget(self, n: int, k: int, target: int) -> int:\n        m = (10 ** 9) + 7\n        if n*k < target:\n            return 0\n        dp = [[0]*(target+1) for _ in range(n+1)]\n        dp[0][0] = 1\n\n        for i in range(1, n+1):\n            for j in range(1, target+1):\n                for f in range(1, k+1):\n                    if j - f < 0:\n                        continue\n                    dp[i][j] = (dp[i-1][j-f] + dp[i][j]) % m\n        return dp[-1][-1]"
+        },
+        {
+          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/README.md",
+          "content": "# [1155] Number of Dice Rolls With Target Sum\n**Difficulty:** Medium  |  **Acceptance:** 62.3%  |  **Likes:** 5336 / **Dislikes:** 186\n**Tags:** `Dynamic Programming`\n## Problem\nYou have n dice, and each dice has k faces numbered from 1 to k.\n\nGiven three integers n, k, and target, return the number of possible ways (out of the kn total ways) to roll the dice, so the sum of the face-up numbers equals target. Since the answer may be too large, return it modulo 109 + 7.\n\n&nbsp;\nExample 1:\n\nInput: n = 1, k = 6, target = 3\nOutput: 1\nExplanation: You throw one die with 6 faces.\nThere is only one way to get a sum of 3.\n\nExample 2:\n\nInput: n = 2, k = 6, target = 7\nOutput: 6\nExplanation: You throw two dice, each with 6 faces.\nThere are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.\n\nExample 3:\n\nInput: n = 30, k = 30, target = 500\nOutput: 222616187\nExplanation: The answer must be returned modulo 109 + 7.\n\n&nbsp;\nConstraints:\n\n\t1 <= n, k <= 30\n\t1 <= target <= 1000\n## My Submission\n\n- Runtime: 97 ms (beats 86.0%)\n- Memory: 19.7 MB (beats 69.6%)\n\n## Similar Problems\n\n- [Equal Sum Arrays With Minimum Number of Operations](https://leetcode.com/problems/equal-sum-arrays-with-minimum-number-of-operations/) — Medium\n- [Find Missing Observations](https://leetcode.com/problems/find-missing-observations/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py"
+      },
+      "runtime": "97 ms",
+      "memory": "19.7 MB",
+      "runtimePct": 85.95199999999993,
+      "memoryPct": 69.62230000000001,
+      "timestamp": 1777615130000,
+      "acRate": 62.316840037210085,
+      "likes": 5336,
+      "dislikes": 186,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "equal-sum-arrays-with-minimum-number-of-operations",
+          "title": "Equal Sum Arrays With Minimum Number of Operations",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-missing-observations",
+          "title": "Find Missing Observations",
           "isPaidOnly": false
         }
       ],
