@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-05-01T17:42:09.737Z",
+  "updatedAt": "2026-05-02T16:23:06.009Z",
   "stats": {
-    "total": 217,
-    "easy": 126,
+    "total": 218,
+    "easy": 127,
     "medium": 74,
     "hard": 5
   },
@@ -9867,6 +9867,46 @@
         }
       ],
       "skipCommit": true
+    },
+    {
+      "platform": "leetcode",
+      "id": "students-and-examinations::mysql",
+      "submissionId": null,
+      "title": "Students and Examinations",
+      "titleSlug": "students-and-examinations",
+      "difficulty": "Easy",
+      "topic": "Database",
+      "tags": [
+        "Database"
+      ],
+      "canonical": null,
+      "code": "# Write your MySQL query statement below\nSELECT\n    S.student_id\n    ,S.student_name\n    ,SU.subject_name\n    ,COUNT(E.student_id) attended_exams\nFROM Students S\nCROSS JOIN Subjects SU\nLEFT JOIN Examinations E\n    ON S.student_id = E.student_id\n                        AND SU.subject_name = E.subject_name\n\n                        GROUP BY S.student_id, S.student_name, SU.subject_name\n                        ORDER BY S.student_id, S.student_name, SU.subject_name\n                        ;",
+      "files": [
+        {
+          "path": "topics/Database/students-and-examinations/MySQL.sql",
+          "content": "# Write your MySQL query statement below\nSELECT\n    S.student_id\n    ,S.student_name\n    ,SU.subject_name\n    ,COUNT(E.student_id) attended_exams\nFROM Students S\nCROSS JOIN Subjects SU\nLEFT JOIN Examinations E\n    ON S.student_id = E.student_id\n                        AND SU.subject_name = E.subject_name\n\n                        GROUP BY S.student_id, S.student_name, SU.subject_name\n                        ORDER BY S.student_id, S.student_name, SU.subject_name\n                        ;"
+        },
+        {
+          "path": "topics/Database/students-and-examinations/README.md",
+          "content": "# [1280] Students and Examinations\n**Difficulty:** Easy  |  **Acceptance:** 61.2%  |  **Likes:** 3042 / **Dislikes:** 366\n**Tags:** `Database`\n## Problem\nTable: Students\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| student_id    | int     |\n| student_name  | varchar |\n+---------------+---------+\nstudent_id is the primary key (column with unique values) for this table.\nEach row of this table contains the ID and the name of one student in the school.\n\n&nbsp;\n\nTable: Subjects\n\n+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| subject_name | varchar |\n+--------------+---------+\nsubject_name is the primary key (column with unique values) for this table.\nEach row of this table contains the name of one subject in the school.\n\n&nbsp;\n\nTable: Examinations\n\n+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| student_id   | int     |\n| subject_name | varchar |\n+--------------+---------+\nThere is no primary key (column with unique values) for this table. It may contain duplicates.\nEach student from the Students table takes every course from the Subjects table.\nEach row of this table indicates that a student with ID student_id attended the exam of subject_name.\n\n&nbsp;\n\nWrite a solution to find the number of times each student attended each exam.\n\nReturn the result table ordered by student_id and subject_name.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nStudents table:\n+------------+--------------+\n| student_id | student_name |\n+------------+--------------+\n| 1          | Alice        |\n| 2          | Bob          |\n| 13         | John         |\n| 6          | Alex         |\n+------------+--------------+\nSubjects table:\n+--------------+\n| subject_name |\n+--------------+\n| Math         |\n| Physics      |\n| Programming  |\n+--------------+\nExaminations table:\n+------------+--------------+\n| student_id | subject_name |\n+------------+--------------+\n| 1          | Math         |\n| 1          | Physics      |\n| 1          | Programming  |\n| 2          | Programming  |\n| 1          | Physics      |\n| 1          | Math         |\n| 13         | Math         |\n| 13         | Programming  |\n| 13         | Physics      |\n| 2          | Math         |\n| 1          | Math         |\n+------------+--------------+\nOutput: \n+------------+--------------+--------------+----------------+\n| student_id | student_name | subject_name | attended_exams |\n+------------+--------------+--------------+----------------+\n| 1          | Alice        | Math         | 3              |\n| 1          | Alice        | Physics      | 2              |\n| 1          | Alice        | Programming  | 1              |\n| 2          | Bob          | Math         | 1              |\n| 2          | Bob          | Physics      | 0              |\n| 2          | Bob          | Programming  | 1              |\n| 6          | Alex         | Math         | 0              |\n| 6          | Alex         | Physics      | 0              |\n| 6          | Alex         | Programming  | 0              |\n| 13         | John         | Math         | 1              |\n| 13         | John         | Physics      | 1              |\n| 13         | John         | Programming  | 1              |\n+------------+--------------+--------------+----------------+\nExplanation: \nThe result table should contain all students and all subjects.\nAlice attended the Math exam 3 times, the Physics exam 2 times, and the Programming exam 1 time.\nBob attended the Math exam 1 time, the Programming exam 1 time, and did not attend the Physics exam.\nAlex did not attend any exams.\nJohn attended the Math exam 1 time, the Physics exam 1 time, and the Programming exam 1 time.\n## My Submission\n\n- Runtime: 1105 ms (beats 21.6%)\n- Memory: 0B (beats 100.0%)\n- Solve time: 3s\n"
+        }
+      ],
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "runtime": "1105 ms",
+      "memory": "0B",
+      "runtimePct": 21.558000000000067,
+      "memoryPct": 100,
+      "timestamp": 1777737250000,
+      "acRate": 61.15796822752716,
+      "likes": 3042,
+      "dislikes": 366,
+      "similar": [],
+      "problemStatement": "<p>Table: <code>Students</code></p>\n\n<pre>\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| student_id    | int     |\n| student_name  | varchar |\n+---------------+---------+\nstudent_id is the primary key (column with unique values) for this table.\nEach row of this table contains the ID and the name of one student in the school.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Table: <code>Subjects</code></p>\n\n<pre>\n+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| subject_name | varchar |\n+--------------+---------+\nsubject_name is the primary key (column with unique values) for this table.\nEach row of this table contains the name of one subject in the school.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Table: <code>Examinations</code></p>\n\n<pre>\n+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| student_id   | int     |\n| subject_name | varchar |\n+--------------+---------+\nThere is no primary key (column with unique values) for this table. It may contain duplicates.\nEach student from the Students table takes every course from the Subjects table.\nEach row of this table indicates that a student with ID student_id attended the exam of subject_name.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to find the number of times each student attended each exam.</p>\n\n<p>Return the result table ordered by <code>student_id</code> and <code>subject_name</code>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nStudents table:\n+------------+--------------+\n| student_id | student_name |\n+------------+--------------+\n| 1          | Alice        |\n| 2          | Bob          |\n| 13         | John         |\n| 6          | Alex         |\n+------------+--------------+\nSubjects table:\n+--------------+\n| subject_name |\n+--------------+\n| Math         |\n| Physics      |\n| Programming  |\n+--------------+\nExaminations table:\n+------------+--------------+\n| student_id | subject_name |\n+------------+--------------+\n| 1          | Math         |\n| 1          | Physics      |\n| 1          | Programming  |\n| 2          | Programming  |\n| 1          | Physics      |\n| 1          | Math         |\n| 13         | Math         |\n| 13         | Programming  |\n| 13         | Physics      |\n| 2          | Math         |\n| 1          | Math         |\n+------------+--------------+\n<strong>Output:</strong> \n+------------+--------------+--------------+----------------+\n| student_id | student_name | subject_name | attended_exams |\n+------------+--------------+--------------+----------------+\n| 1          | Alice        | Math         | 3              |\n| 1          | Alice        | Physics      | 2              |\n| 1          | Alice        | Programming  | 1              |\n| 2          | Bob          | Math         | 1              |\n| 2          | Bob          | Physics      | 0              |\n| 2          | Bob          | Programming  | 1              |\n| 6          | Alex         | Math         | 0              |\n| 6          | Alex         | Physics      | 0              |\n| 6          | Alex         | Programming  | 0              |\n| 13         | John         | Math         | 1              |\n| 13         | John         | Physics      | 1              |\n| 13         | John         | Programming  | 1              |\n+------------+--------------+--------------+----------------+\n<strong>Explanation:</strong> \nThe result table should contain all students and all subjects.\nAlice attended the Math exam 3 times, the Physics exam 2 times, and the Programming exam 1 time.\nBob attended the Math exam 1 time, the Programming exam 1 time, and did not attend the Physics exam.\nAlex did not attend any exams.\nJohn attended the Math exam 1 time, the Physics exam 1 time, and the Programming exam 1 time.\n</pre>\n",
+      "elapsedSeconds": 3
     },
     {
       "id": "sum-of-digits-of-string-after-convert::python3",
