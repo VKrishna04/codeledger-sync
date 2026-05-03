@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-03T04:51:50.796Z",
+  "updatedAt": "2026-05-03T07:13:24.081Z",
   "stats": {
-    "total": 220,
+    "total": 221,
     "easy": 127,
-    "medium": 74,
+    "medium": 75,
     "hard": 7
   },
   "problems": [
@@ -1976,6 +1976,49 @@
         }
       ],
       "skipCommit": true
+    },
+    {
+      "platform": "leetcode",
+      "id": "count-number-of-teams::python3",
+      "submissionId": null,
+      "title": "Count Number of Teams",
+      "titleSlug": "count-number-of-teams",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "Array",
+        "Dynamic Programming",
+        "Binary Indexed Tree",
+        "Segment Tree"
+      ],
+      "canonical": null,
+      "code": "class Solution:\n    def numTeams(self, rating: List[int]) -> int:\n        count = 0\n\n        for j in range(1, len(rating) - 1):\n            ls = 0\n            lb = 0\n            for i in range(j):\n                if rating[i] < rating[j]:\n                    ls += 1\n                if rating[i] > rating[j]:\n                    lb += 1\n            rs = 0\n            rb = 0\n            for k in range(j + 1, len(rating)):\n                if rating[j] < rating[k]:\n                    rb += 1\n                if rating[j] > rating[k]:\n                    rs += 1\n            count += (ls * rb) + (lb * rs)\n\n        return count\n",
+      "files": [
+        {
+          "path": "topics/Dynamic Programming/count-number-of-teams/Python3.py",
+          "content": "class Solution:\n    def numTeams(self, rating: List[int]) -> int:\n        count = 0\n\n        for j in range(1, len(rating) - 1):\n            ls = 0\n            lb = 0\n            for i in range(j):\n                if rating[i] < rating[j]:\n                    ls += 1\n                if rating[i] > rating[j]:\n                    lb += 1\n            rs = 0\n            rb = 0\n            for k in range(j + 1, len(rating)):\n                if rating[j] < rating[k]:\n                    rb += 1\n                if rating[j] > rating[k]:\n                    rs += 1\n            count += (ls * rb) + (lb * rs)\n\n        return count\n"
+        },
+        {
+          "path": "topics/Dynamic Programming/count-number-of-teams/README.md",
+          "content": "# [1395] Count Number of Teams\n**Difficulty:** Medium  |  **Acceptance:** 70.2%  |  **Likes:** 3459 / **Dislikes:** 237\n**Tags:** `Array`, `Dynamic Programming`, `Binary Indexed Tree`, `Segment Tree`\n## Problem\nThere are n soldiers standing in a line. Each soldier is assigned a unique rating value.\n\nYou have to form a team of 3 soldiers amongst them under the following rules:\n\n\tChoose 3 soldiers with index (i, j, k) with rating (rating[i], rating[j], rating[k]).\n\tA team is valid if: (rating[i] < rating[j] < rating[k]) or (rating[i] > rating[j] > rating[k]) where (0 <= i < j < k < n).\n\nReturn the number of teams you can form given the conditions. (soldiers can be part of multiple teams).\n\n&nbsp;\nExample 1:\n\nInput: rating = [2,5,3,4,1]\nOutput: 3\nExplanation: We can form three teams given the conditions. (2,3,4), (5,4,1), (5,3,1). \n\nExample 2:\n\nInput: rating = [2,1,3]\nOutput: 0\nExplanation: We can't form any team given the conditions.\n\nExample 3:\n\nInput: rating = [1,2,3,4]\nOutput: 4\n\n&nbsp;\nConstraints:\n\n\tn == rating.length\n\t3 <= n <= 1000\n\t1 <= rating[i] <= 105\n\tAll the integers in rating are unique.\n## My Submission\n\n- Runtime: 564 ms (beats 30.8%)\n- Memory: 19.3 MB (beats 86.8%)\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "564 ms",
+      "memory": "19.3 MB",
+      "runtimePct": 30.82719999999996,
+      "memoryPct": 86.78760000000001,
+      "timestamp": 1777792329000,
+      "acRate": 70.15720779668021,
+      "likes": 3459,
+      "dislikes": 237,
+      "similar": [],
+      "problemStatement": "<p>There are <code>n</code> soldiers standing in a line. Each soldier is assigned a <strong>unique</strong> <code>rating</code> value.</p>\n\n<p>You have to form a team of 3 soldiers amongst them under the following rules:</p>\n\n<ul>\n\t<li>Choose 3 soldiers with index (<code>i</code>, <code>j</code>, <code>k</code>) with rating (<code>rating[i]</code>, <code>rating[j]</code>, <code>rating[k]</code>).</li>\n\t<li>A team is valid if: (<code>rating[i] &lt; rating[j] &lt; rating[k]</code>) or (<code>rating[i] &gt; rating[j] &gt; rating[k]</code>) where (<code>0 &lt;= i &lt; j &lt; k &lt; n</code>).</li>\n</ul>\n\n<p>Return the number of teams you can form given the conditions. (soldiers can be part of multiple teams).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> rating = [2,5,3,4,1]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> We can form three teams given the conditions. (2,3,4), (5,4,1), (5,3,1). \n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> rating = [2,1,3]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> We can&#39;t form any team given the conditions.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> rating = [1,2,3,4]\n<strong>Output:</strong> 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == rating.length</code></li>\n\t<li><code>3 &lt;= n &lt;= 1000</code></li>\n\t<li><code>1 &lt;= rating[i] &lt;= 10<sup>5</sup></code></li>\n\t<li>All the integers in <code>rating</code> are <strong>unique</strong>.</li>\n</ul>\n",
+      "elapsedSeconds": null
     },
     {
       "id": "count-pairs-whose-sum-is-less-than-target::python3",
