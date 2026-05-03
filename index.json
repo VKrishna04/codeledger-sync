@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-03T09:49:42.994Z",
+  "updatedAt": "2026-05-03T10:10:57.046Z",
   "stats": {
-    "total": 211,
+    "total": 212,
     "easy": 127,
-    "medium": 76,
+    "medium": 77,
     "hard": 7
   },
   "problems": [
@@ -5521,15 +5521,15 @@
         "Database"
       ],
       "canonical": null,
-      "code": "# Write your MySQL query statement below\nselect e2.name\nfrom employee as e1\nleft join employee as e2\non e1.managerId = e2.id\ngroup by e2.id\nhaving count(e1.id) >= 5",
+      "code": "# Write your MySQL query statement below\nselect m.name\nfrom employee as m\ninner join employee as e\non e.managerId = m.id\ngroup by m.id\nhaving count(e.id) >= 5",
       "files": [
         {
           "path": "topics/Database/managers-with-at-least-5-direct-reports/MySQL.sql",
-          "content": "# Write your MySQL query statement below\nselect e2.name\nfrom employee as e1\nleft join employee as e2\non e1.managerId = e2.id\ngroup by e2.id\nhaving count(e1.id) >= 5"
+          "content": "# Write your MySQL query statement below\nselect m.name\nfrom employee as m\ninner join employee as e\non e.managerId = m.id\ngroup by m.id\nhaving count(e.id) >= 5"
         },
         {
           "path": "topics/Database/managers-with-at-least-5-direct-reports/README.md",
-          "content": "# [570] Managers with at Least 5 Direct Reports\n**Difficulty:** Medium  |  **Acceptance:** 49.0%  |  **Likes:** 1778 / **Dislikes:** 193\n**Tags:** `Database`\n## Problem\nTable: Employee\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.\n\n&nbsp;\n\nWrite a solution to find managers with at least five direct reports.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\nOutput: \n+------+\n| name |\n+------+\n| John |\n+------+\n## My Submission\n\n- Runtime: N/A\n- Memory: N/A\n"
+          "content": "# [570] Managers with at Least 5 Direct Reports\n**Difficulty:** Medium  |  **Acceptance:** 49.0%  |  **Likes:** 1778 / **Dislikes:** 193\n**Tags:** `Database`\n## Problem\nTable: Employee\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.\n\n&nbsp;\n\nWrite a solution to find managers with at least five direct reports.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\nOutput: \n+------+\n| name |\n+------+\n| John |\n+------+\n## My Submission\n\n- Runtime: 341 ms (beats 58.9%)\n- Memory: 0B (beats 100.0%)\n- Solve time: 24s\n"
         }
       ],
       "lang": {
@@ -5537,17 +5537,17 @@
         "ext": "sql",
         "slug": "mysql"
       },
-      "runtime": "N/A",
-      "memory": "N/A",
-      "runtimePct": null,
-      "memoryPct": null,
-      "timestamp": 1777801613000,
-      "acRate": 49.02705381293971,
+      "runtime": "341 ms",
+      "memory": "0B",
+      "runtimePct": 58.935700000000004,
+      "memoryPct": 100,
+      "timestamp": 1777801758000,
+      "acRate": 49.027028946180494,
       "likes": 1778,
       "dislikes": 193,
       "similar": [],
       "problemStatement": "<p>Table: <code>Employee</code></p>\n\n<pre>\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to find managers with at least <strong>five direct reports</strong>.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\n<strong>Output:</strong> \n+------+\n| name |\n+------+\n| John |\n+------+\n</pre>\n",
-      "elapsedSeconds": null
+      "elapsedSeconds": 24
     },
     {
       "id": "max-consecutive-ones::java",
@@ -7233,6 +7233,65 @@
         }
       ],
       "skipCommit": true
+    },
+    {
+      "platform": "leetcode",
+      "id": "number-of-dice-rolls-with-target-sum::javascript",
+      "submissionId": null,
+      "title": "Number of Dice Rolls With Target Sum",
+      "titleSlug": "number-of-dice-rolls-with-target-sum",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "Dynamic Programming"
+      ],
+      "canonical": null,
+      "code": "/**\n * @param {number} n\n * @param {number} k\n * @param {number} target\n * @return {number}\n */\nvar numRollsToTarget = function(n, k, target) {\n    const MOD = 1000000007;\n    let dp = new Array(target + 1).fill(0);\n    dp[0] = 1;\n\n    for (let i = 1; i <= n; i++) {\n        let nextDp = new Array(target + 1).fill(0);\n        for (let j = 1; j <= target; j++) {\n            for (let face = 1; face <= k; face++) {\n                if (j >= face) {\n                    nextDp[j] = (nextDp[j] + dp[j - face]) % MOD;\n                }\n            }\n        }\n        dp = nextDp;\n    }\n\n    return dp[target];\n};",
+      "files": [
+        {
+          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/JavaScript.js",
+          "content": "/**\n * @param {number} n\n * @param {number} k\n * @param {number} target\n * @return {number}\n */\nvar numRollsToTarget = function(n, k, target) {\n    const MOD = 1000000007;\n    let dp = new Array(target + 1).fill(0);\n    dp[0] = 1;\n\n    for (let i = 1; i <= n; i++) {\n        let nextDp = new Array(target + 1).fill(0);\n        for (let j = 1; j <= target; j++) {\n            for (let face = 1; face <= k; face++) {\n                if (j >= face) {\n                    nextDp[j] = (nextDp[j] + dp[j - face]) % MOD;\n                }\n            }\n        }\n        dp = nextDp;\n    }\n\n    return dp[target];\n};"
+        },
+        {
+          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/README.md",
+          "content": "# [1155] Number of Dice Rolls With Target Sum\n**Difficulty:** Medium  |  **Acceptance:** 62.3%  |  **Likes:** 5336 / **Dislikes:** 186\n**Tags:** `Dynamic Programming`\n## Problem\nYou have n dice, and each dice has k faces numbered from 1 to k.\n\nGiven three integers n, k, and target, return the number of possible ways (out of the kn total ways) to roll the dice, so the sum of the face-up numbers equals target. Since the answer may be too large, return it modulo 109 + 7.\n\n&nbsp;\nExample 1:\n\nInput: n = 1, k = 6, target = 3\nOutput: 1\nExplanation: You throw one die with 6 faces.\nThere is only one way to get a sum of 3.\n\nExample 2:\n\nInput: n = 2, k = 6, target = 7\nOutput: 6\nExplanation: You throw two dice, each with 6 faces.\nThere are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.\n\nExample 3:\n\nInput: n = 30, k = 30, target = 500\nOutput: 222616187\nExplanation: The answer must be returned modulo 109 + 7.\n\n&nbsp;\nConstraints:\n\n\t1 <= n, k <= 30\n\t1 <= target <= 1000\n## My Submission\n\n- Runtime: 29 ms (beats 66.4%)\n- Memory: 56.6 MB (beats 72.9%)\n\n## Similar Problems\n\n- [Equal Sum Arrays With Minimum Number of Operations](https://leetcode.com/problems/equal-sum-arrays-with-minimum-number-of-operations/) — Medium\n- [Find Missing Observations](https://leetcode.com/problems/find-missing-observations/) — Medium\n"
+        },
+        {
+          "path": "topics/Dynamic Programming/number-of-dice-rolls-with-target-sum/hints.md",
+          "content": "# Hints — Number of Dice Rolls With Target Sum\n\n### Hint 1\n\nUse dynamic programming.  The states are how many dice are remaining, and what sum total you have rolled so far.\n"
+        }
+      ],
+      "lang": {
+        "name": "JavaScript",
+        "ext": "js",
+        "slug": "javascript"
+      },
+      "runtime": "29 ms",
+      "memory": "56.6 MB",
+      "runtimePct": 66.3547999999999,
+      "memoryPct": 72.89699999999993,
+      "timestamp": 1777803043000,
+      "acRate": 62.31988663336021,
+      "likes": 5336,
+      "dislikes": 186,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "equal-sum-arrays-with-minimum-number-of-operations",
+          "title": "Equal Sum Arrays With Minimum Number of Operations",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-missing-observations",
+          "title": "Find Missing Observations",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>You have <code>n</code> dice, and each dice has <code>k</code> faces numbered from <code>1</code> to <code>k</code>.</p>\n\n<p>Given three integers <code>n</code>, <code>k</code>, and <code>target</code>, return <em>the number of possible ways (out of the </em><code>k<sup>n</sup></code><em> total ways) </em><em>to roll the dice, so the sum of the face-up numbers equals </em><code>target</code>. Since the answer may be too large, return it <strong>modulo</strong> <code>10<sup>9</sup> + 7</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, k = 6, target = 3\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> You throw one die with 6 faces.\nThere is only one way to get a sum of 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2, k = 6, target = 7\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> You throw two dice, each with 6 faces.\nThere are 6 ways to get a sum of 7: 1+6, 2+5, 3+4, 4+3, 5+2, 6+1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 30, k = 30, target = 500\n<strong>Output:</strong> 222616187\n<strong>Explanation:</strong> The answer must be returned modulo 10<sup>9</sup> + 7.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n, k &lt;= 30</code></li>\n\t<li><code>1 &lt;= target &lt;= 1000</code></li>\n</ul>\n",
+      "elapsedSeconds": null,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/submissions/"
     },
     {
       "id": "number-of-dice-rolls-with-target-sum::python3",

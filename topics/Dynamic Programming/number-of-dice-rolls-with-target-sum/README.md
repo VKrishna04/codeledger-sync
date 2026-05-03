@@ -34,8 +34,8 @@ Constraints:
 	1 <= target <= 1000
 ## My Submission
 
-- Runtime: 97 ms (beats 86.0%)
-- Memory: 19.7 MB (beats 69.6%)
+- Runtime: 29 ms (beats 66.4%)
+- Memory: 56.6 MB (beats 72.9%)
 
 ## Similar Problems
 
