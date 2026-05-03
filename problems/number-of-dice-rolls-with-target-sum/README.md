@@ -1,11 +1,7 @@
-# Number of Dice Rolls With Target Sum
-
-**Difficulty:** Medium  |  **Acceptance:** 62.3%
-
+# [1155] Number of Dice Rolls With Target Sum
+**Difficulty:** Medium  |  **Acceptance:** 62.3%  |  **Likes:** 5337 / **Dislikes:** 186
 **Tags:** `Dynamic Programming`
-
 ## Problem
-
 You have n dice, and each dice has k faces numbered from 1 to k.
 
 Given three integers n, k, and target, return the number of possible ways (out of the kn total ways) to roll the dice, so the sum of the face-up numbers equals target. Since the answer may be too large, return it modulo 109 + 7.
@@ -36,11 +32,10 @@ Constraints:
 
 	1 <= n, k <= 30
 	1 <= target <= 1000
-
 ## My Submission
 
-- Runtime: 97 ms
-- Memory: 19.7 MB
+- Runtime: 29 ms (beats 69.8%)
+- Memory: 56.6 MB (beats 75.0%)
 
 ## Similar Problems
 

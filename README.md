@@ -1,19 +1,26 @@
-# DSA Solutions
+# CodeLedger — DSA Solutions
 
-> Managed by [CodeLedger](https://github.com/Life-Experimentalist/CodeLedger). Last updated: May 10, 2026
+> Automatically tracked by [CodeLedger](https://codeledger.vkrishna04.me) — your DSA journey, committed.
+
+**📊 Live Stats:** [https://VKrishna04.github.io/codeledger-sync/](https://VKrishna04.github.io/codeledger-sync/)
+
+---
+
+## Structure
+
+```
+problems/
+  {problem-slug}/
+    {problem-slug}.py      ← solution (one file per language)
+    {problem-slug}.js
+    README.md              ← problem statement + your stats
+    hints.md               ← hints (if enabled)
+```
 
 ## Stats
 
-| Total | Easy | Medium | Hard |
-|:-----:|:----:|:------:|:----:|
-| **203** | 118 | 77 | 8 |
+See [the live dashboard](https://VKrishna04.github.io/codeledger-sync/) for difficulty breakdown, solve heatmap, and recent solutions.
 
-## Recent Solves
+---
 
-| Problem | Difficulty | Language | Date |
-|---------|-----------|----------|------|
-| Jump Game II | Medium | Python3 | May 10 |
-| Number of Islands | Medium | Python3 | May 9 |
-| Binary Tree Maximum Path Sum | Hard | Python3 | May 9 |
-| Diameter of Binary Tree | Easy | Python3 | May 8 |
-| Filling Bookcase Shelves | Medium | Python3 | May 7 |
+*Managed by [CodeLedger](https://codeledger.vkrishna04.me) — never manually edited.*
