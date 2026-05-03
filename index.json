@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-03T07:32:40.825Z",
+  "updatedAt": "2026-05-03T09:49:42.994Z",
   "stats": {
-    "total": 221,
+    "total": 211,
     "easy": 127,
-    "medium": 75,
+    "medium": 76,
     "hard": 7
   },
   "problems": [
@@ -543,22 +543,6 @@
       "skipCommit": true
     },
     {
-      "id": "article-views-i",
-      "title": "Article Views I",
-      "titleSlug": "article-views-i",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777054016000,
-      "code": "",
-      "url": "https://leetcode.com/problems/article-views-i/"
-    },
-    {
       "platform": "leetcode",
       "id": "article-views-i::mysql",
       "submissionId": null,
@@ -578,7 +562,7 @@
         },
         {
           "path": "topics/Database/article-views-i/README.md",
-          "content": "# [1148] Article Views I\n**Difficulty:** Easy  |  **Acceptance:** 76.7%  |  **Likes:** 2295 / **Dislikes:** 144\n**Tags:** `Database`\n## Problem\nTable: Views\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| article_id    | int     |\n| author_id     | int     |\n| viewer_id     | int     |\n| view_date     | date    |\n+---------------+---------+\nThere is no primary key (column with unique values) for this table, the table may have duplicate rows.\nEach row of this table indicates that some viewer viewed an article (written by some author) on some date. \nNote that equal author_id and viewer_id indicate the same person.\n\n&nbsp;\n\nWrite a solution to find all the authors that viewed at least one of their own articles.\n\nReturn the result table sorted by id in ascending order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nViews table:\n+------------+-----------+-----------+------------+\n| article_id | author_id | viewer_id | view_date  |\n+------------+-----------+-----------+------------+\n| 1          | 3         | 5         | 2019-08-01 |\n| 1          | 3         | 6         | 2019-08-02 |\n| 2          | 7         | 7         | 2019-08-01 |\n| 2          | 7         | 6         | 2019-08-02 |\n| 4          | 7         | 1         | 2019-07-22 |\n| 3          | 4         | 4         | 2019-07-21 |\n| 3          | 4         | 4         | 2019-07-21 |\n+------------+-----------+-----------+------------+\nOutput: \n+------+\n| id   |\n+------+\n| 4    |\n| 7    |\n+------+\n## My Submission\n\n- Runtime: 404 ms (beats 63.9%)\n- Memory: 0B (beats 100.0%)\n- Solve time: 5s\n"
+          "content": "# [1148] Article Views I\n**Difficulty:** Easy  |  **Acceptance:** 76.7%  |  **Likes:** 2295 / **Dislikes:** 144\n**Tags:** `Database`\n## Problem\nTable: Views\n\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| article_id    | int     |\n| author_id     | int     |\n| viewer_id     | int     |\n| view_date     | date    |\n+---------------+---------+\nThere is no primary key (column with unique values) for this table, the table may have duplicate rows.\nEach row of this table indicates that some viewer viewed an article (written by some author) on some date. \nNote that equal author_id and viewer_id indicate the same person.\n\n&nbsp;\n\nWrite a solution to find all the authors that viewed at least one of their own articles.\n\nReturn the result table sorted by id in ascending order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nViews table:\n+------------+-----------+-----------+------------+\n| article_id | author_id | viewer_id | view_date  |\n+------------+-----------+-----------+------------+\n| 1          | 3         | 5         | 2019-08-01 |\n| 1          | 3         | 6         | 2019-08-02 |\n| 2          | 7         | 7         | 2019-08-01 |\n| 2          | 7         | 6         | 2019-08-02 |\n| 4          | 7         | 1         | 2019-07-22 |\n| 3          | 4         | 4         | 2019-07-21 |\n| 3          | 4         | 4         | 2019-07-21 |\n+------------+-----------+-----------+------------+\nOutput: \n+------+\n| id   |\n+------+\n| 4    |\n| 7    |\n+------+\n## My Submission\n\n- Runtime: 404 ms (beats 63.9%)\n- Memory: 0B (beats 100.0%)\n- Solve time: 4m 36s\n"
         }
       ],
       "lang": {
@@ -591,12 +575,12 @@
       "runtimePct": 63.866699999999966,
       "memoryPct": 100,
       "timestamp": 1777054016000,
-      "acRate": 76.65896526465396,
+      "acRate": 76.65898722659931,
       "likes": 2295,
       "dislikes": 144,
       "similar": [],
       "problemStatement": "<p>Table: <code>Views</code></p>\n\n<pre>\n+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| article_id    | int     |\n| author_id     | int     |\n| viewer_id     | int     |\n| view_date     | date    |\n+---------------+---------+\nThere is no primary key (column with unique values) for this table, the table may have duplicate rows.\nEach row of this table indicates that some viewer viewed an article (written by some author) on some date. \nNote that equal author_id and viewer_id indicate the same person.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to find all the authors that viewed at least one of their own articles.</p>\n\n<p>Return the result table sorted by <code>id</code> in ascending order.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nViews table:\n+------------+-----------+-----------+------------+\n| article_id | author_id | viewer_id | view_date  |\n+------------+-----------+-----------+------------+\n| 1          | 3         | 5         | 2019-08-01 |\n| 1          | 3         | 6         | 2019-08-02 |\n| 2          | 7         | 7         | 2019-08-01 |\n| 2          | 7         | 6         | 2019-08-02 |\n| 4          | 7         | 1         | 2019-07-22 |\n| 3          | 4         | 4         | 2019-07-21 |\n| 3          | 4         | 4         | 2019-07-21 |\n+------------+-----------+-----------+------------+\n<strong>Output:</strong> \n+------+\n| id   |\n+------+\n| 4    |\n| 7    |\n+------+\n</pre>\n",
-      "elapsedSeconds": 5
+      "elapsedSeconds": 276
     },
     {
       "id": "assign-cookies::python3",
@@ -633,22 +617,6 @@
       "acRate": 54.89556724354884,
       "similar": null,
       "skipCommit": true
-    },
-    {
-      "id": "average-time-of-process-per-machine",
-      "title": "Average Time of Process per Machine",
-      "titleSlug": "average-time-of-process-per-machine",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777114835000,
-      "code": "",
-      "url": "https://leetcode.com/problems/average-time-of-process-per-machine/"
     },
     {
       "id": "average-time-of-process-per-machine::mysql",
@@ -850,22 +818,6 @@
         }
       ],
       "skipCommit": true
-    },
-    {
-      "id": "big-countries",
-      "title": "Big Countries",
-      "titleSlug": "big-countries",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777048368000,
-      "code": "",
-      "url": "https://leetcode.com/problems/big-countries/"
     },
     {
       "id": "big-countries::mysql",
@@ -2237,32 +2189,42 @@
       "skipCommit": true
     },
     {
-      "id": "create-a-dataframe-from-list::pythondata",
       "platform": "leetcode",
+      "id": "create-a-dataframe-from-list::pythondata",
+      "submissionId": null,
       "title": "Create a DataFrame from List",
       "titleSlug": "create-a-dataframe-from-list",
       "difficulty": "Easy",
+      "topic": "Untagged",
+      "tags": [],
+      "canonical": null,
+      "code": "import pandas as pd\n\ndef createDataframe(student_data: List[List[int]]) -> pd.DataFrame:\n    return pd.DataFrame(student_data, columns = [\"student_id\", \"age\"])",
+      "files": [
+        {
+          "path": "topics/Untagged/create-a-dataframe-from-list/Pandas.txt",
+          "content": "import pandas as pd\n\ndef createDataframe(student_data: List[List[int]]) -> pd.DataFrame:\n    return pd.DataFrame(student_data, columns = [\"student_id\", \"age\"])"
+        },
+        {
+          "path": "topics/Untagged/create-a-dataframe-from-list/README.md",
+          "content": "# [2877] Create a DataFrame from List\n**Difficulty:** Easy  |  **Acceptance:** 81.0%  |  **Likes:** 293 / **Dislikes:** 12\n**Tags:** —\n## Problem\nWrite a solution to create a DataFrame from a 2D list called student_data. This 2D list contains the IDs and ages of some students.\n\nThe DataFrame should have two columns, student_id and age, and be in the same order as the original 2D list.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput:\nstudent_data:\n[\n  [1, 15],\n  [2, 11],\n  [3, 11],\n  [4, 20]\n]\nOutput:\n+------------+-----+\n| student_id | age |\n+------------+-----+\n| 1          | 15  |\n| 2          | 11  |\n| 3          | 11  |\n| 4          | 20  |\n+------------+-----+\nExplanation:\nA DataFrame was created on top of student_data, with two columns named student_id and age.\n## My Submission\n\n- Runtime: 390 ms (beats 5.2%)\n- Memory: 68.5 MB (beats 6.0%)\n- Solve time: 6s\n"
+        }
+      ],
       "lang": {
-        "name": "pythondata",
+        "name": "Pandas",
         "ext": "txt",
         "slug": "pythondata"
       },
-      "tags": [],
-      "topic": "Untagged",
-      "code": "",
-      "files": [],
-      "timestamp": 1729715291000,
       "runtime": "390 ms",
       "memory": "68.5 MB",
-      "runtimePct": null,
-      "memoryPct": null,
+      "runtimePct": 5.162400000000004,
+      "memoryPct": 6.017400000000017,
+      "timestamp": 1729715291000,
+      "acRate": 80.98234115681744,
+      "likes": 293,
+      "dislikes": 12,
+      "similar": [],
       "problemStatement": "<p>Write a solution to <strong>create</strong> a DataFrame from a 2D list called <code>student_data</code>. This 2D list contains the IDs and ages of some students.</p>\n\n<p>The DataFrame should have two columns, <code>student_id</code> and <code>age</code>, and be in the same order as the original 2D list.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:\n</strong>student_data:<strong>\n</strong><code>[\n  [1, 15],\n  [2, 11],\n  [3, 11],\n  [4, 20]\n]</code>\n<strong>Output:</strong>\n+------------+-----+\n| student_id | age |\n+------------+-----+\n| 1          | 15  |\n| 2          | 11  |\n| 3          | 11  |\n| 4          | 20  |\n+------------+-----+\n<strong>Explanation:</strong>\nA DataFrame was created on top of student_data, with two columns named <code>student_id</code> and <code>age</code>.\n</pre>\n",
-      "hints": [
-        "Consider using a built-in function in pandas library and specifying the column names within it."
-      ],
-      "acRate": 80.99003622318092,
-      "similar": null,
-      "skipCommit": true
+      "elapsedSeconds": 6
     },
     {
       "id": "create-a-new-column::pythondata",
@@ -2317,22 +2279,6 @@
       "acRate": 81.91516501296417,
       "similar": null,
       "skipCommit": true
-    },
-    {
-      "id": "customer-who-visited-but-did-not-make-any-transactions",
-      "title": "Customer Who Visited but Did Not Make Any Transactions",
-      "titleSlug": "customer-who-visited-but-did-not-make-any-transactions",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777104021000,
-      "code": "",
-      "url": "https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/"
     },
     {
       "id": "customer-who-visited-but-did-not-make-any-transactions::mysql",
@@ -2818,22 +2764,6 @@
       "skipCommit": true
     },
     {
-      "id": "employee-bonus",
-      "title": "Employee Bonus",
-      "titleSlug": "employee-bonus",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777115023000,
-      "code": "",
-      "url": "https://leetcode.com/problems/employee-bonus/"
-    },
-    {
       "id": "employee-bonus::mysql",
       "platform": "leetcode",
       "title": "Employee Bonus",
@@ -3131,22 +3061,6 @@
       "acRate": 88.95982668565028,
       "similar": null,
       "skipCommit": true
-    },
-    {
-      "id": "find-customer-referee",
-      "title": "Find Customer Referee",
-      "titleSlug": "find-customer-referee",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777045371000,
-      "code": "",
-      "url": "https://leetcode.com/problems/find-customer-referee/"
     },
     {
       "id": "find-customer-referee::mysql",
@@ -4488,22 +4402,6 @@
       "skipCommit": true
     },
     {
-      "id": "invalid-tweets",
-      "title": "Invalid Tweets",
-      "titleSlug": "invalid-tweets",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777054886000,
-      "code": "",
-      "url": "https://leetcode.com/problems/invalid-tweets/"
-    },
-    {
       "id": "invalid-tweets::mysql",
       "platform": "leetcode",
       "title": "Invalid Tweets",
@@ -5610,6 +5508,46 @@
         }
       ],
       "skipCommit": true
+    },
+    {
+      "platform": "leetcode",
+      "id": "managers-with-at-least-5-direct-reports::mysql",
+      "submissionId": null,
+      "title": "Managers with at Least 5 Direct Reports",
+      "titleSlug": "managers-with-at-least-5-direct-reports",
+      "difficulty": "Medium",
+      "topic": "Database",
+      "tags": [
+        "Database"
+      ],
+      "canonical": null,
+      "code": "# Write your MySQL query statement below\nselect e2.name\nfrom employee as e1\nleft join employee as e2\non e1.managerId = e2.id\ngroup by e2.id\nhaving count(e1.id) >= 5",
+      "files": [
+        {
+          "path": "topics/Database/managers-with-at-least-5-direct-reports/MySQL.sql",
+          "content": "# Write your MySQL query statement below\nselect e2.name\nfrom employee as e1\nleft join employee as e2\non e1.managerId = e2.id\ngroup by e2.id\nhaving count(e1.id) >= 5"
+        },
+        {
+          "path": "topics/Database/managers-with-at-least-5-direct-reports/README.md",
+          "content": "# [570] Managers with at Least 5 Direct Reports\n**Difficulty:** Medium  |  **Acceptance:** 49.0%  |  **Likes:** 1778 / **Dislikes:** 193\n**Tags:** `Database`\n## Problem\nTable: Employee\n\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.\n\n&nbsp;\n\nWrite a solution to find managers with at least five direct reports.\n\nReturn the result table in any order.\n\nThe result format is in the following example.\n\n&nbsp;\nExample 1:\n\nInput: \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\nOutput: \n+------+\n| name |\n+------+\n| John |\n+------+\n## My Submission\n\n- Runtime: N/A\n- Memory: N/A\n"
+        }
+      ],
+      "lang": {
+        "name": "MySQL",
+        "ext": "sql",
+        "slug": "mysql"
+      },
+      "runtime": "N/A",
+      "memory": "N/A",
+      "runtimePct": null,
+      "memoryPct": null,
+      "timestamp": 1777801613000,
+      "acRate": 49.02705381293971,
+      "likes": 1778,
+      "dislikes": 193,
+      "similar": [],
+      "problemStatement": "<p>Table: <code>Employee</code></p>\n\n<pre>\n+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself.\n</pre>\n\n<p>&nbsp;</p>\n\n<p>Write a solution to find managers with at least <strong>five direct reports</strong>.</p>\n\n<p>Return the result table in <strong>any order</strong>.</p>\n\n<p>The result format is in the following example.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> \nEmployee table:\n+-----+-------+------------+-----------+\n| id  | name  | department | managerId |\n+-----+-------+------------+-----------+\n| 101 | John  | A          | null      |\n| 102 | Dan   | A          | 101       |\n| 103 | James | A          | 101       |\n| 104 | Amy   | A          | 101       |\n| 105 | Anne  | A          | 101       |\n| 106 | Ron   | B          | 101       |\n+-----+-------+------------+-----------+\n<strong>Output:</strong> \n+------+\n| name |\n+------+\n| John |\n+------+\n</pre>\n",
+      "elapsedSeconds": null
     },
     {
       "id": "max-consecutive-ones::java",
@@ -7933,22 +7871,6 @@
       "skipCommit": true
     },
     {
-      "id": "product-sales-analysis-i",
-      "title": "Product Sales Analysis I",
-      "titleSlug": "product-sales-analysis-i",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777095239000,
-      "code": "",
-      "url": "https://leetcode.com/problems/product-sales-analysis-i/"
-    },
-    {
       "id": "product-sales-analysis-i::mysql",
       "platform": "leetcode",
       "title": "Product Sales Analysis I",
@@ -8082,22 +8004,6 @@
         }
       ],
       "skipCommit": true
-    },
-    {
-      "id": "recyclable-and-low-fat-products",
-      "title": "Recyclable and Low Fat Products",
-      "titleSlug": "recyclable-and-low-fat-products",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777045102000,
-      "code": "",
-      "url": "https://leetcode.com/problems/recyclable-and-low-fat-products/"
     },
     {
       "id": "recyclable-and-low-fat-products::mysql",
@@ -8269,22 +8175,6 @@
       "acRate": 85.2438200176132,
       "similar": null,
       "skipCommit": true
-    },
-    {
-      "id": "replace-employee-id-with-the-unique-identifier",
-      "title": "Replace Employee ID With The Unique Identifier",
-      "titleSlug": "replace-employee-id-with-the-unique-identifier",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777093595000,
-      "code": "",
-      "url": "https://leetcode.com/problems/replace-employee-id-with-the-unique-identifier/"
     },
     {
       "id": "replace-employee-id-with-the-unique-identifier::mysql",
@@ -8704,22 +8594,6 @@
         }
       ],
       "skipCommit": true
-    },
-    {
-      "id": "rising-temperature",
-      "title": "Rising Temperature",
-      "titleSlug": "rising-temperature",
-      "platform": "leetcode",
-      "difficulty": "Unknown",
-      "lang": {
-        "name": "mysql",
-        "ext": "mysql",
-        "slug": "mysql"
-      },
-      "tags": [],
-      "timestamp": 1777107821000,
-      "code": "",
-      "url": "https://leetcode.com/problems/rising-temperature/"
     },
     {
       "id": "rising-temperature::mysql",
