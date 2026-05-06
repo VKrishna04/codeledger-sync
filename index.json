@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-06T07:19:45.096Z",
+  "updatedAt": "2026-05-06T20:08:33.799Z",
   "stats": {
-    "total": 209,
+    "total": 210,
     "easy": 127,
-    "medium": 75,
+    "medium": 76,
     "hard": 7
   },
   "problems": [
@@ -7718,6 +7718,67 @@
         }
       ],
       "skipCommit": true
+    },
+    {
+      "platform": "leetcode",
+      "id": "partition-array-for-maximum-sum::python3",
+      "submissionId": null,
+      "title": "Partition Array for Maximum Sum",
+      "titleSlug": "partition-array-for-maximum-sum",
+      "difficulty": "Medium",
+      "topic": "Dynamic Programming",
+      "tags": [
+        "Array",
+        "Dynamic Programming"
+      ],
+      "canonical": null,
+      "readmeContent": "# [1043] Partition Array for Maximum Sum\n**Difficulty:** Medium  |  **Acceptance:** 77.3%  |  **Likes:** 5073 / **Dislikes:** 439\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an integer array arr, partition the array into (contiguous) subarrays of length at most k. After partitioning, each subarray has their values changed to become the maximum value of that subarray.\n\nReturn the largest sum of the given array after partitioning. Test cases are generated so that the answer fits in a 32-bit integer.\n\n&nbsp;\nExample 1:\n\nInput: arr = [1,15,7,9,2,5,10], k = 3\nOutput: 84\nExplanation: arr becomes [15,15,15,9,10,10,10]\n\nExample 2:\n\nInput: arr = [1,4,1,5,7,3,6,1,9,9,3], k = 4\nOutput: 83\n\nExample 3:\n\nInput: arr = [1], k = 1\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\t1 <= arr.length <= 500\n\t0 <= arr[i] <= 109\n\t1 <= k <= arr.length\n## My Submission\n\n- Runtime: 151 ms (beats 60.8%)\n- Memory: 19.1 MB (beats 97.7%)\n\n## Similar Problems\n\n- [Partition String Into Minimum Beautiful Substrings](https://leetcode.com/problems/partition-string-into-minimum-beautiful-substrings/) — Medium\n- [Minimum Substring Partition of Equal Character Frequency](https://leetcode.com/problems/minimum-substring-partition-of-equal-character-frequency/) — Medium\n",
+      "code": "class Solution:\n    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:\n        n = len(arr)\n        dp = [0] * (n + 1)\n\n        for i in range(1, n + 1):\n            cur_max = 0\n\n            for j in range(1, min(k, i) + 1):\n                cur_max = max(cur_max, arr[i - j])\n                \n                chunk_sum = cur_max * j\n                dp[i] = max(dp[i], dp[i - j] + chunk_sum)\n\n        return dp[n]",
+      "files": [
+        {
+          "path": "problems/partition-array-for-maximum-sum/Python3.py",
+          "content": "class Solution:\n    def maxSumAfterPartitioning(self, arr: List[int], k: int) -> int:\n        n = len(arr)\n        dp = [0] * (n + 1)\n\n        for i in range(1, n + 1):\n            cur_max = 0\n\n            for j in range(1, min(k, i) + 1):\n                cur_max = max(cur_max, arr[i - j])\n                \n                chunk_sum = cur_max * j\n                dp[i] = max(dp[i], dp[i - j] + chunk_sum)\n\n        return dp[n]"
+        },
+        {
+          "path": "problems/partition-array-for-maximum-sum/README.md",
+          "content": "# [1043] Partition Array for Maximum Sum\n**Difficulty:** Medium  |  **Acceptance:** 77.3%  |  **Likes:** 5073 / **Dislikes:** 439\n**Tags:** `Array`, `Dynamic Programming`\n## Problem\nGiven an integer array arr, partition the array into (contiguous) subarrays of length at most k. After partitioning, each subarray has their values changed to become the maximum value of that subarray.\n\nReturn the largest sum of the given array after partitioning. Test cases are generated so that the answer fits in a 32-bit integer.\n\n&nbsp;\nExample 1:\n\nInput: arr = [1,15,7,9,2,5,10], k = 3\nOutput: 84\nExplanation: arr becomes [15,15,15,9,10,10,10]\n\nExample 2:\n\nInput: arr = [1,4,1,5,7,3,6,1,9,9,3], k = 4\nOutput: 83\n\nExample 3:\n\nInput: arr = [1], k = 1\nOutput: 1\n\n&nbsp;\nConstraints:\n\n\t1 <= arr.length <= 500\n\t0 <= arr[i] <= 109\n\t1 <= k <= arr.length\n## My Submission\n\n- Runtime: 151 ms (beats 60.8%)\n- Memory: 19.1 MB (beats 97.7%)\n\n## Similar Problems\n\n- [Partition String Into Minimum Beautiful Substrings](https://leetcode.com/problems/partition-string-into-minimum-beautiful-substrings/) — Medium\n- [Minimum Substring Partition of Equal Character Frequency](https://leetcode.com/problems/minimum-substring-partition-of-equal-character-frequency/) — Medium\n"
+        },
+        {
+          "path": "problems/partition-array-for-maximum-sum/hints.md",
+          "content": "# Hints — Partition Array for Maximum Sum\n\n### Hint 1\n\nThink dynamic programming:  dp[i] will be the answer for array A[0], ..., A[i-1].\n\n### Hint 2\n\nFor j = 1 .. k that keeps everything in bounds, dp[i] is the maximum of dp[i-j] + max(A[i-1], ..., A[i-j]) * j .\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "151 ms",
+      "memory": "19.1 MB",
+      "runtimePct": 60.7962999999999,
+      "memoryPct": 97.6616,
+      "timestamp": 1778098101000,
+      "acRate": 77.34058832547954,
+      "likes": 5073,
+      "dislikes": 439,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "partition-string-into-minimum-beautiful-substrings",
+          "title": "Partition String Into Minimum Beautiful Substrings",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "minimum-substring-partition-of-equal-character-frequency",
+          "title": "Minimum Substring Partition of Equal Character Frequency",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an integer array <code>arr</code>, partition the array into (contiguous) subarrays of length <strong>at most</strong> <code>k</code>. After partitioning, each subarray has their values changed to become the maximum value of that subarray.</p>\n\n<p>Return <em>the largest sum of the given array after partitioning. Test cases are generated so that the answer fits in a <strong>32-bit</strong> integer.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1,15,7,9,2,5,10], k = 3\n<strong>Output:</strong> 84\n<strong>Explanation:</strong> arr becomes [15,15,15,9,10,10,10]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1,4,1,5,7,3,6,1,9,9,3], k = 4\n<strong>Output:</strong> 83\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> arr = [1], k = 1\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= arr.length &lt;= 500</code></li>\n\t<li><code>0 &lt;= arr[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= k &lt;= arr.length</code></li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/partition-array-for-maximum-sum/submissions/"
     },
     {
       "id": "partition-equal-subset-sum::python3",
