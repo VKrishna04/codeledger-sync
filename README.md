@@ -1,21 +1,19 @@
-# codeledger-sync
+# DSA Solutions
 
-Automatically synced LeetCode & DSA problem solutions via [CodeLedger](https://codeledger.vkrishna04.me).
+> Managed by [CodeLedger](https://github.com/Life-Experimentalist/CodeLedger). Last updated: May 7, 2026
 
-## Organization
+## Stats
 
-```
-topics/
-  Dynamic Programming/
-    two-sum/
-      Python3.py
-      README.md
-```
+| Total | Easy | Medium | Hard |
+|:-----:|:----:|:------:|:----:|
+| **211** | 127 | 77 | 7 |
 
-## Links
+## Recent Solves
 
-- [CodeLedger Extension](https://codeledger.vkrishna04.me)
-- [Life-Experimentalist/Code-Ledger](https://github.com/Life-Experimentalist/Code-Ledger)
-
----
-_Last updated: 2026-04-30T17:40:21.311Z_
+| Problem | Difficulty | Language | Date |
+|---------|-----------|----------|------|
+| Filling Bookcase Shelves | Medium | Python3 | May 7 |
+| Partition Array for Maximum Sum | Medium | Python3 | May 6 |
+| Longest Increasing Subsequence | Medium | Python3 | May 5 |
+| Number of Dice Rolls With Target Sum | Medium | JavaScript | May 3 |
+| Managers with at Least 5 Direct Reports | Medium | MySQL | May 3 |
