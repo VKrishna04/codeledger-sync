@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-05-08T17:50:44.617Z",
+  "updatedAt": "2026-05-09T08:06:42.402Z",
   "stats": {
-    "total": 212,
+    "total": 213,
     "easy": 128,
-    "medium": 77,
+    "medium": 78,
     "hard": 7
   },
   "problems": [
@@ -7657,6 +7657,105 @@
         }
       ],
       "skipCommit": true
+    },
+    {
+      "platform": "leetcode",
+      "id": "number-of-islands::python3",
+      "submissionId": null,
+      "title": "Number of Islands",
+      "titleSlug": "number-of-islands",
+      "difficulty": "Medium",
+      "topic": "Array",
+      "tags": [
+        "Array",
+        "Depth-First Search",
+        "Breadth-First Search",
+        "Union-Find",
+        "Matrix"
+      ],
+      "canonical": {
+        "id": "number-of-islands",
+        "title": "Number of Islands"
+      },
+      "readmeContent": "# [200] Number of Islands\n**Difficulty:** Medium  |  **Acceptance:** 64.3%  |  **Likes:** 25040 / **Dislikes:** 619\n**Tags:** `Array`, `Depth-First Search`, `Breadth-First Search`, `Union-Find`, `Matrix`\n## Problem\nGiven an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.\n\nAn island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n&nbsp;\nExample 1:\n\nInput: grid = [\n  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\nOutput: 1\n\nExample 2:\n\nInput: grid = [\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\nOutput: 3\n\n&nbsp;\nConstraints:\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 300\n\tgrid[i][j] is '0' or '1'.\n## My Submission\n\n- Runtime: 228 ms (beats 93.7%)\n- Memory: 21.6 MB (beats 72.3%)\n\n## Similar Problems\n\n- [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) — Medium\n- [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/) — Medium\n- [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) — Medium\n- [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) — Medium\n- [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) — Medium\n",
+      "code": "class Solution:\n    def numIslands(self, grid: List[List[str]]) -> int:\n        if not grid: return 0\n\n        islands = 0\n        rows, cols = len(grid), len(grid[0])\n\n        def dfs(r, c):\n            if r < 0 or c < 0 or r >= rows or c >= cols or grid[r][c] == '0':\n                return\n            \n            grid[r][c] = '0'\n\n            dfs(r + 1, c)\n            dfs(r - 1, c)\n            dfs(r, c + 1)\n            dfs(r, c - 1)\n\n        for r in range(rows):\n            for c in range(cols):\n                if grid[r][c] == '1':\n                    islands += 1\n                    dfs(r, c)\n        \n        return islands",
+      "files": [
+        {
+          "path": "problems/number-of-islands/leetcode/Python3.py",
+          "content": "class Solution:\n    def numIslands(self, grid: List[List[str]]) -> int:\n        if not grid: return 0\n\n        islands = 0\n        rows, cols = len(grid), len(grid[0])\n\n        def dfs(r, c):\n            if r < 0 or c < 0 or r >= rows or c >= cols or grid[r][c] == '0':\n                return\n            \n            grid[r][c] = '0'\n\n            dfs(r + 1, c)\n            dfs(r - 1, c)\n            dfs(r, c + 1)\n            dfs(r, c - 1)\n\n        for r in range(rows):\n            for c in range(cols):\n                if grid[r][c] == '1':\n                    islands += 1\n                    dfs(r, c)\n        \n        return islands"
+        },
+        {
+          "path": "problems/number-of-islands/README.md",
+          "content": "# [200] Number of Islands\n**Difficulty:** Medium  |  **Acceptance:** 64.3%  |  **Likes:** 25040 / **Dislikes:** 619\n**Tags:** `Array`, `Depth-First Search`, `Breadth-First Search`, `Union-Find`, `Matrix`\n## Problem\nGiven an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.\n\nAn island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n&nbsp;\nExample 1:\n\nInput: grid = [\n  [\"1\",\"1\",\"1\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"1\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\nOutput: 1\n\nExample 2:\n\nInput: grid = [\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"1\",\"1\",\"0\",\"0\",\"0\"],\n  [\"0\",\"0\",\"1\",\"0\",\"0\"],\n  [\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\nOutput: 3\n\n&nbsp;\nConstraints:\n\n\tm == grid.length\n\tn == grid[i].length\n\t1 <= m, n <= 300\n\tgrid[i][j] is '0' or '1'.\n## My Submission\n\n- Runtime: 228 ms (beats 93.7%)\n- Memory: 21.6 MB (beats 72.3%)\n\n## Similar Problems\n\n- [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) — Medium\n- [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board/) — Medium\n- [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) — Medium\n- [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) — Medium\n- [Find All Groups of Farmland](https://leetcode.com/problems/find-all-groups-of-farmland/) — Medium\n"
+        }
+      ],
+      "lang": {
+        "name": "Python3",
+        "ext": "py",
+        "slug": "python3"
+      },
+      "runtime": "228 ms",
+      "memory": "21.6 MB",
+      "runtimePct": 93.70900000000003,
+      "memoryPct": 72.3493,
+      "timestamp": 1778313930000,
+      "acRate": 64.31885924440874,
+      "likes": 25040,
+      "dislikes": 619,
+      "similar": [
+        {
+          "difficulty": "Medium",
+          "titleSlug": "surrounded-regions",
+          "title": "Surrounded Regions",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "battleships-in-a-board",
+          "title": "Battleships in a Board",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "max-area-of-island",
+          "title": "Max Area of Island",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-sub-islands",
+          "title": "Count Sub Islands",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "find-all-groups-of-farmland",
+          "title": "Find All Groups of Farmland",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-unreachable-pairs-of-nodes-in-an-undirected-graph",
+          "title": "Count Unreachable Pairs of Nodes in an Undirected Graph",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "maximum-number-of-fish-in-a-grid",
+          "title": "Maximum Number of Fish in a Grid",
+          "isPaidOnly": false
+        },
+        {
+          "difficulty": "Medium",
+          "titleSlug": "count-islands-with-total-value-divisible-by-k",
+          "title": "Count Islands With Total Value Divisible by K",
+          "isPaidOnly": false
+        }
+      ],
+      "problemStatement": "<p>Given an <code>m x n</code> 2D binary grid <code>grid</code> which represents a map of <code>&#39;1&#39;</code>s (land) and <code>&#39;0&#39;</code>s (water), return <em>the number of islands</em>.</p>\n\n<p>An <strong>island</strong> is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [\n  [&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;],\n  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;],\n  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],\n  [&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;]\n]\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [\n  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],\n  [&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;],\n  [&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],\n  [&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;]\n]\n<strong>Output:</strong> 3\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == grid.length</code></li>\n\t<li><code>n == grid[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 300</code></li>\n\t<li><code>grid[i][j]</code> is <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code>.</li>\n</ul>\n",
+      "elapsedSeconds": 0,
+      "hasSimilar": true,
+      "submissionsUrl": "https://leetcode.com/problems/number-of-islands/submissions/"
     },
     {
       "id": "ones-and-zeroes::python3",
