@@ -1,7 +1,11 @@
-# [1105] Filling Bookcase Shelves
-**Difficulty:** Medium  |  **Acceptance:** 68.6%  |  **Likes:** 2682 / **Dislikes:** 270
+# Filling Bookcase Shelves
+
+**Difficulty:** Medium  |  **Acceptance:** 68.6%
+
 **Tags:** `Array`, `Dynamic Programming`
+
 ## Problem
+
 You are given an array books where books[i] = [thicknessi, heighti] indicates the thickness and height of the ith book. You are also given an integer shelfWidth.
 
 We want to place these books in order onto bookcase shelves that have a total width shelfWidth.
@@ -34,7 +38,8 @@ Constraints:
 	1 <= books.length <= 1000
 	1 <= thicknessi <= shelfWidth <= 1000
 	1 <= heighti <= 1000
+
 ## My Submission
 
-- Runtime: 3 ms (beats 54.8%)
-- Memory: 19.4 MB (beats 95.2%)
+- Runtime: 3 ms
+- Memory: 19.4 MB

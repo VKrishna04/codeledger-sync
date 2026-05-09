@@ -1,7 +1,11 @@
-# [102] Binary Tree Level Order Traversal
-**Difficulty:** Medium  |  **Acceptance:** 72.6%  |  **Likes:** 17108 / **Dislikes:** 383
+# Binary Tree Level Order Traversal
+
+**Difficulty:** Medium  |  **Acceptance:** 72.6%
+
 **Tags:** `Tree`, `Breadth-First Search`, `Binary Tree`
+
 ## Problem
+
 Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
 
 &nbsp;
@@ -25,11 +29,11 @@ Constraints:
 
 	The number of nodes in the tree is in the range [0, 2000].
 	-1000 <= Node.val <= 1000
+
 ## My Submission
 
-- Runtime: 558 ms (beats 1.3%)
-- Memory: 19.9 MB (beats 60.8%)
-- Solve time: 1h 9m 6s
+- Runtime: 558 ms
+- Memory: 19.9 MB
 
 ## Similar Problems
 

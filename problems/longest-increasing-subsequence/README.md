@@ -1,7 +1,11 @@
-# [300] Longest Increasing Subsequence
-**Difficulty:** Medium  |  **Acceptance:** 59.4%  |  **Likes:** 22773 / **Dislikes:** 516
+# Longest Increasing Subsequence
+
+**Difficulty:** Medium  |  **Acceptance:** 59.4%
+
 **Tags:** `Array`, `Binary Search`, `Dynamic Programming`
+
 ## Problem
+
 Given an integer array nums, return the length of the longest strictly increasing subsequence.
 
 &nbsp;
@@ -29,11 +33,11 @@ Constraints:
 
 &nbsp;
 Follow up:&nbsp;Can you come up with an algorithm that runs in&nbsp;O(n log(n)) time complexity?
+
 ## My Submission
 
-- Runtime: 7 ms (beats 82.3%)
-- Memory: 19.5 MB (beats 60.2%)
-- Solve time: 3m 9s
+- Runtime: 7 ms
+- Memory: 19.5 MB
 
 ## Similar Problems
 
